@@ -115,7 +115,7 @@ h3, .h3 {
 @media only screen and (max-width: 575.96px) {
   h3, .h3 {
     font-size: 1.75rem;
-    line-height: 2rem;
+    line-height: 3rem;
   }
 }
 
@@ -1905,8 +1905,8 @@ span.comment-date {
 
 .cart-banner .image-column .price-box {
   position: absolute;
-  left: 15%;
-  top: -30px;
+  left: 5%;
+  top: -50px;
   width: 110px;
   height: 110px;
   border-radius: 50%;

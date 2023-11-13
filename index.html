@@ -79,12 +79,11 @@
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<a class="mobile-show search-bar-icon" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>
@@ -94,7 +93,7 @@
 	</div>
 	<!-- end header -->
 	
-	<!-- search area -->
+	<!-- search area 
 	<div class="search-area">
 		<div class="container">
 			<div class="row">
@@ -110,7 +109,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- end search area -->
 
 	<!-- hero area -->
@@ -120,7 +119,7 @@
 				<div class="col-lg-9 offset-lg-2 text-center">
 					<div class="hero-text">
 						<div class="hero-text-tablecell">
-							<p class="subtitle">1st Online Store in Naya Bazar</p>
+							<p class="subtitle">1st Online Store in NayaBazar</p>
 							<h1>
 								<a href="" style="color: white; font-size: 55px;" class="typewrite" data-period="2000" data-type='[ "Hello !", "Namaste!", "Welcome to Acharya Stores" ]'>
 								  <span class="wrap"></span>
@@ -249,9 +248,17 @@
                 </div>
                 <!--Content Column-->
                 <div class="content-column col-lg-6">
-					<p class="top-sub">Since Year 2065</p>
 					<h3><span class="orange-text">Deal</span> of the month</h3>
-                    <h4>Petrol in Pump Price !!</h4>
+                    <h4 class="line-spacing">Petrol in Pump Price !!</h4>
+					<style>
+						
+/* Media query for mobile devices (adjust the max-width as needed) */
+@media only screen and (max-width: 600px) {
+  .line-spacing {
+    line-height: 1.5; /* Adjust this value based on your preference */
+  }
+}
+					</style>
                     <div class="text"> Now, More Km and less stress on your wallet. Seize the opportunity and grab it as you hit the road with a tank full of energy and excitement. <br> Hurry and fuel up, the road is waiting!</div>
 					<p class="product-price"><span>Per Litre</span> Rs. 180 </p>
                     <!--Countdown Timer-->
@@ -603,14 +610,14 @@
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
     var that = this;
-    var delta = 200 - Math.random() * 100;
+    var delta = 100 - Math.random() * 50;
 
     if (this.isDeleting) {
         delta /= 2;
     }
 
     if (!this.isDeleting && this.txt === fullTxt) {
-        delta = 1000; // Set a 1-second delay after displaying text
+        delta = 800; // Set a 1-second delay after displaying text
         this.isDeleting = true;
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
