@@ -33,6 +33,10 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+	
 </head>
 
 <body>
@@ -64,7 +68,14 @@
 							<ul>
 								<li class="current-list-item"><a href="#">Home</a>
 								</li>
-								<li><a href="#products">Products</a></li>
+								<li><a href="#products">Products</a>
+									<ul class="sub-menu">
+										<li><a href="#grocery">Grocery Items</a></li>
+										<li><a href="#cosmetics">Cosmetic Items</a></li>
+										<li><a href="#puja">Puja Items</a></li>
+										<li><a href="#other">Other Items</a></li>
+									</ul>
+								</li>
 								<li><a href="about.html">About</a></li>
 								<li><a href="#">Pages</a>
 									<ul class="sub-menu">
@@ -200,7 +211,7 @@
 			</div>
 			<hr style="border-top: 2px solid orange; margin-top: -2rem;">
 			<br>
-			<div class="col-lg-8 offset-lg-2 text-center">
+			<div   id="grocery" class="col-lg-8 offset-lg-2 text-center">
 				<div class="section-title">
 					<br>
 					<h3 style="font-size: 30px;">Grocery <span class="orange-text">Items</span></h3>
@@ -403,9 +414,24 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
+	</div>
+	</div>
+	</div>
+	<div id="box" class="showmore">
+	
+		<style>
+			.showmore {
+				display: none;
+			}
+		</style>
+	
+		<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+			<div class="container">
+				<div class="row">
+	
+					<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
+						<div class="single-product-item">
+							<div class="product-image">
 							<a href="single-product.html"><img src="img/products/coconut biscuit.jpg" alt=""></a>
 						</div>
 						<h3>Coconut Biscuit</h3>
@@ -868,39 +894,63 @@
 					</div>
 				</div>
 
-
-				<!--
-				<div class="col-lg-4 col-md-6 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/" alt=""></a>
-						</div>
-						<h3></h3>
-						<p class="product-price"><span></span>रु. </p>
-						<a href="checkout.html" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
-					</div>
+				
+			</div>
+			</div>
+			</div>
+			</div>
+			
+			<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+				<div class="container" style="text-align: center;">
+					<br>
+					<button style=" font-family: 'Poppins', sans-serif;
+						background-color: #F28123;
+						color: #fff;
+						padding: 10px 20px; 
+						border-radius: 20px;
+						border: none;
+						cursor: pointer;" id="btn" class="cart-btn">Show more...</button>
+					<br> <br> <br>
+			
 				</div>
-				<div class="col-lg-4 col-md-6 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/" alt=""></a>
-						</div>
-						<h3></h3>
-						<p class="product-price"><span></span>रु. </p>
-						<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
-					</div>
-				</div>
-
-				-->
-
-
-
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-title">
-						<br> <br>
-						<h3 style="font-size: 35px;">Cosmetic <span class="orange-text">Items</span> </h3>
-						<p>"Discover a world of beauty with our exquisite range of cosmetic items — your one-stop
-							destination for all the cosmetic products under one roof!"</p>
+			</div>
+			
+			
+			
+			<!--
+							<div class="col-lg-4 col-md-6 text-center">
+								<div class="single-product-item">
+									<div class="product-image">
+										<a href="single-product.html"><img src="img/products/" alt=""></a>
+									</div>
+									<h3></h3>
+									<p class="product-price"><span></span>रु. </p>
+									<a href="checkout.html" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 text-center">
+								<div class="single-product-item">
+									<div class="product-image">
+										<a href="single-product.html"><img src="img/products/" alt=""></a>
+									</div>
+									<h3></h3>
+									<p class="product-price"><span></span>रु. </p>
+									<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+								</div>
+							</div>
+			
+							-->
+			
+			<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+				<div class="container">
+			
+			
+					<div class="col-lg-8 offset-lg-2 text-center" id="cosmetics">
+						<div class="section-title">
+							<br> <br>
+							<h3 style="font-size: 35px;">Cosmetic <span class="orange-text">Items</span> </h3>
+							<p>"Discover a world of beauty with our exquisite range of cosmetic items — your one-stop
+								destination for all the cosmetic products under one roof!"</p>
 					</div>
 				</div>
 
@@ -1078,6 +1128,21 @@
 						</div>
 					</div>
 
+
+				</div>
+			</div>
+			</div>
+			<div id="bax" class="showmore">
+			
+				<style>
+					.showmore {
+						display: none;
+					}
+				</style>
+			
+				<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+					<div class="container">
+						<div class="row">
 
 					<div class="col-lg-4 col-md-6 text-center">
 						<div class="single-product-item">
@@ -1639,50 +1704,73 @@
 
 				-->
 
-					<div class="col-lg-8 offset-lg-2 text-center">
-						<div class="section-title">
-							<br><br>
-							<h3 style="font-size: 35px;">Puja <span class="orange-text">Items</span> </h3>
-							<p>"Elevate your rituals with our shop for Puja items and spiritual supplies!"</p>
-						</div>
-					</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		
+		<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+			<div class="container" style="text-align: center;">
+				<br>
+				<button style=" font-family: 'Poppins', sans-serif;
+					background-color: #F28123;
+					color: #fff;
+					padding: 10px 20px; 
+					border-radius: 20px;
+					border: none;
+					cursor: pointer;" id="ban" class="cart-btn">Show more...</button>
+				<br> <br> <br>
+		
+			</div>
+		</div>
+
+
+		<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+			<div class="container">
+				<div class="row">
+
+
+			<div class="col-lg-8 offset-lg-2 text-center" id="puja">
+				<div class="section-title">
+					<br><br>
+					<h3 style="font-size: 35px;">Puja <span class="orange-text">Items</span> </h3>
+					<p>"Elevate your rituals with our shop for Puja items and spiritual supplies!"</p>
+				</div>
+			</div>
 
 
 
-					<div class="col-lg-4 col-md-6 text-center">
-						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/dhup.jpg"
-										alt="धुप"></a>
-							</div>
-							<h3>धुप</h3>
-							<p class="product-price"><span></span>रु. ३५</p>
-							<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
-						</div>
+			<div class="col-lg-4 col-md-6 text-center">
+				<div class="single-product-item">
+					<div class="product-image">
+						<a href="single-product.html"><img src="img/products/dhup.jpg" alt="धुप"></a>
 					</div>
-					<div class="col-lg-4 col-md-6 text-center">
-						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/batti.jpg"
-										alt="बाती"></a>
-							</div>
-							<h3>बाती</h3>
-							<p class="product-price"><span></span>रु. ६०</p>
-							<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
-						</div>
+					<h3>धुप</h3>
+					<p class="product-price"><span></span>रु. ३५</p>
+					<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 text-center">
+				<div class="single-product-item">
+					<div class="product-image">
+						<a href="single-product.html"><img src="img/products/batti.jpg" alt="बाती"></a>
 					</div>
-					<div class="col-lg-4 col-md-6 text-center">
-						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/aasthagandha.jpg"
-										alt="अष्टगन्ध"></a>
-							</div>
-							<h3>अष्टगन्ध</h3>
-							<p class="product-price"><span></span>रु. ३० </p>
-							<a href="checkout.html" target="_main" class="cart-btn"><i
-									class="fas fa-shopping-cart"></i>Buy Now</a>
-						</div>
+					<h3>बाती</h3>
+					<p class="product-price"><span></span>रु. ६०</p>
+					<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 text-center">
+				<div class="single-product-item">
+					<div class="product-image">
+						<a href="single-product.html"><img src="img/products/aasthagandha.jpg" alt="अष्टगन्ध"></a>
 					</div>
+					<h3>अष्टगन्ध</h3>
+					<p class="product-price"><span></span>रु. ३० </p>
+					<a href="checkout.html" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						Now</a>
+				</div>
+			</div>
 
 					<div class="col-lg-4 col-md-6 text-center">
 						<div class="single-product-item">
@@ -1787,6 +1875,25 @@
 							<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
 						</div>
 					</div>
+
+
+				</div>
+			</div>
+			</div>
+			<div id="bbx" class="showmore">
+			
+				<style>
+					.showmore {
+						display: none;
+					}
+				</style>
+			
+				<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+					<div class="container">
+						<div class="row">
+
+
+
 					<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
 						<div class="single-product-item">
 							<div class="product-image">
@@ -1922,7 +2029,33 @@
 					</div>
 
 
-					<div class="col-lg-8 offset-lg-2 text-center">
+				</div>
+			</div>
+			</div>
+			</div>
+			
+			<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+				<div class="container" style="text-align: center;">
+					<br>
+					<button style=" font-family: 'Poppins', sans-serif;
+						background-color: #F28123;
+						color: #fff;
+						padding: 10px 20px; 
+						border-radius: 20px;
+						border: none;
+						cursor: pointer;" id="bbn" class="cart-btn">Show more...</button>
+					<br> <br> <br>
+			
+				</div>
+			</div>
+	
+	
+			<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+				<div class="container">
+					<div class="row">
+
+
+					<div class="col-lg-8 offset-lg-2 text-center"  id="other">
 						<div class="section-title">
 							<br> <br>
 							<h3 style="font-size: 35px;">Other <span class="orange-text">Products</span></h3>
@@ -2034,6 +2167,25 @@
 							<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
 						</div>
 					</div>
+
+				</div>
+			</div>
+			</div>
+			<div id="bcx" class="showmore">
+			
+				<style>
+					.showmore {
+						display: none;
+					}
+				</style>
+			
+				<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+					<div class="container">
+						<div class="row">
+
+
+
+
 					<div class="col-lg-4 col-md-6 text-center">
 						<div class="single-product-item">
 							<div class="product-image">
@@ -2138,6 +2290,29 @@
 									class="fas fa-shopping-cart"></i>Buy Now</a>
 						</div>
 					</div>
+
+
+					
+			</div>
+		</div>
+		</div>
+		</div>
+		
+		<div class="product-section mt-150 mb-150" id="products" style="margin-top: -150px;">
+			<div class="container" style="text-align: center;">
+				<br>
+				<button style=" font-family: 'Poppins', sans-serif;
+					background-color: #F28123;
+					color: #fff;
+					padding: 10px 20px; 
+					border-radius: 20px;
+					border: none;
+					cursor: pointer;" id="bcn" class="cart-btn">Show more...</button>
+				<br> <br> <br>
+		
+			</div>
+		</div>
+
 
 					<!--
 				<div class="col-lg-4 col-md-6 text-center">
@@ -2593,6 +2768,63 @@
 				document.body.appendChild(css);
 			};
 		</script>
+		
+		<script>
+			const btn = document.getElementById('btn');
+
+btn.addEventListener('click', () => {
+  // 👇️ hide button
+  btn.style.display = 'none';
+
+  // 👇️ show div
+  const box = document.getElementById('box');
+  box.style.display = 'block';
+});
+
+		</script>
+
+
+<script>
+	const ban = document.getElementById('ban');
+
+ban.addEventListener('click', () => {
+// 👇️ hide button
+ban.style.display = 'none';
+
+// 👇️ show div
+const box = document.getElementById('bax');
+box.style.display = 'block';
+});
+
+</script>
+
+<script>
+	const bbn = document.getElementById('bbn');
+
+bbn.addEventListener('click', () => {
+// 👇️ hide button
+bbn.style.display = 'none';
+
+// 👇️ show div
+const bbx = document.getElementById('bbx');
+bbx.style.display = 'block';
+});
+
+</script>
+<script>
+	const bcn = document.getElementById('bcn');
+
+bcn.addEventListener('click', () => {
+// 👇️ hide button
+bcn.style.display = 'none';
+
+// 👇️ show div
+const bcx = document.getElementById('bcx');
+bcx.style.display = 'block';
+});
+
+</script>
+
 </body>
 
 </html>
