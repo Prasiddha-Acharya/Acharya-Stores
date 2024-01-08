@@ -245,8 +245,10 @@
 			<div class="row">
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/chini.jpg" alt=""></a>
+						<img id="myImg" src="img/products/chini.jpg" alt="Snow" style="width:100%;max-width:300px">
+						<div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
 						</div>
 						<h3>चिनी (प्रती किलो)</h3>
 						<p class="product-price"><span></span>रु. ११० </p>
@@ -675,20 +677,26 @@
 					</div>
 				</div>
 				
+
+
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/brush cheaper.jpg" alt=""></a>
+						<img id="myImg" src="img/products/brush cheaper.jpg" alt="Snow" style="width:100%;max-width:300px">
+						<div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
 						</div>
 						<h3>ब्रस (सस्तो)</h3>
 						<p class="product-price"><span></span>रु. २५</p>
 						<a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
 					</div>
-				</div>
-				<div class="col-lg-2 col-md-2 text-center">
-					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/brush.jpg" alt=""></a>
+					</div>
+
+
+					<div class="col-lg-2 col-md-2 text-center">
+						<div class="single-product-item">
+							<div class="product-image">
+								<a href="single-product.html"><img src="img/products/brush.jpg" alt=""></a>
 						</div>
 						<h3>ब्रस (महङ्गो)</h3>
 						<p class="product-price"><span></span>रु. ६० </p>
@@ -2883,6 +2891,31 @@ bcx.style.display = 'block';
 });
 
 </script>
+
+<script>
+	// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+
 
 </body>
 
