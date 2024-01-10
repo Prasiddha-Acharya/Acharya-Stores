@@ -2563,9 +2563,25 @@ ul.social-link-team li a {
 }
 
 .single-product-item h3 {
-  font-size: 17px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+
+/* Media query for phone (max-width: 767px) */
+@media (max-width: 767px) {
+ 
+.single-product-item h3 {
+  font-size: 17px;
+  }
+}
+
+/* Media query for PC (min-width: 768px) */
+@media (min-width: 768px) {
+ 
+.single-product-item h3 {
+  font-size: 18px;
+  }
 }
 
 
@@ -2586,7 +2602,7 @@ p.product-price {
 /* Media query for PC (min-width: 768px) */
 @media (min-width: 768px) {
   p.product-price {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -2618,8 +2634,8 @@ a.cart-btn {
 /* Media query for PC (min-width: 768px) */
 @media (min-width: 768px) {
   a.cart-btn {
-    font-size: 30px;
-    padding: 10px 20px;
+    font-size: 13px;
+    padding: 8px 16px;
   }
 }
 
