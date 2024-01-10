@@ -91,76 +91,80 @@
 			}
 		}
 	</style>
-	<!--PreLoader-->
-	<div class="loader">
-		<div class="loader-inner">
-			<div class="circle"></div>
-		</div>
-	</div>
+	
 	<!--PreLoader Ends-->
 
 	<header class="header">
 		<nav class="nav container">
-		   <div class="nav__data">
-			  <a style="font-size: 30px; font-weight: bold; font-family: Poppins, sans-serif;" href="#" class="nav__logo">
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
-					<path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5"/>
-				  </svg> Acharya Stores
-			  </a>
+			<div class="nav__data">
+				<a style="font-size: 30px; font-weight: bold; font-family: Poppins, sans-serif;" href="#"
+					class="nav__logo">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+						class="bi bi-shop-window" viewBox="0 0 16 16">
+						<path
+							d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
+					</svg> Acharya Stores
+				</a>
 
-			  <div class="nav__toggle" id="nav-toggle">
-				 <i class="ri-menu-line nav__burger"></i>
-				 <i class="ri-close-line nav__close"></i>
-			  </div>
-		   </div>
+				<style>
+				.nav__logo:hover {
+      color: white; 
+					}
+				</style>
 
-		   <!--=============== NAV MENU ===============-->
-		   <div class="nav__menu" id="nav-menu">
-			  <ul class="nav__list">
-				 <li><a href="#" class="nav__link">Home</a></li>
+				<div class="nav__toggle" id="nav-toggle">
+					<i class="ri-menu-line nav__burger"></i>
+					<i class="ri-close-line nav__close"></i>
+				</div>
+			</div>
 
-				 <!--=============== DROPDOWN 1 ===============-->
-				 <li class="dropdown__item">
-					<div class="nav__link">Products<i class="ri-arrow-down-s-line dropdown__arrow"></i>
-					</div>
+			<!--=============== NAV MENU ===============-->
+			<div class="nav__menu" id="nav-menu">
+				<ul class="nav__list">
+					<li><a href="#" class="nav__link">Home</a></li>
 
-					<ul class="dropdown__menu">
-					   <li>
-						  <a href="#grocery" class="dropdown__link">
-							<i class="ri-arrow-up-down-line"></i>Groceries
-						</a>                         
-					   </li>
+					<!--=============== DROPDOWN 1 ===============-->
+					<li class="dropdown__item">
+						<div class="nav__link">Products<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+						</div>
 
-					   <li>
-						  <a href="#cosmetics" class="dropdown__link">
-							 <i class="ri-arrow-up-down-line"></i>Cosmetics
-						  </a>
-					   </li>
+						<ul class="dropdown__menu">
+							<li>
+								<a href="#grocery" class="dropdown__link">
+									<i class="ri-arrow-up-down-line"></i>Groceries
+								</a>
+							</li>
 
-					   <!--=============== DROPDOWN SUBMENU ===============-->
-					   <li>
-						<a href="#puja" class="dropdown__link">
-						   <i class="ri-arrow-up-down-line"></i>Puja
-						</a>
-					 </li>
+							<li>
+								<a href="#cosmetics" class="dropdown__link">
+									<i class="ri-arrow-up-down-line"></i>Cosmetics
+								</a>
+							</li>
 
-					 
-					 <li>
-						<a href="#others" class="dropdown__link">
-						   <i class="ri-arrow-up-down-line"></i> Other 
-						</a>
-					 </li>
-					</ul>
-				 </li>
-				 
-				 <li><a href="#" class="nav__link">About</a></li>
+							<!--=============== DROPDOWN SUBMENU ===============-->
+							<li>
+								<a href="#puja" class="dropdown__link">
+									<i class="ri-arrow-up-down-line"></i>Puja
+								</a>
+							</li>
 
-				 <li><a href="#" class="nav__link">Contact</a></li>
 
-				 <li><a href="#" class="nav__link"><i class="fas fa-shopping-cart"></i></a></a></li>
+							<li>
+								<a href="#others" class="dropdown__link">
+									<i class="ri-arrow-up-down-line"></i> Other
+								</a>
+							</li>
+						</ul>
+					</li>
 
-				 <!--=============== DROPDOWN 2 ===============-->
-				<!-- <li class="dropdown__item">
+					<li><a href="#" class="nav__link">About</a></li>
+
+					<li><a href="#" class="nav__link">Contact</a></li>
+
+					<li><a href="#" class="nav__link"><i class="fas fa-shopping-cart"></i></a></a></li>
+
+					<!--=============== DROPDOWN 2 ===============-->
+					<!-- <li class="dropdown__item">
 					<div class="nav__link">
 					   Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
 					</div>
@@ -186,10 +190,10 @@
 					</ul>
 				 </li> -->
 
-			  </ul>
-		   </div>
+				</ul>
+			</div>
 		</nav>
-	 </header>
+	</header>
 
 	<!-- search area 
 	<div class="search-area">
@@ -312,7 +316,8 @@
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
 						<div class="gallery">
-							<a href="img/products/mishri.jpg" data-lightbox='mygallery'><img src="img/products/mishri.jpg"></a>
+							<a href="img/products/mishri.jpg" data-lightbox='mygallery'><img
+									src="img/products/mishri.jpg"></a>
 						</div>
 						<h3>मिश्री (प्रती किलो)</h3>
 						<p class="product-price"><span></span>रु. १८० </p>
@@ -2899,7 +2904,7 @@
 	</script>
 
 
-<script src="assets/js/navbar.js"></script>
+	<script src="assets/js/navbar.js"></script>
 </body>
 
 </html>
