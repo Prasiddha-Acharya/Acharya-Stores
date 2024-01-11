@@ -23,6 +23,7 @@ body {
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  background-color: black; 
 }
 
 @keyframes fadeInAnimation {
@@ -3037,3 +3038,6 @@ table.order-details tbody td {
     width: 100%;
   }
 }
+
+
+
