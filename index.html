@@ -69,7 +69,7 @@
 	</style>
 </head>
 
-<body onload="document.body.style.opacity='1'">
+<body>
 	<style>
 		@media (min-width: 767px) {
 			.col-lg-2 {
@@ -2953,6 +2953,15 @@
 
 
 	<script src="assets/js/navbar.js"></script>
+
+	<script>
+    // JavaScript to trigger the fade-in effect after a delay (e.g., 2 seconds)
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        document.getElementById('overlay').style.opacity = '1';
+      }, 2000); // Adjust the delay as needed
+    });
+  </script>
 </body>
 
 </html>
