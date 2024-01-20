@@ -14,7 +14,7 @@
     background-color: #000;
     filter: alpha(Opacity=80);
     opacity: .8;
-    display: none
+    display: none;
 }
 
 .lightbox {
@@ -202,5 +202,12 @@ box-shadow: black;}
         /* Your original styles here */
         position: fixed;
         top: 35% !important;
+    }
+}
+
+/* Styles specific to desktop screens (PC) */
+@media only screen and (min-width: 1024px) {
+    .lightbox {
+        top: 100px !important;
     }
 }
