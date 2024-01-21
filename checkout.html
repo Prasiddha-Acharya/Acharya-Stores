@@ -31,6 +31,184 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
+	<style>
+
+
+#uploadSection {
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Styles for the file input */
+        #paymentScreenshot {
+            color: red; /* Text color for "No file chosen" */
+        }
+
+        #paymentScreenshot::file-selector-button {
+            background-color: #0084d0; /* Button color for "Choose File" */
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+		
+		
+
+		
+        .checkbox-wrapper-55 input[type="checkbox"] {
+            visibility: hidden;
+            display: none;
+        }
+
+        .checkbox-wrapper-55 *,
+        .checkbox-wrapper-55 ::after,
+        .checkbox-wrapper-55 ::before {
+            box-sizing: border-box;
+        }
+
+        .checkbox-wrapper-55 .rocker {
+            display: inline-block;
+            position: relative;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            color: #888;
+            width: 7em;
+            height: 4em;
+            overflow: hidden;
+            border-bottom: 0.5em solid #eee;
+        }
+
+        .checkbox-wrapper-55 .rocker-small {
+            font-size: 0.75em;
+        }
+
+        .checkbox-wrapper-55 .rocker::before {
+            content: "";
+            position: absolute;
+            top: 0.5em;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #999;
+            border: 0.5em solid #eee;
+            border-bottom: 0;
+        }
+
+        .checkbox-wrapper-55 .switch-left,
+        .checkbox-wrapper-55 .switch-right {
+            cursor: pointer;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5em;
+            width: 3em;
+            transition: 0.2s;
+            user-select: none;
+        }
+
+        .checkbox-wrapper-55 .switch-left {
+            height: 2.4em;
+            width: 2.75em;
+            left: 0.85em;
+            bottom: 0.4em;
+            background-color: #ddd;
+            transform: rotate(15deg) skewX(15deg);
+        }
+
+        .checkbox-wrapper-55 .switch-right {
+            right: 0.5em;
+            bottom: 0;
+            background-color: #bd5757;
+            color: #fff;
+        }
+
+        .checkbox-wrapper-55 .switch-left::before,
+        .checkbox-wrapper-55 .switch-right::before {
+            content: "";
+            position: absolute;
+            width: 0.4em;
+            height: 2.45em;
+            bottom: -0.45em;
+            background-color: #ccc;
+            transform: skewY(-65deg);
+        }
+
+        .checkbox-wrapper-55 .switch-left::before {
+            left: -0.4em;
+        }
+
+        .checkbox-wrapper-55 .switch-right::before {
+            right: -0.375em;
+            background-color: transparent;
+            transform: skewY(65deg);
+        }
+
+        .checkbox-wrapper-55 input:checked + .switch-left {
+            background-color: #0084d0;
+            color: #fff;
+            bottom: 0px;
+            left: 0.5em;
+            height: 2.5em;
+            width: 3em;
+            transform: rotate(0deg) skewX(0deg);
+        }
+
+        .checkbox-wrapper-55 input:checked + .switch-left::before {
+            background-color: transparent;
+            width: 3.0833em;
+        }
+
+        .checkbox-wrapper-55 input:checked + .switch-left + .switch-right {
+            background-color: #ddd;
+            color: #888;
+            bottom: 0.4em;
+            right: 0.8em;
+            height: 2.4em;
+            width: 2.75em;
+            transform: rotate(-15deg) skewX(-15deg);
+        }
+
+        .checkbox-wrapper-55 input:checked + .switch-left + .switch-right::before {
+            background-color: #ccc;
+        }
+
+        .checkbox-wrapper-55 input:focus + .switch-left {
+            color: #333;
+        }
+
+        .checkbox-wrapper-55 input:checked:focus + .switch-left {
+            color: #fff;
+        }
+
+        .checkbox-wrapper-55 input:focus + .switch-left + .switch-right {
+            color: #fff;
+        }
+
+        .checkbox-wrapper-55 input:checked:focus + .switch-left + .switch-right {
+            color: #333;
+        }
+
+        /* Additional styles for the upload section */
+        #uploadSection {
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        function handleDeliveryOption() {
+            var deliveryOption = document.getElementById("deliveryOption");
+            var uploadSection = document.getElementById("uploadSection");
+
+            // If "Yes" is selected, show the upload section; otherwise, hide it
+            uploadSection.style.display = deliveryOption.checked ? "block" : "none";
+        }
+    </script>
+
+
 </head>
 <body>
 	
@@ -155,7 +333,7 @@
 						    <div class="card-header" id="headingOne">
 						      <h5 class="mb-0">
 						        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						          Billing Address
+						          Buyer Details
 						        </button>
 						      </h5>
 						    </div>
@@ -169,43 +347,78 @@
 						        		<p><input type="text" placeholder="Address"></p>
 						        		<p><input type="tel" placeholder="Phone"></p>
 						        		<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-						        	</form>
+						        
+<style>.delivery{
+	font-size: 15px;
+	font-weight: 600;
+	font-family: "Poppins", sans-serif;
+}
+</style>
+
+<style>
+	/* Checkbox styles */
+	input[type="checkbox"] {
+		font-size: 15px;
+		font-weight: 600;
+		font-family: "Poppins", sans-serif;
+		margin-right: 5px; /* Add some spacing between the checkbox and the label */
+	}
+</style>	
+<label class="delivery" for="deliveryOption">Do you want home delivery?</label>
+
+<div class="checkbox-wrapper-55 delivery">
+	<label class="rocker rocker-small">
+		Home Delivery:
+	  <input type="checkbox" id="deliveryOption" name="deliveryOption" value="yes" onclick="handleDeliveryOption()">
+	  <span class="switch-left">Yes</span>
+	  <span class="switch-right">No</span>
+	</label>
+  </div>
+
+  <div class="delivery" id="uploadSection">
+	<p class="delivery" style=" font-size: 14px !important;
+		color: red;">Conditions for Home Delivery : <br>
+  *Only available for order above Rs.500 <br>
+  *Shipping fee is free inside Nayabazar area. <br>
+  *Pre-payement should be done for home delivery. <br>
+  *Upload the screenshot of payment below. <br>
+  </p> <p class="delivery">
+		Scan the QR Below to proceed payment </p>
+
+<div>
+		<img src="img/scan-to-pay.png" alt="Scan to Pay" class="medium-image">
+	</div>
+	
+
+		<style>
+			/* Add your desired styles here */
+			.medium-image {
+				width: 50%; /* Adjust the width as needed */
+				height: auto;
+				justify-content: left;
+				/* Center the image horizontally */
+			}
+
+			@media (max-width: 768px) {
+            .medium-image {
+                width: 100%; /* Make the image full-width on screens up to 768px */
+            }
+        }
+		</style>
+	</p>
+	<label for="paymentScreenshot">Upload Pre-payment Screenshot :</label>
+	<input class="delivery" type="file" id="paymentScreenshot" name="paymentScreenshot">
+  </div>
+
+								
+								
+									</form>
 						        </div>
 						      </div>
 						    </div>
 						  </div>
-						  <div class="card single-accordion">
-						    <div class="card-header" id="headingTwo">
-						      <h5 class="mb-0">
-						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						          Shipping Address
-						        </button>
-						      </h5>
-						    </div>
-						    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-						      <div class="card-body">
-						        <div class="shipping-address-form">
-						        	<p>Your shipping address form is here.</p>
-						        </div>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="card single-accordion">
-						    <div class="card-header" id="headingThree">
-						      <h5 class="mb-0">
-						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						          Card Details
-						        </button>
-						      </h5>
-						    </div>
-						    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-						      <div class="card-body">
-						        <div class="card-details">
-						        	<p>Your card details goes here.</p>
-						        </div>
-						      </div>
-						    </div>
-						  </div>
+						 
+						 
 						</div>
 
 					</div>
@@ -379,6 +592,7 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
+	
 
 </body>
 </html>
