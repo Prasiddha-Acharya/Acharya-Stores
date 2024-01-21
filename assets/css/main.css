@@ -319,12 +319,12 @@ p:last-child {
 }
 
 .mt-100 {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .mt-100 {
-    margin-top: 80px;
+    margin-top: 10px;
   }
 }
 
@@ -344,7 +344,7 @@ p:last-child {
 
 @media only screen and (max-width: 767.96px) {
   .mt-150 {
-    margin-top: 100px;
+    margin-top: 10px;
   }
 }
 
@@ -359,12 +359,12 @@ p:last-child {
 }
 
 .pt-80 {
-  padding-top: 80px;
+  padding-top: 10px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .pt-80 {
-    padding-top: 50px;
+    padding-top: 10px;
   }
 }
 
@@ -379,12 +379,12 @@ p:last-child {
 }
 
 .pt-100 {
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .pt-100 {
-    padding-top: 80px;
+    padding-top: 10px;
   }
 }
 
@@ -399,12 +399,12 @@ p:last-child {
 }
 
 .pt-150 {
-  padding-top: 150px;
+  padding-top: 10px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .pt-150 {
-    padding-top: 100px;
+    padding-top: 10px;
   }
 }
 
