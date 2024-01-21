@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
 	<title>Check Out</title>
@@ -31,195 +33,202 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
+	<link rel="stylesheet" href="assets/css/navbar.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+
 	<style>
+		#uploadSection {
+			margin-top: 10px;
+			display: none;
+		}
+
+		/* Styles for the file input */
+		#paymentScreenshot {
+			color: red;
+			/* Text color for "No file chosen" */
+		}
+
+		#paymentScreenshot::file-selector-button {
+			background-color: #0084d0;
+			/* Button color for "Choose File" */
+			color: white;
+			padding: 5px 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
 
 
-#uploadSection {
-            margin-top: 10px;
-            display: none;
-        }
 
-        /* Styles for the file input */
-        #paymentScreenshot {
-            color: red; /* Text color for "No file chosen" */
-        }
 
-        #paymentScreenshot::file-selector-button {
-            background-color: #0084d0; /* Button color for "Choose File" */
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-		
-		
+		.checkbox-wrapper-55 input[type="checkbox"] {
+			visibility: hidden;
+			display: none;
+		}
 
-		
-        .checkbox-wrapper-55 input[type="checkbox"] {
-            visibility: hidden;
-            display: none;
-        }
+		.checkbox-wrapper-55 *,
+		.checkbox-wrapper-55 ::after,
+		.checkbox-wrapper-55 ::before {
+			box-sizing: border-box;
+		}
 
-        .checkbox-wrapper-55 *,
-        .checkbox-wrapper-55 ::after,
-        .checkbox-wrapper-55 ::before {
-            box-sizing: border-box;
-        }
+		.checkbox-wrapper-55 .rocker {
+			display: inline-block;
+			position: relative;
+			font-size: 2em;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			color: #888;
+			width: 7em;
+			height: 4em;
+			overflow: hidden;
+			border-bottom: 0.5em solid #eee;
+		}
 
-        .checkbox-wrapper-55 .rocker {
-            display: inline-block;
-            position: relative;
-            font-size: 2em;
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-            color: #888;
-            width: 7em;
-            height: 4em;
-            overflow: hidden;
-            border-bottom: 0.5em solid #eee;
-        }
+		.checkbox-wrapper-55 .rocker-small {
+			font-size: 0.75em;
+		}
 
-        .checkbox-wrapper-55 .rocker-small {
-            font-size: 0.75em;
-        }
+		.checkbox-wrapper-55 .rocker::before {
+			content: "";
+			position: absolute;
+			top: 0.5em;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #999;
+			border: 0.5em solid #eee;
+			border-bottom: 0;
+		}
 
-        .checkbox-wrapper-55 .rocker::before {
-            content: "";
-            position: absolute;
-            top: 0.5em;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #999;
-            border: 0.5em solid #eee;
-            border-bottom: 0;
-        }
+		.checkbox-wrapper-55 .switch-left,
+		.checkbox-wrapper-55 .switch-right {
+			cursor: pointer;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 2.5em;
+			width: 3em;
+			transition: 0.2s;
+			user-select: none;
+		}
 
-        .checkbox-wrapper-55 .switch-left,
-        .checkbox-wrapper-55 .switch-right {
-            cursor: pointer;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 2.5em;
-            width: 3em;
-            transition: 0.2s;
-            user-select: none;
-        }
+		.checkbox-wrapper-55 .switch-left {
+			height: 2.4em;
+			width: 2.75em;
+			left: 0.85em;
+			bottom: 0.4em;
+			background-color: #ddd;
+			transform: rotate(15deg) skewX(15deg);
+		}
 
-        .checkbox-wrapper-55 .switch-left {
-            height: 2.4em;
-            width: 2.75em;
-            left: 0.85em;
-            bottom: 0.4em;
-            background-color: #ddd;
-            transform: rotate(15deg) skewX(15deg);
-        }
+		.checkbox-wrapper-55 .switch-right {
+			right: 0.5em;
+			bottom: 0;
+			background-color: #bd5757;
+			color: #fff;
+		}
 
-        .checkbox-wrapper-55 .switch-right {
-            right: 0.5em;
-            bottom: 0;
-            background-color: #bd5757;
-            color: #fff;
-        }
+		.checkbox-wrapper-55 .switch-left::before,
+		.checkbox-wrapper-55 .switch-right::before {
+			content: "";
+			position: absolute;
+			width: 0.4em;
+			height: 2.45em;
+			bottom: -0.45em;
+			background-color: #ccc;
+			transform: skewY(-65deg);
+		}
 
-        .checkbox-wrapper-55 .switch-left::before,
-        .checkbox-wrapper-55 .switch-right::before {
-            content: "";
-            position: absolute;
-            width: 0.4em;
-            height: 2.45em;
-            bottom: -0.45em;
-            background-color: #ccc;
-            transform: skewY(-65deg);
-        }
+		.checkbox-wrapper-55 .switch-left::before {
+			left: -0.4em;
+		}
 
-        .checkbox-wrapper-55 .switch-left::before {
-            left: -0.4em;
-        }
+		.checkbox-wrapper-55 .switch-right::before {
+			right: -0.375em;
+			background-color: transparent;
+			transform: skewY(65deg);
+		}
 
-        .checkbox-wrapper-55 .switch-right::before {
-            right: -0.375em;
-            background-color: transparent;
-            transform: skewY(65deg);
-        }
+		.checkbox-wrapper-55 input:checked+.switch-left {
+			background-color: #0084d0;
+			color: #fff;
+			bottom: 0px;
+			left: 0.5em;
+			height: 2.5em;
+			width: 3em;
+			transform: rotate(0deg) skewX(0deg);
+		}
 
-        .checkbox-wrapper-55 input:checked + .switch-left {
-            background-color: #0084d0;
-            color: #fff;
-            bottom: 0px;
-            left: 0.5em;
-            height: 2.5em;
-            width: 3em;
-            transform: rotate(0deg) skewX(0deg);
-        }
+		.checkbox-wrapper-55 input:checked+.switch-left::before {
+			background-color: transparent;
+			width: 3.0833em;
+		}
 
-        .checkbox-wrapper-55 input:checked + .switch-left::before {
-            background-color: transparent;
-            width: 3.0833em;
-        }
+		.checkbox-wrapper-55 input:checked+.switch-left+.switch-right {
+			background-color: #ddd;
+			color: #888;
+			bottom: 0.4em;
+			right: 0.8em;
+			height: 2.4em;
+			width: 2.75em;
+			transform: rotate(-15deg) skewX(-15deg);
+		}
 
-        .checkbox-wrapper-55 input:checked + .switch-left + .switch-right {
-            background-color: #ddd;
-            color: #888;
-            bottom: 0.4em;
-            right: 0.8em;
-            height: 2.4em;
-            width: 2.75em;
-            transform: rotate(-15deg) skewX(-15deg);
-        }
+		.checkbox-wrapper-55 input:checked+.switch-left+.switch-right::before {
+			background-color: #ccc;
+		}
 
-        .checkbox-wrapper-55 input:checked + .switch-left + .switch-right::before {
-            background-color: #ccc;
-        }
+		.checkbox-wrapper-55 input:focus+.switch-left {
+			color: #333;
+		}
 
-        .checkbox-wrapper-55 input:focus + .switch-left {
-            color: #333;
-        }
+		.checkbox-wrapper-55 input:checked:focus+.switch-left {
+			color: #fff;
+		}
 
-        .checkbox-wrapper-55 input:checked:focus + .switch-left {
-            color: #fff;
-        }
+		.checkbox-wrapper-55 input:focus+.switch-left+.switch-right {
+			color: #fff;
+		}
 
-        .checkbox-wrapper-55 input:focus + .switch-left + .switch-right {
-            color: #fff;
-        }
+		.checkbox-wrapper-55 input:checked:focus+.switch-left+.switch-right {
+			color: #333;
+		}
 
-        .checkbox-wrapper-55 input:checked:focus + .switch-left + .switch-right {
-            color: #333;
-        }
+		/* Additional styles for the upload section */
+		#uploadSection {
+			margin-top: 10px;
+			display: none;
+		}
+	</style>
+	<script>
+		function handleDeliveryOption() {
+			var deliveryOption = document.getElementById("deliveryOption");
+			var uploadSection = document.getElementById("uploadSection");
 
-        /* Additional styles for the upload section */
-        #uploadSection {
-            margin-top: 10px;
-            display: none;
-        }
-    </style>
-    <script>
-        function handleDeliveryOption() {
-            var deliveryOption = document.getElementById("deliveryOption");
-            var uploadSection = document.getElementById("uploadSection");
-
-            // If "Yes" is selected, show the upload section; otherwise, hide it
-            uploadSection.style.display = deliveryOption.checked ? "block" : "none";
-        }
-    </script>
+			// If "Yes" is selected, show the upload section; otherwise, hide it
+			uploadSection.style.display = deliveryOption.checked ? "block" : "none";
+		}
+	</script>
 
 
 </head>
+
 <body>
-	
+
 	<!--PreLoader-->
-    <div class="loader">
-        <div class="loader-inner">
-            <div class="circle"></div>
-        </div>
-    </div>
-    <!--PreLoader Ends-->
-	
+	<div class="loader">
+		<div class="loader-inner">
+			<div class="circle"></div>
+		</div>
+	</div>
+	<!--PreLoader Ends-->
+
 	<!-- header -->
 	<div class="top-header-area" id="sticker">
 		<div class="container">
@@ -272,8 +281,10 @@
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+										<a class="shopping-cart" href="cart.html"><i
+												class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#"><i
+												class="fas fa-search"></i></a>
 									</div>
 								</li>
 							</ul>
@@ -306,7 +317,7 @@
 		</div>
 	</div>
 	<!-- end search arewa -->
-	
+
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
@@ -325,149 +336,191 @@
 	<!-- check out section -->
 	<div class="checkout-section mt-150 mb-150">
 		<div class="container">
+
+ <br> <br>
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="checkout-accordion-wrap">
 						<div class="accordion" id="accordionExample">
-						  <div class="card single-accordion">
-						    <div class="card-header" id="headingOne">
-						      <h5 class="mb-0">
-						        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						          Buyer Details
-						        </button>
-						      </h5>
-						    </div>
+							
+<div class="order-details-wrap">
+    <table class="order-details">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody class="order-details-body">
+        <tr>
+            <td>
+                <select id="Products">
+                    <option value="chini">Chini</option>
+                    <option value="mishri">Mishri</option>
+                    <option value="chana">Chana</option>
+                    <option value="musuridaal">Daal</option>
+                </select>
+            </td>
+            <td id="priceContainer">
+                <p><span id="productPrice"></span></p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
-						    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-						      <div class="card-body">
-						        <div class="billing-address-form">
-						        	<form action="index.html">
-						        		<p><input type="text" placeholder="Name"></p>
-						        		<p><input type="email" placeholder="Email"></p>
-						        		<p><input type="text" placeholder="Address"></p>
-						        		<p><input type="tel" placeholder="Phone"></p>
-						        		<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-						        
-<style>.delivery{
-	font-size: 15px;
-	font-weight: 600;
-	font-family: "Poppins", sans-serif;
-}
-</style>
+<script>
+    const ProductsSelect = document.getElementById('Products');
+    const priceContainer = document.getElementById('priceContainer');
+    const productPrice = document.getElementById('productPrice');
 
-<style>
-	/* Checkbox styles */
-	input[type="checkbox"] {
-		font-size: 15px;
-		font-weight: 600;
-		font-family: "Poppins", sans-serif;
-		margin-right: 5px; /* Add some spacing between the checkbox and the label */
-	}
-</style>	
-<label class="delivery" for="deliveryOption">Do you want home delivery?</label>
+    const prices = {
+        chini: 110,
+        mishri: 180,
+        chana: 140,
+        musuridaal: 180,
+    };
 
-<div class="checkbox-wrapper-55 delivery">
-	<label class="rocker rocker-small">
-		Home Delivery:
-	  <input type="checkbox" id="deliveryOption" name="deliveryOption" value="yes" onclick="handleDeliveryOption()">
-	  <span class="switch-left">Yes</span>
-	  <span class="switch-right">No</span>
-	</label>
-  </div>
+    ProductsSelect.addEventListener('change', () => {
+        const selectedOption = ProductsSelect.value;
+        const selectedPrice = prices[selectedOption];
 
-  <div class="delivery" id="uploadSection">
-	<p class="delivery" style=" font-size: 14px !important;
-		color: red;">Conditions for Home Delivery : <br>
-  *Only available for order above Rs.500 <br>
-  *Shipping fee is free inside Nayabazar area. <br>
-  *Pre-payement should be done for home delivery. <br>
-  *Upload the screenshot of payment below. <br>
-  </p> <p class="delivery">
-		Scan the QR Below to proceed payment </p>
+        productPrice.textContent = `Rs.${selectedPrice}`;
+        priceContainer.style.display = 'block';
 
-<div>
-		<img src="img/scan-to-pay.png" alt="Scan to Pay" class="medium-image">
-	</div>
-	
+        // You can add more logic here if needed
 
-		<style>
-			/* Add your desired styles here */
-			.medium-image {
-				width: 50%; /* Adjust the width as needed */
-				height: auto;
-				justify-content: left;
-				/* Center the image horizontally */
-			}
+        window.history.pushState(null, null, `?option=${selectedOption}`);
+    });
 
-			@media (max-width: 768px) {
-            .medium-image {
-                width: 100%; /* Make the image full-width on screens up to 768px */
-            }
+    window.addEventListener('load', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedOption = urlParams.get('option');
+
+        if (selectedOption) {
+            ProductsSelect.value = selectedOption;
+            ProductsSelect.dispatchEvent(new Event('change'));
         }
-		</style>
-	</p>
-	<label for="paymentScreenshot">Upload Pre-payment Screenshot :</label>
-	<input class="delivery" type="file" id="paymentScreenshot" name="paymentScreenshot">
-  </div>
+    });
+</script> <br> <br>
+							<div class="card single-accordion">
+								<div class="card-header" id="headingOne">
+									<h5 class="mb-0">
+										<button class="btn btn-link" type="button" data-toggle="collapse"
+											data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											Buyer Details
+										</button>
+									</h5>
+								</div>
 
-								
-								
-									</form>
-						        </div>
-						      </div>
-						    </div>
-						  </div>
-						 
-						 
+								<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+									data-parent="#accordionExample">
+									<div class="card-body">
+										<div class="billing-address-form">
+											<form action="index.html">
+
+												
+												<p><input type="text" placeholder="Name"></p>
+												<p><input type="email" placeholder="Email"></p>
+												<p><input type="text" placeholder="Address"></p>
+												<p><input type="tel" placeholder="Phone"></p>
+												<p><textarea name="bill" id="bill" cols="30" rows="10"
+														placeholder="Say Something"></textarea></p>
+
+												<style>
+													.delivery {
+														font-size: 15px;
+														font-weight: 600;
+														font-family: "Poppins", sans-serif;
+													}
+												</style>
+
+												<style>
+													/* Checkbox styles */
+													input[type="checkbox"] {
+														font-size: 15px;
+														font-weight: 600;
+														font-family: "Poppins", sans-serif;
+														margin-right: 5px;
+														/* Add some spacing between the checkbox and the label */
+													}
+												</style>
+												<label class="delivery" for="deliveryOption">Do you want home
+													delivery?</label>
+
+												<div class="checkbox-wrapper-55 delivery">
+													<label class="rocker rocker-small">
+														Home Delivery:
+														<input type="checkbox" id="deliveryOption" name="deliveryOption"
+															value="yes" onclick="handleDeliveryOption()">
+														<span class="switch-left">Yes</span>
+														<span class="switch-right">No</span>
+													</label>
+												</div>
+
+												<div class="delivery" id="uploadSection">
+													<p class="delivery" style=" font-size: 14px !important;
+		color: red;">Conditions for Home Delivery : <br>
+														*Only available for order above Rs.500 <br>
+														*Shipping fee is free inside Nayabazar area. <br>
+														*Pre-payment should be done for home delivery. <br>
+														*Upload the screenshot of payment below. <br>
+													</p>
+													<p class="delivery">
+														Scan the QR Below to proceed payment </p>
+
+													<div>
+														<img src="img/scan-to-pay.png" alt="Scan to Pay"
+															class="medium-image">
+													</div>
+
+
+													<style>
+														::placeholder {
+															color:
+																font-size: 15px;
+															font-family: "Poppins", sans-serif;
+														}
+
+														/* Add your desired styles here */
+														.medium-image {
+															width: 50%;
+															/* Adjust the width as needed */
+															height: auto;
+															justify-content: left;
+															/* Center the image horizontally */
+														}
+
+														@media (max-width: 768px) {
+															.medium-image {
+																width: 100%;
+																/* Make the image full-width on screens up to 768px */
+															}
+														}
+													</style>
+													</p>
+													<label for="paymentScreenshot">Upload Pre-payment Screenshot
+														:</label>
+													<input class="delivery" type="file" id="paymentScreenshot"
+														name="paymentScreenshot">
+												</div>
+
+
+												<a href="#" class="boxed-btn">Place Order</a>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
 						</div>
 
 					</div>
 				</div>
 
 				<div class="col-lg-4">
-					<div class="order-details-wrap">
-						<table class="order-details">
-							<thead>
-								<tr>
-									<th>Your order Details</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody class="order-details-body">
-								<tr>
-									<td>Product</td>
-									<td>Total</td>
-								</tr>
-								<tr>
-									<td>Strawberry</td>
-									<td>$85.00</td>
-								</tr>
-								<tr>
-									<td>Berry</td>
-									<td>$70.00</td>
-								</tr>
-								<tr>
-									<td>Lemon</td>
-									<td>$35.00</td>
-								</tr>
-							</tbody>
-							<tbody class="checkout-details">
-								<tr>
-									<td>Subtotal</td>
-									<td>$190</td>
-								</tr>
-								<tr>
-									<td>Shipping</td>
-									<td>$50</td>
-								</tr>
-								<tr>
-									<td>Total</td>
-									<td>$240</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#" class="boxed-btn">Place Order</a>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -509,7 +562,8 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium
+							doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -548,13 +602,14 @@
 		</div>
 	</div>
 	<!-- end footer -->
-	
+
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
-					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
+					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>, All Rights
+						Reserved.</p>
 				</div>
 				<div class="col-lg-6 text-right col-md-12">
 					<div class="social-icons">
@@ -571,7 +626,7 @@
 		</div>
 	</div>
 	<!-- end copyright -->
-	
+
 	<!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
 	<!-- bootstrap -->
@@ -592,7 +647,8 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
-	
+
 
 </body>
+
 </html>
