@@ -9,7 +9,7 @@
 		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Check Out</title>
+	<title>Check Out || Acharya Stores</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -33,299 +33,367 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
-	<link rel="stylesheet" href="assets/css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/photo-zoom.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/photo-lightbox.css">
+	<script src="assets/js/photo-zoom.js" type="text/javascript"></script>
 
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+	<!--=============== CSS ===============-->
+	<link rel="stylesheet" href="assets/css/navbar.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
 	</script>
 
-	<style>
-		#uploadSection {
-			margin-top: 10px;
-			display: none;
-		}
 
-		/* Styles for the file input */
-		#paymentScreenshot {
-			color: red;
-			/* Text color for "No file chosen" */
-		}
+<style>
+	#uploadSection {
+		margin-top: 10px;
+		display: none;
+	}
 
-		#paymentScreenshot::file-selector-button {
-			background-color: #0084d0;
-			/* Button color for "Choose File" */
-			color: white;
-			padding: 5px 10px;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-		}
+	/* Styles for the file input */
+	#paymentScreenshot {
+		color: red;
+		/* Text color for "No file chosen" */
+	}
+
+	#paymentScreenshot::file-selector-button {
+		background-color: #0084d0;
+		/* Button color for "Choose File" */
+		color: white;
+		padding: 5px 10px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
 
 
 
 
-		.checkbox-wrapper-55 input[type="checkbox"] {
-			visibility: hidden;
-			display: none;
-		}
+	.checkbox-wrapper-55 input[type="checkbox"] {
+		visibility: hidden;
+		display: none;
+	}
 
-		.checkbox-wrapper-55 *,
-		.checkbox-wrapper-55 ::after,
-		.checkbox-wrapper-55 ::before {
-			box-sizing: border-box;
-		}
+	.checkbox-wrapper-55 *,
+	.checkbox-wrapper-55 ::after,
+	.checkbox-wrapper-55 ::before {
+		box-sizing: border-box;
+	}
 
-		.checkbox-wrapper-55 .rocker {
-			display: inline-block;
-			position: relative;
-			font-size: 2em;
-			font-weight: bold;
-			text-align: center;
-			text-transform: uppercase;
-			color: #888;
-			width: 7em;
-			height: 4em;
-			overflow: hidden;
-			border-bottom: 0.5em solid #eee;
-		}
+	.checkbox-wrapper-55 .rocker {
+		display: inline-block;
+		position: relative;
+		font-size: 2em;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		color: #888;
+		width: 7em;
+		height: 4em;
+		overflow: hidden;
+		border-bottom: 0.5em solid #eee;
+	}
 
-		.checkbox-wrapper-55 .rocker-small {
-			font-size: 0.75em;
-		}
+	.checkbox-wrapper-55 .rocker-small {
+		font-size: 0.75em;
+	}
 
-		.checkbox-wrapper-55 .rocker::before {
-			content: "";
-			position: absolute;
-			top: 0.5em;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: #999;
-			border: 0.5em solid #eee;
-			border-bottom: 0;
-		}
+	.checkbox-wrapper-55 .rocker::before {
+		content: "";
+		position: absolute;
+		top: 0.5em;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #999;
+		border: 0.5em solid #eee;
+		border-bottom: 0;
+	}
 
-		.checkbox-wrapper-55 .switch-left,
-		.checkbox-wrapper-55 .switch-right {
-			cursor: pointer;
-			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 2.5em;
-			width: 3em;
-			transition: 0.2s;
-			user-select: none;
-		}
+	.checkbox-wrapper-55 .switch-left,
+	.checkbox-wrapper-55 .switch-right {
+		cursor: pointer;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 2.5em;
+		width: 3em;
+		transition: 0.2s;
+		user-select: none;
+	}
 
-		.checkbox-wrapper-55 .switch-left {
-			height: 2.4em;
-			width: 2.75em;
-			left: 0.85em;
-			bottom: 0.4em;
-			background-color: #ddd;
-			transform: rotate(15deg) skewX(15deg);
-		}
+	.checkbox-wrapper-55 .switch-left {
+		height: 2.4em;
+		width: 2.75em;
+		left: 0.85em;
+		bottom: 0.4em;
+		background-color: #ddd;
+		transform: rotate(15deg) skewX(15deg);
+	}
 
-		.checkbox-wrapper-55 .switch-right {
-			right: 0.5em;
-			bottom: 0;
-			background-color: #bd5757;
-			color: #fff;
-		}
+	.checkbox-wrapper-55 .switch-right {
+		right: 0.5em;
+		bottom: 0;
+		background-color: #bd5757;
+		color: #fff;
+	}
 
-		.checkbox-wrapper-55 .switch-left::before,
-		.checkbox-wrapper-55 .switch-right::before {
-			content: "";
-			position: absolute;
-			width: 0.4em;
-			height: 2.45em;
-			bottom: -0.45em;
-			background-color: #ccc;
-			transform: skewY(-65deg);
-		}
+	.checkbox-wrapper-55 .switch-left::before,
+	.checkbox-wrapper-55 .switch-right::before {
+		content: "";
+		position: absolute;
+		width: 0.4em;
+		height: 2.45em;
+		bottom: -0.45em;
+		background-color: #ccc;
+		transform: skewY(-65deg);
+	}
 
-		.checkbox-wrapper-55 .switch-left::before {
-			left: -0.4em;
-		}
+	.checkbox-wrapper-55 .switch-left::before {
+		left: -0.4em;
+	}
 
-		.checkbox-wrapper-55 .switch-right::before {
-			right: -0.375em;
-			background-color: transparent;
-			transform: skewY(65deg);
-		}
+	.checkbox-wrapper-55 .switch-right::before {
+		right: -0.375em;
+		background-color: transparent;
+		transform: skewY(65deg);
+	}
 
-		.checkbox-wrapper-55 input:checked+.switch-left {
-			background-color: #0084d0;
-			color: #fff;
-			bottom: 0px;
-			left: 0.5em;
-			height: 2.5em;
-			width: 3em;
-			transform: rotate(0deg) skewX(0deg);
-		}
+	.checkbox-wrapper-55 input:checked+.switch-left {
+		background-color: #0084d0;
+		color: #fff;
+		bottom: 0px;
+		left: 0.5em;
+		height: 2.5em;
+		width: 3em;
+		transform: rotate(0deg) skewX(0deg);
+	}
 
-		.checkbox-wrapper-55 input:checked+.switch-left::before {
-			background-color: transparent;
-			width: 3.0833em;
-		}
+	.checkbox-wrapper-55 input:checked+.switch-left::before {
+		background-color: transparent;
+		width: 3.0833em;
+	}
 
-		.checkbox-wrapper-55 input:checked+.switch-left+.switch-right {
-			background-color: #ddd;
-			color: #888;
-			bottom: 0.4em;
-			right: 0.8em;
-			height: 2.4em;
-			width: 2.75em;
-			transform: rotate(-15deg) skewX(-15deg);
-		}
+	.checkbox-wrapper-55 input:checked+.switch-left+.switch-right {
+		background-color: #ddd;
+		color: #888;
+		bottom: 0.4em;
+		right: 0.8em;
+		height: 2.4em;
+		width: 2.75em;
+		transform: rotate(-15deg) skewX(-15deg);
+	}
 
-		.checkbox-wrapper-55 input:checked+.switch-left+.switch-right::before {
-			background-color: #ccc;
-		}
+	.checkbox-wrapper-55 input:checked+.switch-left+.switch-right::before {
+		background-color: #ccc;
+	}
 
-		.checkbox-wrapper-55 input:focus+.switch-left {
-			color: #333;
-		}
+	.checkbox-wrapper-55 input:focus+.switch-left {
+		color: #333;
+	}
 
-		.checkbox-wrapper-55 input:checked:focus+.switch-left {
-			color: #fff;
-		}
+	.checkbox-wrapper-55 input:checked:focus+.switch-left {
+		color: #fff;
+	}
 
-		.checkbox-wrapper-55 input:focus+.switch-left+.switch-right {
-			color: #fff;
-		}
+	.checkbox-wrapper-55 input:focus+.switch-left+.switch-right {
+		color: #fff;
+	}
 
-		.checkbox-wrapper-55 input:checked:focus+.switch-left+.switch-right {
-			color: #333;
-		}
+	.checkbox-wrapper-55 input:checked:focus+.switch-left+.switch-right {
+		color: #333;
+	}
 
-		/* Additional styles for the upload section */
-		#uploadSection {
-			margin-top: 10px;
-			display: none;
-		}
-	</style>
-	<script>
-		function handleDeliveryOption() {
-			var deliveryOption = document.getElementById("deliveryOption");
-			var uploadSection = document.getElementById("uploadSection");
+	/* Additional styles for the upload section */
+	#uploadSection {
+		margin-top: 10px;
+		display: none;
+	}
+</style>
+<script>
+	function handleDeliveryOption() {
+		var deliveryOption = document.getElementById("deliveryOption");
+		var uploadSection = document.getElementById("uploadSection");
 
-			// If "Yes" is selected, show the upload section; otherwise, hide it
-			uploadSection.style.display = deliveryOption.checked ? "block" : "none";
-		}
-	</script>
+		// If "Yes" is selected, show the upload section; otherwise, hide it
+		uploadSection.style.display = deliveryOption.checked ? "block" : "none";
+	}
+</script>
 
 
 </head>
 
 <body>
 
-	<!--PreLoader-->
-	<div class="loader">
-		<div class="loader-inner">
-			<div class="circle"></div>
-		</div>
-	</div>
-	<!--PreLoader Ends-->
+	<header class="header">
+		<nav class="nav container">
+			<div class="nav__data">
+				<a style="font-weight: bold; font-family: Poppins, sans-serif;" href="#"
+					class="nav__logo">
+					<style>
+						/* Base styles for the nav__logo class */
+						.nav__logo {
+						  font-weight: bold;
+						  font-family: 'Poppins', sans-serif;
+						  text-decoration: none; /* Assuming this is a link */
+						}
+					
+						/* Media queries for different screen sizes */
+						@media (min-width: 768px) {
+						  .nav__logo {
+							font-size: 30px;
+						  }
+						}
+					
+						@media (max-width: 767px) {
+						  .nav__logo {
+							font-size: 25px;
+						  }
+						}
 
-	<!-- header -->
-	<div class="top-header-area" id="sticker">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-sm-12 text-center">
-					<div class="main-menu-wrap">
-						<!-- logo -->
-						<div class="site-logo">
-							<a href="index.html">
-								<img src="assets/img/logo.png" alt="">
-							</a>
-						</div>
-						<!-- logo -->
+						@media (min-width: 768px) {
+						  .nav__logo {
+							font-size: 30px;
+						  }
+						}
+					
+						@media (max-width: 767px) {
+						  .nav__logo {
+							font-size: 23px;
+							margin-top: 0px;
+						  }
+						}
+						
+					  </style>
+					    <style>
+							/* Base styles for the SVG icon */
+							.bi-shop-window {
+							  width: 32px;
+							  height: 32px;
+							}
+						
+							/* Media query for smaller size on mobile devices */
+							@media (max-width: 767px) {
+							  .bi-shop-window {
+								width: 23px; /* Adjust the size as needed */
+								height: 24px; /* Adjust the size as needed */
+							  }
+							}
+						  </style>
+					  
 
-						<!-- menu start -->
-						<nav class="main-menu">
-							<ul>
-								<li class="current-list-item"><a href="#">Home</a>
-									<ul class="sub-menu">
-										<li><a href="index.html">Static Home</a></li>
-										<li><a href="index_2.html">Slider Home</a></li>
-									</ul>
-								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="#">Pages</a>
-									<ul class="sub-menu">
-										<li><a href="404.html">404 page</a></li>
-										<li><a href="about.html">About</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="news.html">News</a></li>
-										<li><a href="shop.html">Shop</a></li>
-									</ul>
-								</li>
-								<li><a href="news.html">News</a>
-									<ul class="sub-menu">
-										<li><a href="news.html">News</a></li>
-										<li><a href="single-news.html">Single News</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="shop.html">Shop</a>
-									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-										<li><a href="cart.html">Cart</a></li>
-									</ul>
-								</li>
-								<li>
-									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i
-												class="fas fa-shopping-cart"></i></a>
-										<a class="mobile-hide search-bar-icon" href="#"><i
-												class="fas fa-search"></i></a>
-									</div>
-								</li>
-							</ul>
-						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-						<div class="mobile-menu"></div>
-						<!-- menu end -->
-					</div>
+
+						  
+
+
+
+
+					  <img src="img/acharya-stores-logo.png" alt="Logo" class="logo">	
+	
+					<style>
+						
+						/* Default style for larger screens (PC) */
+.logo {
+    width: 180px;
+    height: 55px;
+    margin-left: -30px;
+}
+
+/* Adjust styles for mobile and small devices */
+@media only screen and (max-width: 720px) {
+    .logo {
+        width: 150px;
+        height: 45px;
+        margin-left: 0; /* Adjust margin as needed for mobile devices */
+    }
+}
+
+/* Additional styles for even smaller screens if necessary */
+@media only screen and (max-width: 480px) {
+    .logo {
+        width: 100px;
+        height: 35px;
+    }
+}
+
+
+					</style>
+
+
+
+
+				</a>
+
+				<style>
+				.nav__logo:hover {
+      color: white; 
+					}
+				</style>
+
+				<div class="nav__toggle" id="nav-toggle">
+					<i class="ri-menu-line nav__burger"></i>
+					<i class="ri-close-line nav__close"></i>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- end header -->
 
-	<!-- search area -->
-	<div class="search-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<span class="close-btn"><i class="fas fa-window-close"></i></span>
-					<div class="search-bar">
-						<div class="search-bar-tablecell">
-							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
-						</div>
+			<!--=============== NAV MENU ===============-->
+			<div class="nav__menu" id="nav-menu">
+				<ul class="nav__list">
+					<li><a href="https://acharyastores.com.np/" class="nav__link">Home</a></li>
+
+					<!--=============== DROPDOWN 1 ==============-->
+					<li><a href="./#products" class="nav__link">Shop</a></li>
+
+					<li><a href="about.html" class="nav__link">About</a></li>
+
+					<li><a href="contact.html" class="nav__link">Contact</a></li>
+
+					<li><a href="cart.html" class="nav__link"><i class="fas fa-shopping-cart"></i></a></a></li>
+
+					<!--=============== DROPDOWN 2 ===============-->
+					<!-- <li class="dropdown__item">
+					<div class="nav__link">
+					   Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end search arewa -->
 
+					<ul class="dropdown__menu">
+					   <li>
+						  <a href="#" class="dropdown__link">
+							 <i class="ri-user-line"></i> Profiles
+						  </a>                          
+					   </li>
+
+					   <li>
+						  <a href="#" class="dropdown__link">
+							 <i class="ri-lock-line"></i> Accounts
+						  </a>
+					   </li>
+
+					   <li>
+						  <a href="#" class="dropdown__link">
+							 <i class="ri-message-3-line"></i> Messages
+						  </a>
+					   </li>
+					</ul>
+				 </li> -->
+
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Fresh and Organic</p>
-						<h1>Check Out Product</h1>
+						<p class="animated fadeInUp" style="opacity: 0; animation-delay: 0.3s;">Acharya Stores</p>
+						<h1 class="animated fadeInUp" style="opacity: 0; animation-delay: 0.s;">Check Out Product</h1>
 					</div>
 				</div>
 			</div>
@@ -344,18 +412,21 @@
 						<div class="accordion" id="accordionExample">
 							
 <div class="order-details-wrap">
-    <table class="order-details">
+    <table style="width: 100%;" class="order-details delivery">
         <thead>
-        <tr>
-            <th>Product</th>
-            <th>Price</th>
+        <tr >
+            <th style="font-size: 15px;
+			font-weight: 600;">Product</th>
+            <th  style="font-size: 15px;
+			font-weight: 600;" class="delivery">Price</th>
         </tr>
         </thead>
         <tbody class="order-details-body">
         <tr>
             <td>
-                <select id="Products">
-                    <option value="chini">Chini</option>
+                <select id="Products" >
+					<option value="" disabled selected>Select a product</option>
+                    <option value="chini">चिनी (Sugar)</option>
                     <option value="mishri">Mishri</option>
                     <option value="chana">Chana</option>
                     <option value="musuridaal">Daal</option>
@@ -368,6 +439,51 @@
         </tbody>
     </table>
 </div>
+<style>
+	label {
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+	font-weight: 600;
+    border: none; /* Remove border */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    appearance: none; /* Remove default arrow in Firefox */
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    background: none; /* Remove background (optional) */
+	pointer-events: none;
+}
+
+#priceContainer {
+    display: none;
+    margin-top: 12px;
+	border: none;
+	color: red;
+}
+
+#productPrice {
+            font-size: 17px;
+            color: red;
+			font-weight: 600;
+														font-family: "Poppins", sans-serif;
+        }
+
+.order-details-wrap {
+    margin-top: 20px;
+}
+
+.order-details th,
+.order-details td {
+    padding: 10px;
+    text-align: left;
+}
+
+</style>
 
 <script>
     const ProductsSelect = document.getElementById('Products');
@@ -385,7 +501,7 @@
         const selectedOption = ProductsSelect.value;
         const selectedPrice = prices[selectedOption];
 
-        productPrice.textContent = `Rs.${selectedPrice}`;
+        productPrice.textContent = `Rs. ${selectedPrice}`;
         priceContainer.style.display = 'block';
 
         // You can add more logic here if needed
@@ -499,7 +615,7 @@
 														}
 													</style>
 													</p>
-													<label for="paymentScreenshot">Upload Pre-payment Screenshot
+													<label for="paymentScreenshot">Upload Payment Screenshot
 														:</label>
 													<input class="delivery" type="file" id="paymentScreenshot"
 														name="paymentScreenshot">
@@ -527,33 +643,6 @@
 	</div>
 	<!-- end check out section -->
 
-	<!-- logo carousel -->
-	<div class="logo-carousel-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/1.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/2.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/3.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/4.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/5.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end logo carousel -->
 
 	<!-- footer -->
 	<div class="footer-area">
@@ -562,66 +651,88 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium
-							doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<p>We are a local shop of Naya Bazar, Ilam. You can get all of the Grocery Items & Cosmetics
+							Item here at suitable price!</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box get-in-touch">
 						<h2 class="widget-title">Get in Touch</h2>
 						<ul>
-							<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-							<li>support@fruitkha.com</li>
-							<li>+00 111 222 3333</li>
+							<li> <a href="https://bit.ly/3QKbqII" target="_main">Naya Bazar, Ilam, Koshi, Nepal </a>
+							</li>
+							<li><a href="mailto:acharyastores.np@gmail.com">acharyastores.np@gmail.com</a></li>
+							<li> <a href="tel:+9779842671308">+977 9842671308</a></li>
 						</ul>
+						<style>
+							@media only screen and (max-width: 767px) {
+								.social-icons {
+									margin-left: -205px;
+								}
+							}
+						</style>
+
+						<div class="social-icons">
+							<ul>
+								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box pages">
-						<h2 class="widget-title">Pages</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Shop</a></li>
-							<li><a href="news.html">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-3 col-md-6" id="sug">
 					<div class="footer-box subscribe">
-						<h2 class="widget-title">Subscribe</h2>
-						<p>Subscribe to our mailing list to get the latest updates.</p>
+						<style>
+							/* Styles for PC screens with a minimum width of 1200px */
+							@media only screen and (min-width: 1200px) {
+								#sug {
+									margin-left: 250px;
+								}
+							}
+						</style>
+						<h2 class="widget-title">Suggestions</h2>
+						<p>We would like to hear from you...</p>
 						<form action="index.html">
-							<input type="email" placeholder="Email">
+							<input aria id="feedback" placeholder="Type here.....">
 							<button type="submit"><i class="fas fa-paper-plane"></i></button>
 						</form>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 	<!-- end footer -->
 
 	<!-- copyright -->
 	<div class="copyright">
+		<style>
+			@media only screen and (max-width: 767px) {
+				.container {
+					content: "";
+					display: block;
+				}
+			}
+		</style>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>, All Rights
-						Reserved.</p>
-				</div>
-				<div class="col-lg-6 text-right col-md-12">
-					<div class="social-icons">
-						<ul>
-							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-						</ul>
-					</div>
-				</div>
+
+			<div style="max-width: 100%; text-align: center;" class="col-lg-6 col-md-12">
+				<p>Copyrights &copy; 2023 - <a href="">Acharya Stores</a>, All Rights Reserved ||
+					Developed by <a href="https://prasiddhaacharya.com.np/" target="_main">Prasiddha Acharya</a>
+				</p>
+				<span class="mobile-line-break"></span>
+
+				<br class="last-br">
+				<style>
+					@media only screen and (min-width: 1200px) {
+						.last-br {
+							display: none;
+						}
+					}
+				</style>
 			</div>
 		</div>
 	</div>
@@ -647,8 +758,284 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
+	<script>$(function () {
+
+			var targetDate = new Date(Date.UTC(2023, 03, 8));
+			var now = new Date();
+
+			window.days = daysBetween(now, targetDate);
+			var secondsLeft = secondsDifference(now, targetDate);
+			window.hours = Math.floor(secondsLeft / 60 / 60);
+			secondsLeft = secondsLeft - (window.hours * 60 * 60);
+			window.minutes = Math.floor(secondsLeft / 60);
+			secondsLeft = secondsLeft - (window.minutes * 60);
+			console.log(secondsLeft);
+			window.seconds = Math.floor(secondsLeft);
+
+			startCountdown();
+		});
+		var interval;
+
+		function daysBetween(date1, date2) {
+			//Get 1 day in milliseconds
+			var one_day = 1000 * 60 * 60 * 24;
+
+			// Convert both dates to milliseconds
+			var date1_ms = date1.getTime();
+			var date2_ms = date2.getTime();
+
+			// Calculate the difference in milliseconds
+			var difference_ms = date2_ms - date1_ms;
+
+			// Convert back to days and return
+			return Math.round(difference_ms / one_day);
+		}
+
+		function secondsDifference(date1, date2) {
+			//Get 1 day in milliseconds
+			var one_day = 1000 * 60 * 60 * 24;
+
+			// Convert both dates to milliseconds
+			var date1_ms = date1.getTime();
+			var date2_ms = date2.getTime();
+			var difference_ms = date2_ms - date1_ms;
+			var difference = difference_ms / one_day;
+			var offset = difference - Math.floor(difference);
+			return offset * (60 * 60 * 24);
+		}
 
 
+
+		function startCountdown() {
+			$('#input-container').hide();
+			$('#countdown-container').show();
+
+			displayValue('#js-days', window.days);
+			displayValue('#js-hours', window.hours);
+			displayValue('#js-minutes', window.minutes);
+			displayValue('#js-seconds', window.seconds);
+
+			interval = setInterval(function () {
+				if (window.seconds > 0) {
+					window.seconds--;
+					displayValue('#js-seconds', window.seconds);
+				} else {
+					// Seconds is zero - check the minutes
+					if (window.minutes > 0) {
+						window.minutes--;
+						window.seconds = 59;
+						updateValues('minutes');
+					} else {
+						// Minutes is zero, check the hours
+						if (window.hours > 0) {
+							window.hours--;
+							window.minutes = 59;
+							window.seconds = 59;
+							updateValues('hours');
+						} else {
+							// Hours is zero
+							window.days--;
+							window.hours = 23;
+							window.minutes = 59;
+							window.seconds = 59;
+							updateValues('days');
+						}
+						// $('#js-countdown').addClass('remove');
+						// $('#js-next-container').addClass('bigger');
+					}
+				}
+			}, 1000);
+		}
+
+
+		function updateValues(context) {
+			if (context === 'days') {
+				displayValue('#js-days', window.days);
+				displayValue('#js-hours', window.hours);
+				displayValue('#js-minutes', window.minutes);
+				displayValue('#js-seconds', window.seconds);
+			} else if (context === 'hours') {
+				displayValue('#js-hours', window.hours);
+				displayValue('#js-minutes', window.minutes);
+				displayValue('#js-seconds', window.seconds);
+			} else if (context === 'minutes') {
+				displayValue('#js-minutes', window.minutes);
+				displayValue('#js-seconds', window.seconds);
+			}
+		}
+
+		function displayValue(target, value) {
+			var newDigit = $('<span></span>');
+			$(newDigit).text(pad(value))
+				.addClass('new');
+			$(target).prepend(newDigit);
+			$(target).find('.current').addClass('old').removeClass('current');
+			setTimeout(function () {
+				$(target).find('.old').remove();
+				$(target).find('.new').addClass('current').removeClass('new');
+			}, 900);
+		}
+
+		function pad(number) {
+			return ("0" + number).slice(-2);
+		}</script>
+
+
+
+
+
+
+	<script>
+		var TxtType = function (el, toRotate, period) {
+			this.toRotate = toRotate;
+			this.el = el;
+			this.loopNum = 0;
+			this.period = parseInt(period, 10) || 2000;
+			this.txt = '';
+			this.tick();
+			this.isDeleting = false;
+		};
+
+		TxtType.prototype.tick = function () {
+			var i = this.loopNum % this.toRotate.length;
+			var fullTxt = this.toRotate[i];
+
+			if (this.isDeleting) {
+				this.txt = fullTxt.substring(0, this.txt.length - 1);
+			} else {
+				this.txt = fullTxt.substring(0, this.txt.length + 1);
+			}
+
+			this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+			var that = this;
+			var delta = 100 - Math.random() * 50;
+
+			if (this.isDeleting) {
+				delta /= 2;
+			}
+
+			if (!this.isDeleting && this.txt === fullTxt) {
+				delta = 800; // Set a 1-second delay after displaying text
+				this.isDeleting = true;
+			} else if (this.isDeleting && this.txt === '') {
+				this.isDeleting = false;
+				this.loopNum++;
+				delta = 500;
+			}
+
+			setTimeout(function () {
+				that.tick();
+			}, delta);
+		};
+
+		window.onload = function () {
+			var elements = document.getElementsByClassName('typewrite');
+			for (var i = 0; i < elements.length; i++) {
+				var toRotate = elements[i].getAttribute('data-type');
+				var period = elements[i].getAttribute('data-period');
+				if (toRotate) {
+					new TxtType(elements[i], JSON.parse(toRotate), period);
+				}
+			}
+			// INJECT CSS
+			var css = document.createElement("style");
+
+			css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+			document.body.appendChild(css);
+		};
+	</script>
+
+	<script>
+		const btn = document.getElementById('btn');
+
+		btn.addEventListener('click', () => {
+			// 👇️ hide button
+			btn.style.display = 'none';
+
+			// 👇️ show div
+			const box = document.getElementById('box');
+			box.style.display = 'block';
+		});
+
+	</script>
+
+
+	<script>
+		const ban = document.getElementById('ban');
+
+		ban.addEventListener('click', () => {
+			// 👇️ hide button
+			ban.style.display = 'none';
+
+			// 👇️ show div
+			const box = document.getElementById('bax');
+			box.style.display = 'block';
+		});
+
+	</script>
+
+	<script>
+		const bbn = document.getElementById('bbn');
+
+		bbn.addEventListener('click', () => {
+			// 👇️ hide button
+			bbn.style.display = 'none';
+
+			// 👇️ show div
+			const bbx = document.getElementById('bbx');
+			bbx.style.display = 'block';
+		});
+
+	</script>
+	<script>
+		const bcn = document.getElementById('bcn');
+
+		bcn.addEventListener('click', () => {
+			// 👇️ hide button
+			bcn.style.display = 'none';
+
+			// 👇️ show div
+			const bcx = document.getElementById('bcx');
+			bcx.style.display = 'block';
+		});
+
+	</script>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var img = document.getElementById("myImg");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		img.onclick = function () {
+			modal.style.display = "block";
+			modalImg.src = this.src;
+			captionText.innerHTML = this.alt;
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+	</script>
+
+
+	<script src="assets/js/navbar.js"></script>
+
+	<script>
+    // JavaScript to trigger the fade-in effect after a delay (e.g., 2 seconds)
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        document.getElementById('overlay').style.opacity = '1';
+      }, 2000); // Adjust the delay as needed
+    });
+  </script>
 </body>
 
 </html>

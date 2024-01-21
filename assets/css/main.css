@@ -18,20 +18,7 @@ html {
   height: 100%;
 }
 
-body {
-  animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 
 
@@ -339,12 +326,12 @@ p:last-child {
 }
 
 .mt-150 {
-  margin-top: 150px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .mt-150 {
-    margin-top: 100px;
+    margin-top: -40px;
   }
 }
 
@@ -515,13 +502,13 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 }
 
 .breadcrumb-section {
-  padding: 150px 0;
+  padding: 50px 0;
   background-size: cover;
   background-position: center center;
   position: relative;
   z-index: 1;
   background-attachment: fixed;
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
 .breadcrumb-section:after {
