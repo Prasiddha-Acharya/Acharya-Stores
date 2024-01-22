@@ -303,12 +303,12 @@ p:last-child {
 }
 
 .mt-100 {
-  margin-top: 10px;
+  margin-top: 50px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .mt-100 {
-    margin-top: 10px;
+    margin-top: 50px;
   }
 }
 
@@ -323,12 +323,12 @@ p:last-child {
 }
 
 .mt-150 {
-  margin-top: 10px;
+  margin-top: 100px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .mt-150 {
-    margin-top: 10px;
+    margin-top: 50px;
   }
 }
 
@@ -343,12 +343,12 @@ p:last-child {
 }
 
 .pt-80 {
-  padding-top: 10px;
+  padding-top: 80px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .pt-80 {
-    padding-top: 10px;
+    padding-top: 50px;
   }
 }
 
@@ -363,12 +363,12 @@ p:last-child {
 }
 
 .pt-100 {
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .pt-100 {
-    padding-top: 10px;
+    padding-top: 50px;
   }
 }
 
@@ -383,12 +383,12 @@ p:last-child {
 }
 
 .pt-150 {
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 @media only screen and (max-width: 767.96px) {
   .pt-150 {
-    padding-top: 10px;
+    padding-top: 50px;
   }
 }
 
@@ -869,7 +869,7 @@ a.mobile-show {
 .footer-area {
   background-color: #051922;
   color: #fff;
-  padding: 150px 0;
+  padding: 50px 0;
 }
 
 h2.widget-title {
