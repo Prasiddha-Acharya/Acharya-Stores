@@ -869,7 +869,7 @@ a.mobile-show {
 .footer-area {
   background-color: #051922;
   color: #fff;
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 h2.widget-title {
@@ -2294,7 +2294,7 @@ a.video-play-btn {
 }
 
 .feature-bg:after {
-  background-image: url(../img/feature-bg.jpg);
+  background-image: url(/img/feature-bg.jpg);
   position: absolute;
   right: 0;
   top: 0;
@@ -2310,20 +2310,17 @@ a.video-play-btn {
 }
 
 .team-bg-1 {
-  background-image: url(../img/team/team-1.jpg);
+  background-image: url(/img/sita.JPG);
 }
 
 .team-bg-2 {
-  background-image: url(../img/team/team-2.jpg);
+  background-image: url(/img/prem.jpg);
 }
 
 .team-bg-3 {
-  background-image: url(../img/team/team-3.jpg);
+  background-image: url(/img/prasiddha.jpg);
 }
 
-.team-bg-4 {
-  background-image: url(../img/team/team-4.jpg);
-}
 
 .team-bg {
   height: 400px;
