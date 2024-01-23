@@ -44,4 +44,20 @@
             echo '<div>Your message sending failed!</div>';
         }
     }
+
+
+    $success = mail($to, $subject, $body, $headers, "-t -i -f $from");
+
+if ($success) {
+    echo '<div class="success"><i class="fas fa-check-circle"></i><h3>Thank You!</h3>Your message has been sent successfully.</div>';
+} else {
+    echo '<div>Error: Unable to send the email.</div>';
+    error_log('Error sending email: ' . error_get_last()['message']);
+}
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
+
+
