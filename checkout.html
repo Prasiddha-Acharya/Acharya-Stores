@@ -494,7 +494,29 @@ select {
 									data-parent="#accordionExample">
 									<div class="card-body">
 										<div class="billing-address-form">
-											<form action="index.html">
+
+											<form action="mail.php" method="post">
+												<!-- Add a hidden field for the token -->
+												<input type="hidden" name="token" value="FsWga4&@f6aw">
+											
+												<label for="name">Name:</label>
+												<input type="text" name="name" required><br>
+											
+												<label for="email">Email:</label>
+												<input type="email" name="email" required><br>
+											
+												<label for="phone">Phone:</label>
+												<input type="tel" name="phone"><br>
+											
+												<label for="subject">Subject:</label>
+												<input type="text" name="subject" required><br>
+											
+												<label for="message">Message:</label>
+												<textarea name="message" rows="4" required></textarea><br>
+											
+												<input type="submit" value="Submit">
+											</form>
+											<form action="mail.php" method="post">
 
 												
 												<p><input type="text" placeholder="Name"></p>
@@ -628,7 +650,7 @@ select {
 						<style>
 							@media only screen and (max-width: 767px) {
 								.social-icons {
-									margin-left: -205px;
+									margin-left: -155px;
 								}
 							}
 						</style>
@@ -681,7 +703,7 @@ select {
 		<div class="container">
 
 			<div style="max-width: 100%; text-align: center;" class="col-lg-6 col-md-12">
-				<p>Copyrights &copy; 2023 - <a href="">Acharya Stores</a>, All Rights Reserved ||
+				<p>Copyrights &copy; 2024 - <a href="https://acharyastores.com.np">Acharya Stores</a>, All Rights Reserved ||
 					Developed by <a href="https://prasiddhaacharya.com.np/" target="_main">Prasiddha Acharya</a>
 				</p>
 				<span class="mobile-line-break"></span>
