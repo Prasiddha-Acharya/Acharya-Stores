@@ -45,6 +45,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
 	</script>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <style>
 	#uploadSection {
@@ -387,10 +388,12 @@
             <td>
                 <select id="Products" >
 					<option value="" disabled selected>Select a product</option>
-                    <option value="chini">चिनी (Sugar)</option>
-                    <option value="mishri">Mishri</option>
-                    <option value="chana">Chana</option>
-                    <option value="musuridaal">Daal</option>
+                    <option value="Chini">चिनी (Sugar)</option>
+                    <option value="Mishri">Mishri</option>
+                    <option value="Chana">Chana</option>
+                    <option value="Musuri-Daal">Daal</option>
+					<option value="Kaalo-Daal">Kaalo Daal</option>
+					<option value="Jwano">Jwano</option>
                 </select>
             </td>
             <td id="priceContainer">
@@ -445,17 +448,18 @@ select {
 }
 
 </style>
-
 <script>
     const ProductsSelect = document.getElementById('Products');
     const priceContainer = document.getElementById('priceContainer');
     const productPrice = document.getElementById('productPrice');
 
     const prices = {
-        chini: 110,
-        mishri: 180,
-        chana: 140,
-        musuridaal: 180,
+        Chini: 110,
+        Mishri: 180,
+        Chana: 140,
+        'musuri-daal': 180, 
+		'Kaalo-Daal': 200,
+		Jwano: 100,
     };
 
     ProductsSelect.addEventListener('change', () => {
@@ -479,7 +483,8 @@ select {
             ProductsSelect.dispatchEvent(new Event('change'));
         }
     });
-</script> <br> <br>
+</script>
+<br> <br>
 							<div class="card single-accordion">
 								<div class="card-header" id="headingOne">
 									<h5 class="mb-0">
@@ -494,37 +499,26 @@ select {
 									data-parent="#accordionExample">
 									<div class="card-body">
 										<div class="billing-address-form">
+											
 
-											<form action="mail.php" method="post">
-												<!-- Add a hidden field for the token -->
-												<input type="hidden" name="token" value="FsWga4&@f6aw">
+											<form action="https://script.google.com/macros/s/AKfycbwxbl5eArk-cWGh8-8hiQKMD9nzODvPd0CRaOk0oiv2ztjWlOAybCoS4_byOWUVpG1l/exec" method="POST" name="orderForm" onsubmit="return validateForm()">
+												<p><input type="text" name="fullName" placeholder="Name"></p>
+												<p><input type="email" name="email" placeholder="Email"></p>
+												<p><input type="text" name="address" placeholder="Address"></p>
+												<p><input type="tel" name="phone" placeholder="Phone"></p>
+												<style>
+													#productName {
+													  display: none;
+													}
+												  </style>
+												  
+												  <p><input type="text" name="productName" id="productName" placeholder="productName"></p>
+												  
+												<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
 											
-												<label for="name">Name:</label>
-												<input type="text" name="name" required><br>
-											
-												<label for="email">Email:</label>
-												<input type="email" name="email" required><br>
-											
-												<label for="phone">Phone:</label>
-												<input type="tel" name="phone"><br>
-											
-												<label for="subject">Subject:</label>
-												<input type="text" name="subject" required><br>
-											
-												<label for="message">Message:</label>
-												<textarea name="message" rows="4" required></textarea><br>
-											
-												<input type="submit" value="Submit">
-											</form>
-											<form action="mail.php" method="post">
 
-												
-												<p><input type="text" placeholder="Name"></p>
-												<p><input type="email" placeholder="Email"></p>
-												<p><input type="text" placeholder="Address"></p>
-												<p><input type="tel" placeholder="Phone"></p>
-												<p><textarea name="bill" id="bill" cols="30" rows="10"
-														placeholder="Say Something"></textarea></p>
+										
+
 
 												<style>
 													.delivery {
@@ -561,7 +555,8 @@ select {
 													<p class="delivery" style=" font-size: 13px !important;
 		color: red;">Conditions for Home Delivery : <br>
 														*Only available for order above Rs.500 <br>
-														*Shipping fee is free inside Nayabazar area. <br>
+														*Shipping fee is free only inside Nayabazar area. <br>
+														*Shipping fee will be charged outside Nayabazar area. <br>
 														*Pre-payment should be done for home delivery. <br>
 														*Upload the screenshot of payment below. <br>
 													</p>
@@ -604,9 +599,31 @@ select {
 														name="paymentScreenshot">
 												</div>
 
-
-												<a href="#" class="boxed-btn">Place Order</a>
+												<button type="submit" name="submit" class="boxed-btn">Place Order</button>
 											</form>
+										
+											<script>
+												function validateForm() {
+													// Add your validation logic here
+													var fullName = document.forms["orderForm"]["fullName"].value;
+													var email = document.forms["orderForm"]["email"].value;
+													var address = document.forms["orderForm"]["address"].value;
+													var phone = document.forms["orderForm"]["phone"].value;
+										
+													// Add more fields as needed
+										
+													if (fullName == "" || email == "" || address == "" || phone == "") {
+														alert("All fields must be filled out");
+														return false;
+													}
+										
+													// You can add more complex validation logic here
+										
+													// If validation passes, show the thank you message
+													alert("Thank you for shopping with Acharya Stores. You will be soon notified about your order status. Stay tuned.");
+													return true;
+												}
+											</script>
 										</div>
 									</div>
 								</div>
@@ -1019,6 +1036,37 @@ select {
       }, 2000); // Adjust the delay as needed
     });
   </script>
+
+
+								
+<script>
+	$(document).ready(function () {
+		// Event listener for dropdown change
+		$("#Products").change(function () {
+			// Get the selected option value
+			var selectedProduct = $(this).val();
+			
+			// Set the value of the "Product Name" input field
+			$("#productName").val(selectedProduct);
+			
+			// Modify the URL (you can customize this as needed)
+			var newURL = "index.html?product=" + selectedProduct;
+			window.history.replaceState(null, null, newURL);
+		});
+	});
+</script>
+<script>
+	// To show the input field
+	function showProductInput() {
+	  document.getElementById("productName").style.display = "block";
+	}
+  
+	// To hide the input field again
+	function hideProductInput() {
+	  document.getElementById("productName").style.display = "none";
+	}
+  </script>
+  
 </body>
 
 </html>
