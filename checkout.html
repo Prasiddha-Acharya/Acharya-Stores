@@ -370,7 +370,25 @@
 	<div class="checkout-section mt-150 mb-150">
 		<div class="container" style="margin-top: -50px;">
 			<div id="orderNotification" class="order-notification"
-				style="display:none; margin-top: -60px; margin-bottom: -150px; text-align: center;">
+				style="display:none; text-align: center;">
+				<style>
+					/* Media query for desktop screens */
+					@media only screen and (min-width: 768px) {
+						.order-notification {
+							margin-top: -70px;
+							margin-bottom: -160px;
+						}
+					}
+
+					/* Media query for mobile screens */
+					@media only screen and (max-width: 767px) {
+						.order-notification {
+							/* Adjust the margin for mobile */
+							margin-top: 90px;
+							margin-bottom: -50px;
+						}
+					}
+				</style>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="100" height="100">
 					<!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
 					<path
@@ -656,49 +674,51 @@
 											<iframe id="hiddenIframe" name="hiddenIframe"
 												style="display:none;"></iframe>
 
-												<script>
-													function validateAndSubmitForm() {
-														if (!validateForm()) {
-															return false;
-														}
-												
-														// Set the target of the form to the hidden iframe
-														document.orderForm.target = "hiddenIframe";
-												
-														// Hide the form container
-														document.getElementById("orderFormContainer").style.display = "none";
-												
-														// Show the order notification text
-														document.getElementById("orderNotification").style.display = "block";
-												
-														// Return true to allow the form to be submitted
-														return true;
+											<script>
+												function validateAndSubmitForm() {
+													if (!validateForm()) {
+														return false;
 													}
-												
-													function validateForm() {
-														var fullName = document.forms["orderForm"]["fullName"].value;
-														var email = document.forms["orderForm"]["email"].value;
-														var address = document.forms["orderForm"]["address"].value;
-														var phone = document.forms["orderForm"]["phone"].value;
-												
-														// Add more validation checks as needed
-														if (fullName === "" || email === "" || address === "" || phone === "") {
-															alert("Please fill out all the required fields.");
-															return false;
-														}
-												
-														// You can add more specific validation checks here
-												
-														return true;
+
+													// Set the target of the form to the hidden iframe
+													document.orderForm.target = "hiddenIframe";
+
+													// Hide the form container
+													document.getElementById("orderFormContainer").style.display = "none";
+
+													// Show the order notification text
+													document.getElementById("orderNotification").style.display = "block";
+
+													// Scroll to the top of the page
+													window.scrollTo(0, 0);
+
+													// Return true to allow the form to be submitted
+													return true;
+												}
+
+												function validateForm() {
+													var fullName = document.forms["orderForm"]["fullName"].value;
+													var email = document.forms["orderForm"]["email"].value;
+													var address = document.forms["orderForm"]["address"].value;
+													var phone = document.forms["orderForm"]["phone"].value;
+
+													// Add more validation checks as needed
+													if (fullName === "" || email === "" || address === "" || phone === "") {
+														alert("Please fill out all the required fields.");
+														return false;
 													}
-												
-													// Add an event listener to handle the iframe load event
-													document.getElementById("hiddenIframe").addEventListener("load", function() {
-														// Reset the form target after the iframe has loaded
-														document.orderForm.target = "_self";
-													});
-												</script>
-												
+
+													// You can add more specific validation checks here
+
+													return true;
+												}
+
+												// Add an event listener to handle the iframe load event
+												document.getElementById("hiddenIframe").addEventListener("load", function () {
+													// Reset the form target after the iframe has loaded
+													document.orderForm.target = "_self";
+												});
+											</script>
 
 										</div>
 									</div>
