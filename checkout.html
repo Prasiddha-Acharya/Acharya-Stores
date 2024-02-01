@@ -516,7 +516,8 @@ select {
 												  
 												<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
 											
-
+												<p><input style="display: none;" type="text" name="OrderStatus" placeholder="Received" value="Received"></p>
+												<p><input style="display: none;" type="text" name="Time" placeholder="Time" value="=NOW()"></p>
 										
 
 
@@ -538,18 +539,19 @@ select {
 														/* Add some spacing between the checkbox and the label */
 													}
 												</style>
-												<label class="delivery" for="deliveryOption">Do you want home
-													delivery?</label>
+												
 
+												<!-- Home Delivery Option -->
+												<label class="delivery" for="deliveryOption">Do you want home delivery?</label>
 												<div class="checkbox-wrapper-55 delivery">
 													<label class="rocker rocker-small">
 														Home Delivery:
-														<input type="checkbox" id="deliveryOption" name="deliveryOption"
-															value="yes" onclick="handleDeliveryOption()">
+														<input type="checkbox" id="deliveryOption" name="HomeDelivery" value="yes" onclick="handleDeliveryOption()">
 														<span class="switch-left">Yes</span>
 														<span class="switch-right">No</span>
 													</label>
 												</div>
+											
 
 												<div class="delivery" id="uploadSection">
 													<p class="delivery" style=" font-size: 13px !important;

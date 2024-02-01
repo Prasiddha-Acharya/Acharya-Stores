@@ -90,74 +90,76 @@
 				max-width: 24.666667%;
 			}
 		}
-
 	</style>
-	
+
 	<!--PreLoader Ends-->
 
 	<header class="header">
 		<nav class="nav container">
 			<div class="nav__data">
-				<a style="font-weight: bold; font-family: Poppins, sans-serif;" href="#"
-					class="nav__logo">
+				<a style="font-weight: bold; font-family: Poppins, sans-serif;" href="#" class="nav__logo">
 					<style>
 						/* Base styles for the nav__logo class */
 						.nav__logo {
-						  font-weight: bold;
-						  font-family: 'Poppins', sans-serif;
-						  text-decoration: none; /* Assuming this is a link */
+							font-weight: bold;
+							font-family: 'Poppins', sans-serif;
+							text-decoration: none;
+							/* Assuming this is a link */
 						}
-					
+
 						/* Media queries for different screen sizes */
 						@media (min-width: 768px) {
-						  .nav__logo {
-							font-size: 30px;
-						  }
+							.nav__logo {
+								font-size: 30px;
+							}
 						}
-					
+
 						@media (max-width: 767px) {
-						  .nav__logo {
-							font-size: 25px;
-						  }
+							.nav__logo {
+								font-size: 25px;
+							}
 						}
 
 						@media (min-width: 768px) {
-						  .nav__logo {
-							font-size: 30px;
-						  }
+							.nav__logo {
+								font-size: 30px;
+							}
 						}
-					
+
 						@media (max-width: 767px) {
-						  .nav__logo {
-							font-size: 23px;
-							margin-top: 0px;
-						  }
+							.nav__logo {
+								font-size: 23px;
+								margin-top: 0px;
+							}
 						}
-						
-					  </style>
-					    <style>
-							/* Base styles for the SVG icon */
+					</style>
+					<style>
+						/* Base styles for the SVG icon */
+						.bi-shop-window {
+							width: 32px;
+							height: 32px;
+						}
+
+						/* Media query for smaller size on mobile devices */
+						@media (max-width: 767px) {
 							.bi-shop-window {
-							  width: 32px;
-							  height: 32px;
+								width: 23px;
+								/* Adjust the size as needed */
+								height: 24px;
+								/* Adjust the size as needed */
 							}
-						
-							/* Media query for smaller size on mobile devices */
-							@media (max-width: 767px) {
-							  .bi-shop-window {
-								width: 23px; /* Adjust the size as needed */
-								height: 24px; /* Adjust the size as needed */
-							  }
-							}
-						  </style>
-					  <svg style="margin-top: -6px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
-						<path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
-					  </svg> Acharya Stores
+						}
+					</style>
+					<svg style="margin-top: -6px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-shop-window" viewBox="0 0 16 16">
+						<path
+							d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
+					</svg> Acharya Stores
 				</a>
 
 				<style>
-				.nav__logo:hover {
-      color: white; 
+					.nav__logo:hover {
+						color: white;
 					}
 				</style>
 
@@ -271,10 +273,11 @@
 					<div class="hero-text">
 						<div class="hero-text-tablecell">
 							<p class="subtitle animated fadeInUp" style="opacity: 0;">1ST ONLINE STORE IN NAYABAZAR</p>
-							<h1 class="animated fadeInUp" style="opacity: 0; animation-delay: 0.3s;">Welcome to Acharya Stores</h1>
+							<h1 class="animated fadeInUp" style="opacity: 0; animation-delay: 0.3s;">Welcome to Acharya
+								Stores</h1>
 							<div class="hero-btns animated fadeInUp" style="opacity: 0; animation-delay: 0.5s;">
 								<a href="#products" class="boxed-btn">Start Shopping</a>
-								
+
 								<a href="contact.html" class="bordered-btn">Contact Us</a>
 							</div>
 						</div>
@@ -341,10 +344,10 @@
 				</div>
 			</div>
 
-			
+
 			<div id="grocery" class="col-lg-8 offset-lg-2 text-center">
 				<div class="section-title">
-					
+
 					<h3 style="font-size: 30px;">Grocery <span class="orange-text">Items</span></h3>
 				</div>
 			</div>
@@ -352,14 +355,13 @@
 			<div class="row">
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<img id="myImg" src="img/products/chini.jpg" alt="Snow" style="width:100%;max-width:300px">
-						<div id="myModal" class="modal">
-							<span class="close">&times;</span>
-							<img class="modal-content" id="img01">
+						<div class="gallery">
+							<a href="img/products/chini.jpg" data-lightbox='mygallery'><img src="img/products/chini.jpg"></a>
 						</div>
 						<h3>चिनी <br> (प्रती किलो)</h3>
 						<p class="product-price"><span></span>रु. ११० </p>
-						<a href="checkout.html?option=Chini" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=Chini" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -371,67 +373,73 @@
 						</div>
 						<h3>मिश्री <br> (प्रती किलो)</h3>
 						<p class="product-price"><span></span>रु. १८० </p>
-						<a href="checkout.html?option=Mishri" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+						<a href="checkout.html?option=Mishri" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+							Now</a>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href=""><img src="img/products/chana.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/chana.jpg" data-lightbox='mygallery'><img src="img/products/chana.jpg"></a>
 						</div>
 						<h3>चना <br> (प्रती किलो)</h3>
 						<p class="product-price"><span></span>रु. १४० </p>
-						<a href="checkout.html?option=Chana" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+						<a href="checkout.html?option=Chana" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+							Now</a>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/musuri dal.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/musuri dal.jpg" data-lightbox='mygallery'><img src="img/products/musuri dal.jpg"></a>
 						</div>
 						<h3>मुसुरी दाल <br> (प्रती किलो)</h3>
 						<p class="product-price"><span></span>रु. १८० </p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>z
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/kalo-dal.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/kalo-dal.jpg" data-lightbox='mygallery'><img src="img/products/kalo-dal.jpg"></a>
 						</div>
 						<h3>कालो दाल <br> (प्रती किलो)</h3>
 						<p class="product-price"><span></span>रु. १६० </p>
-						<a href="checkout.html?option=Kaalo-Daal" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+						<a href="checkout.html?option=Kaalo-Daal" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy Now</a>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/jwano.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/jwano.jpg" data-lightbox='mygallery'><img src="img/products/jwano.jpg"></a>
 						</div>
-						<h3>ज्वानो <br>  (प्रती पावा)</h3>
+						<h3>ज्वानो <br> (प्रती पावा)</h3>
 						<p class="product-price"><span></span>रु. १०० </p>
-						<a href="checkout.html?option=Jwano" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=Jwano" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
 
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/bread.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/bread.jpg" data-lightbox='mygallery'><img src="img/products/bread.jpg"></a>
 						</div>
-						<h3>पाउरोटी<br>  (Bread)</h3>
+						<h3>पाउरोटी<br> (Bread)</h3>
 						<p class="product-price"><span></span>रु. ५०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/suji.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/suji.jpg" data-lightbox='mygallery'><img src="img/products/suji.jpg"></a>
 						</div>
 						<h3>सुजी</h3>
 						<p class="product-price"><span></span>रु. ५०</p>
@@ -440,8 +448,8 @@
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/sunflower oil.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/sunflower oil.jpg" data-lightbox='mygallery'><img src="img/products/sunflower oil.jpg"></a>
 						</div>
 						<h3>सनफ्लावर तेल</h3>
 						<p class="product-price"><span></span>रु. ११०</p>
@@ -450,31 +458,30 @@
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/dabur red paste.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/dabur red paste.jpg" data-lightbox='mygallery'><img src="img/products/dabur red paste.jpg"></a>
 						</div>
-						<h3>डाबर रेड <br>  पेस्ट</h3>
+						<h3>डाबर रेड <br> पेस्ट</h3>
 						<p class="product-price"><span></span>रु. ३० </p>
 						<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/nut.jpg
-								" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/nut.jpg" data-lightbox='mygallery'><img src="img/products/nut.jpg"></a>
 						</div>
 						<h3>न्युटेला</h3>
 						<p class="product-price"><span></span>रु. ५०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/pasta.jpg
-							   " alt=""></a>
+						<div class="gallery">
+							<a href="img/products/pasta.jpg" data-lightbox='mygallery'><img src="img/products/pasta.jpg"></a>
 						</div>
 						<h3>पास्ता <br> (प्रती पावा)</h3>
 						<p class="product-price"><span></span>रु. ५०</p>
@@ -483,8 +490,8 @@
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/salt.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/salt.jpg" data-lightbox='mygallery'><img src="img/products/salt.jpg"></a>
 						</div>
 						<h3>नुुन</h3>
 						<p class="product-price"><span></span>रु. ३०</p>
@@ -494,8 +501,8 @@
 
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/ctc tea.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/ctc tea.jpg" data-lightbox='mygallery'><img src="img/products/ctc tea.jpg"></a>
 						</div>
 						<h3>चिया <br> (CTC)</h3>
 						<p class="product-price"><span></span>रु. २५ </p>
@@ -504,20 +511,20 @@
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/steel jute.jpg
-								" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/steel jute.jpg" data-lightbox='mygallery'><img src="img/products/steel jute.jpg"></a>
 						</div>
 						<h3>स्टिल झुट</h3>
 						<p class="product-price"><span></span>रु. ३०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/rajor.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/rajor.jpg" data-lightbox='mygallery'><img src="img/products/rajor.jpg"></a>
 						</div>
 						<h3>रेजर</h3>
 						<p class="product-price"><span></span>रु. ४० </p>
@@ -528,10 +535,10 @@
 
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/coconut biscuit.jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/coconut biscuit.jpg" data-lightbox='mygallery'><img src="img/products/coconut biscuit.jpg"></a>
 						</div>
-						<h3>Coconut <br>  Biscuit</h3>
+						<h3>Coconut <br> Biscuit</h3>
 						<p class="product-price"><span></span>रु. ५०</p>
 						<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
 					</div>
@@ -539,12 +546,13 @@
 
 				<div class="col-lg-2 col-md-2 text-center">
 					<div class="single-product-item">
-						<div class="product-image">
-							<a href="single-product.html"><img src="img/products/good day .jpg" alt=""></a>
+						<div class="gallery">
+							<a href="img/products/good day .jpg" data-lightbox='mygallery'><img src="img/products/good day .jpg"></a>
 						</div>
-						<h3>Good Day <br>  Biscuit</h3>
+						<h3>Good Day <br> Biscuit</h3>
 						<p class="product-price"><span></span>रु. ५० </p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -566,95 +574,100 @@
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/parle-g.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/parle-g.jpg" data-lightbox='mygallery'><img src="img/products/parle-g.jpg"></a>
 							</div>
 							<h3>Parle-G Biscuit</h3>
 							<p class="product-price"><span></span>रु. २५</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/biscuit .jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/biscuit .jpg" data-lightbox='mygallery'><img src="img/products/biscuit .jpg"></a>
 							</div>
 							<h3>Biscuit (सानो)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/blade.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/blade.jpg" data-lightbox='mygallery'><img src="img/products/blade.jpg"></a>
 							</div>
 							<h3>ब्लेड</h3>
 							<p class="product-price"><span></span>रु. ४० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/sancho.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/sancho.jpg" data-lightbox='mygallery'><img src="img/products/sancho.jpg"></a>
 							</div>
 							<h3>सन्चो</h3>
 							<p class="product-price"><span></span>रु. ४०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/shoe polish.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/shoe polish.jpg" data-lightbox='mygallery'><img src="img/products/shoe polish.jpg"></a>
 							</div>
 							<h3>सु-पोलिस</h3>
 							<p class="product-price"><span></span>रु. ६० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/salai.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/salai.jpg" data-lightbox='mygallery'><img src="img/products/salai.jpg"></a>
 							</div>
 							<h3>सलाई</h3>
 							<p class="product-price"><span></span>रु. २५ </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/small-ball.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/small-ball.jpg" data-lightbox='mygallery'><img src="img/products/small-ball.jpg"></a>
 							</div>
 							<h3>बल (सानो)</h3>
 							<p class="product-price"><span></span>रु. ८० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/big-ball.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/big-ball.jpg" data-lightbox='mygallery'><img src="img/products/big-ball.jpg"></a>
 							</div>
 							<h3>बल (ठुलो)</h3>
 							<p class="product-price"><span></span>रु. १०० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/chiya masala.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/chiya masala.jpg" data-lightbox='mygallery'><img src="img/products/chiya masala.jpg"></a>
 							</div>
 							<h3>चिया मसाला</h3>
 							<p class="product-price"><span></span>रु. ७०</p>
@@ -665,30 +678,30 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/meat masala.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/meat masala.jpg" data-lightbox='mygallery'><img src="img/products/meat masala.jpg"></a>
 							</div>
 							<h3>मिट मसाला</h3>
 							<p class="product-price"><span></span>रु. ४० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/sabji masala.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/sabji masala.jpg" data-lightbox='mygallery'><img src="img/products/sabji masala.jpg"></a>
 							</div>
 							<h3>सब्जी मसाला</h3>
 							<p class="product-price"><span></span>रु. ४० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/momo masala.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/momo masala.jpg" data-lightbox='mygallery'><img src="img/products/momo masala.jpg"></a>
 							</div>
 							<h3>मम: मसाला</h3>
 							<p class="product-price"><span></span>रु. ४० </p>
@@ -699,19 +712,19 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/khukuri churot.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/khukuri churot.jpg" data-lightbox='mygallery'><img src="img/products/khukuri churot.jpg"></a>
 							</div>
 							<h3>खुकुरी चुरोट (प्रती बट्टा)</h3>
 							<p class="product-price"><span></span>रु. १३०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/surya churot.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/surya churot.jpg" data-lightbox='mygallery'><img src="img/products/surya churot.jpg"></a>
 							</div>
 							<h3>सुर्य चुरोट (प्रती बट्टा)</h3>
 							<p class="product-price"><span></span>रु. ३०० </p>
@@ -723,21 +736,21 @@
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/current.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/current.jpg" data-lightbox='mygallery'><img src="img/products/current.jpg"></a>
 							</div>
 							<h3>Current चाउचाउ (सानो)</h3>
 							<p class="product-price"><span></span>रु. २० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/current big.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/current big.jpg" data-lightbox='mygallery'><img src="img/products/current big.jpg"></a>
 							</div>
 							<h3>Current चाउचाउ (ठुलो)</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
@@ -748,39 +761,42 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/rum pum.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/rum pum.jpg" data-lightbox='mygallery'><img src="img/products/rum pum.jpg"></a>
 							</div>
 							<h3>रमपम चाउचाउ </h3>
 							<p class="product-price"><span></span>रु. २०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/gold-finger.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/gold-finger.jpg" data-lightbox='mygallery'><img src="img/products/gold-finger.jpg"></a>
 							</div>
 							<h3>गोल्ड फिंगर</h3>
 							<p class="product-price"><span></span>रु. ४०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/finger-chips.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/finger-chips.jpg" data-lightbox='mygallery'><img src="img/products/finger-chips.jpg"></a>
 							</div>
 							<h3>फिंगर चिप्स</h3>
 							<p class="product-price"><span></span>रु. ४०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/papad.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/papad.jpg" data-lightbox='mygallery'><img src="img/products/papad.jpg"></a>
 							</div>
 							<h3>पापड</h3>
 							<p class="product-price"><span></span>रु. ३०</p>
@@ -794,54 +810,55 @@
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<img id="myImg" src="img/products/brush cheaper.jpg" alt="Snow"
-								style="width:100%;max-width:300px">
-							<div id="myModal" class="modal">
-								<span class="close">&times;</span>
-								<img class="modal-content" id="img01">
+							<div class="gallery">
+								<a href="img/products/brush cheaper.jpg" data-lightbox='mygallery'><img src="img/products/brush cheaper.jpg"></a>
 							</div>
 							<h3>ब्रस (सस्तो)</h3>
 							<p class="product-price"><span></span>रु. २५</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/brush.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/brush.jpg" data-lightbox='mygallery'><img src="img/products/brush.jpg"></a>
 							</div>
 							<h3>ब्रस (महङ्गो)</h3>
 							<p class="product-price"><span></span>रु. ६० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/lwang.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/lwang.jpg" data-lightbox='mygallery'><img src="img/products/lwang.jpg"></a>
 							</div>
 							<h3>ल्वाङ्ग (प्रती प्याकेट)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/marich.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/marich.jpg" data-lightbox='mygallery'><img src="img/products/marich.jpg"></a>
 							</div>
 							<h3>मरिच (प्रती प्याकेट)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/sukumel.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/sukumel.jpg" data-lightbox='mygallery'><img src="img/products/sukumel.jpg"></a>
 							</div>
 							<h3>सुकुमेल (प्रती प्याकेट)</h3>
 							<p class="product-price"><span></span>रु. २०</p>
@@ -852,8 +869,8 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/supari.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/supari.jpg" data-lightbox='mygallery'><img src="img/products/supari.jpg"></a>
 							</div>
 							<h3>सुपारी (प्रती प्याकेट)</h3>
 							<p class="product-price"><span></span>रु. १० </p>
@@ -864,18 +881,19 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/lifebuoy.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/lifebuoy.jpg" data-lightbox='mygallery'><img src="img/products/lifebuoy.jpg"></a>
 							</div>
 							<h3>Lifebuoy साबुन</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/lux soap.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/lux soap.jpg" data-lightbox='mygallery'><img src="img/products/lux soap.jpg"></a>
 							</div>
 							<h3>LUX साबुन</h3>
 							<p class="product-price"><span></span>रु. ५५ </p>
@@ -886,18 +904,19 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/vim soap.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/vim soap.jpg" data-lightbox='mygallery'><img src="img/products/vim soap.jpg"></a>
 							</div>
 							<h3>VIM साबुन (भाडा माझ्ने)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/kalo-sabun.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/kalo-sabun.jpg" data-lightbox='mygallery'><img src="img/products/kalo-sabun.jpg"></a>
 							</div>
 							<h3>कालो साबुन (भाडा माझ्ने)</h3>
 							<p class="product-price"><span></span>रु. १५ </p>
@@ -908,41 +927,43 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/dhoni laundary soap.jpg"
-										alt=""></a>
+							<div class="gallery">
+								<a href="img/products/dhoni laundary soap.jpg" data-lightbox='mygallery'><img src="img/products/dhoni laundary soap.jpg"></a>
 							</div>
 							<h3>DHONI साबुन (कपडा धुने)</h3>
 							<p class="product-price"><span></span>रु. ३५</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/surf.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/surf.jpg" data-lightbox='mygallery'><img src="img/products/surf.jpg"></a>
 							</div>
 							<h3>Surf (सानो)</h3>
 							<p class="product-price"><span></span>रु. २५</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/frooti.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/frooti.jpg" data-lightbox='mygallery'><img src="img/products/frooti.jpg"></a>
 							</div>
 							<h3>Frooti</h3>
 							<p class="product-price"><span></span>रु. ३०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/sprite.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/sprite.jpg" data-lightbox='mygallery'><img src="img/products/sprite.jpg"></a>
 							</div>
 							<h3>Sprite (Jumbo)</h3>
 							<p class="product-price"><span></span>रु. २००</p>
@@ -953,50 +974,53 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/sprite medium.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/sprite medium.jpg" data-lightbox='mygallery'><img src="img/products/sprite medium.jpg"></a>
 							</div>
 							<h3>Sprite (Medium)</h3>
 							<p class="product-price"><span></span>रु. १०० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/lachi-dhago.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/lachi-dhago.jpg" data-lightbox='mygallery'><img src="img/products/lachi-dhago.jpg"></a>
 							</div>
 							<h3>धागो (प्रती ल्हाच्छी)</h3>
 							<p class="product-price"><span></span>रु. ७० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/2pm cheese ball.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/2pm cheese ball.jpg" data-lightbox='mygallery'><img src="img/products/2pm cheese ball.jpg"></a>
 							</div>
 							<h3>2PM Cheese Ball</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/2pm stck kurkure.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/2pm stck kurkure.jpg" data-lightbox='mygallery'><img src="img/products/2pm stck kurkure.jpg"></a>
 							</div>
 							<h3>2PM Stix (Kurkure)</h3>
 							<p class="product-price"><span></span>रु. ५० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/2pm acabare twings.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/2pm acabare twings.jpg" data-lightbox='mygallery'><img src="img/products/2pm acabare twings.jpg"></a>
 							</div>
 							<h3>2PM Akabare Twigs (Kurkure)</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
@@ -1007,29 +1031,30 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/2pm kurkure.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/2pm kurkure.jpg" data-lightbox='mygallery'><img src="img/products/2pm kurkure.jpg"></a>
 							</div>
 							<h3>2PM Kurkure</h3>
 							<p class="product-price"><span></span>रु. ५० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/2pm small acabare kurkure.jpg
-								" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/2pm small acabare kurkure.jpg" data-lightbox='mygallery'><img src="img/products/2pm small acabare kurkure.jpg"></a>
 							</div>
 							<h3>2PM Akabare Twigs (Small)</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/cheese ball.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/cheese ball.jpg" data-lightbox='mygallery'><img src="img/products/cheese ball.jpg"></a>
 							</div>
 							<h3>Cheese Ball</h3>
 							<p class="product-price"><span></span>रु. १०</p>
@@ -1040,22 +1065,24 @@
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/kurkure.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/kurkure.jpg" data-lightbox='mygallery'><img src="img/products/kurkure.jpg"></a>
 							</div>
 							<h3>Kurkure</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
 						<div class="single-product-item">
-							<div class="product-image">
-								<a href="single-product.html"><img src="img/products/matar.jpg" alt=""></a>
+							<div class="gallery">
+								<a href="img/products/matar.jpg" data-lightbox='mygallery'><img src="img/products/matar.jpg"></a>
 							</div>
 							<h3>मटर</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
@@ -1133,7 +1160,8 @@
 						</div>
 						<h3>Lipstick (सस्तो)</h3>
 						<p class="product-price"><span></span>रु. 60</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -1164,7 +1192,8 @@
 						</div>
 						<h3>Papaya Face Cream</h3>
 						<p class="product-price"><span></span>रु. ३50</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -1205,7 +1234,8 @@
 						</div>
 						<h3>Siglo मेहेन्दी (Red)</h3>
 						<p class="product-price"><span></span>रु. ६०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -1319,7 +1349,8 @@
 							</div>
 							<h3>Glycerin (Small)</h3>
 							<p class="product-price"><span></span>रु. ६० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1329,7 +1360,8 @@
 							</div>
 							<h3>Diaper</h3>
 							<p class="product-price"><span></span>रु. १०० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1395,7 +1427,8 @@
 							</div>
 							<h3>Johnson's Baby Powder (ठुलो)</h3>
 							<p class="product-price"><span></span>रु. 150</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1405,7 +1438,8 @@
 							</div>
 							<h3>Johnson's Baby Powder (सानो)</h3>
 							<p class="product-price"><span></span>रु. ८०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1416,7 +1450,8 @@
 							</div>
 							<h3>Himalaya Baby Powder</h3>
 							<p class="product-price"><span></span>रु. १५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1426,7 +1461,8 @@
 							</div>
 							<h3>मोती माला</h3>
 							<p class="product-price"><span></span>रु. ६०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1436,7 +1472,8 @@
 							</div>
 							<h3>ल्हाच्छा</h3>
 							<p class="product-price"><span></span>रु. ८०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1457,7 +1494,8 @@
 							</div>
 							<h3>Moisturizing Cream</h3>
 							<p class="product-price"><span></span>रु. ३५</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1467,7 +1505,8 @@
 							</div>
 							<h3>LipGuard</h3>
 							<p class="product-price"><span></span>रु. ६०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1488,7 +1527,8 @@
 							</div>
 							<h3>Sunsilk Shampoo (३ पिस)</h3>
 							<p class="product-price"><span></span>रु. १० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1498,7 +1538,8 @@
 							</div>
 							<h3>Dove Shampoo (१ पिस)</h3>
 							<p class="product-price"><span></span>रु. ५ </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1508,7 +1549,8 @@
 							</div>
 							<h3>Dove Conditioner (१ पिस)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1530,7 +1572,8 @@
 							</div>
 							<h3>Goorej Rich Creme मेहेन्दी (Black)</h3>
 							<p class="product-price"><span></span>रु. ७०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1540,7 +1583,8 @@
 							</div>
 							<h3>Nisha मेहेन्दी <br> (Black)</h3>
 							<p class="product-price"><span></span>रु. ५० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1550,7 +1594,8 @@
 							</div>
 							<h3>Nisha मेहेन्दी (Red)</h3>
 							<p class="product-price"><span></span>रु. ५० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1560,7 +1605,8 @@
 							</div>
 							<h3>Nisha मेहेन्दी (Yellow)</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1570,7 +1616,8 @@
 							</div>
 							<h3>Neeta मेहेन्दी (Black)</h3>
 							<p class="product-price"><span></span>रु. २०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1581,7 +1628,8 @@
 							</div>
 							<h3>Neeta मेहेन्दी (Red)</h3>
 							<p class="product-price"><span></span>रु. ३०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
@@ -1593,7 +1641,8 @@
 							</div>
 							<h3>Headbin</h3>
 							<p class="product-price"><span></span>रु. १००</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
@@ -1605,7 +1654,8 @@
 							</div>
 							<h3>Johnson's Baby Soap</h3>
 							<p class="product-price"><span></span>रु. ७०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1626,7 +1676,8 @@
 							</div>
 							<h3>Denver Perfume</h3>
 							<p class="product-price"><span></span>रु. ५००</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1636,7 +1687,8 @@
 							</div>
 							<h3>Melody Perfume</h3>
 							<p class="product-price"><span></span>रु. २५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1646,7 +1698,8 @@
 							</div>
 							<h3>Pocket Perfume</h3>
 							<p class="product-price"><span></span>रु. १४०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1656,7 +1709,8 @@
 							</div>
 							<h3>Sunsilk Shampoo (बट्टा)</h3>
 							<p class="product-price"><span></span>रु. ३५० </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1666,7 +1720,8 @@
 							</div>
 							<h3>Clear Shampoo (बट्टा)</h3>
 							<p class="product-price"><span></span>रु. २५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1676,7 +1731,8 @@
 							</div>
 							<h3>ऐना</h3>
 							<p class="product-price"><span></span>रु. १५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1686,7 +1742,8 @@
 							</div>
 							<h3>Ribbon (प्रती मिटर)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1696,7 +1753,8 @@
 							</div>
 							<h3>NailPolish (सस्तो)</h3>
 							<p class="product-price"><span></span>रु. ६०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1707,7 +1765,8 @@
 							</div>
 							<h3>NailPolish (महङ्गो)</h3>
 							<p class="product-price"><span></span>रु. ८०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1718,7 +1777,8 @@
 							</div>
 							<h3>Nail Polish Remover <br> (Liquid)</h3>
 							<p class="product-price"><span></span>रु. ८०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1729,7 +1789,8 @@
 							</div>
 							<h3>Nail Polish Remover <br> (Paper)</h3>
 							<p class="product-price"><span></span>रु. ४०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -1739,7 +1800,8 @@
 							</div>
 							<h3>काँईयो</h3>
 							<p class="product-price"><span></span>रु. ३०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
@@ -1895,7 +1957,8 @@
 						</div>
 						<h3>अष्टगन्ध</h3>
 						<p class="product-price"><span></span>रु. ३० </p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -1949,7 +2012,8 @@
 						</div>
 						<h3>कपुर</h3>
 						<p class="product-price"><span></span>रु. ६०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -1972,7 +2036,8 @@
 						</div>
 						<h3>जनै (२ पिस)</h3>
 						<p class="product-price"><span></span>रु. ५ </p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -2022,7 +2087,8 @@
 							</div>
 							<h3>जौ (प्रती पावा)</h3>
 							<p class="product-price"><span></span>रु. ६०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2032,7 +2098,8 @@
 							</div>
 							<h3>नरिवल (प्रती किलो)</h3>
 							<p class="product-price"><span></span>रु. ६००</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2043,7 +2110,8 @@
 							</div>
 							<h3>डमडम अबिर</h3>
 							<p class="product-price"><span></span>रु. ३०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2054,7 +2122,8 @@
 							</div>
 							<h3>कनह्यैया अबिर</h3>
 							<p class="product-price"><span></span>रु. ३०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2076,7 +2145,8 @@
 							</div>
 							<h3>सर्वोषधी</h3>
 							<p class="product-price"><span></span>रु. २०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2097,7 +2167,8 @@
 							</div>
 							<h3>पञ्चरत्न</h3>
 							<p class="product-price"><span></span>रु. २०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2107,7 +2178,8 @@
 							</div>
 							<h3>तिलको तेल</h3>
 							<p class="product-price"><span></span>रु. १४०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2117,7 +2189,8 @@
 							</div>
 							<h3>दोपट्टा</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2127,7 +2200,8 @@
 							</div>
 							<h3>हनुमान चालीसा</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2137,7 +2211,8 @@
 							</div>
 							<h3>पिताम्बरी</h3>
 							<p class="product-price"><span></span>रु. ५०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
@@ -2189,7 +2264,8 @@
 						</div>
 						<h3>Petrol (प्रती लि)</h3>
 						<p class="product-price"><span></span>रु. 180</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -2200,7 +2276,8 @@
 						</div>
 						<h3>Black Tape</h3>
 						<p class="product-price"><span></span>रु. ३०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -2231,7 +2308,8 @@
 						</div>
 						<h3>रुमाल</h3>
 						<p class="product-price"><span></span>रु. ५०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -2262,7 +2340,8 @@
 						</div>
 						<h3>कपी (मिडियम)</h3>
 						<p class="product-price"><span></span>रु. ३०</p>
-						<a href="checkout.html?option=" target="_main" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+						<a href="checkout.html?option=" target="_main" class="cart-btn"><i
+								class="fas fa-shopping-cart"></i>Buy
 							Now</a>
 					</div>
 				</div>
@@ -2302,7 +2381,8 @@
 							</div>
 							<h3>कपी (सानो)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2312,7 +2392,8 @@
 							</div>
 							<h3>फाईल</h3>
 							<p class="product-price"><span></span>रु. ३०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2333,7 +2414,8 @@
 							</div>
 							<h3>पेन्सिल</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2343,7 +2425,8 @@
 							</div>
 							<h3>खाम (प्रती गोटा)</h3>
 							<p class="product-price"><span></span>रु. १ </p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2365,7 +2448,8 @@
 							</div>
 							<h3>धागो (ठुलो)</h3>
 							<p class="product-price"><span></span>रु. ४०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-2 text-center">
@@ -2375,7 +2459,8 @@
 							</div>
 							<h3>धागो (सानो)</h3>
 							<p class="product-price"><span></span>रु. १०</p>
-							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+							<a href="checkout.html?option=" class="cart-btn"><i class="fas fa-shopping-cart"></i>Buy
+								Now</a>
 						</div>
 					</div>
 
@@ -2648,7 +2733,8 @@
 		<div class="container">
 
 			<div style="max-width: 100%; text-align: center;" class="col-lg-6 col-md-12">
-				<p>Copyrights &copy; 2024 - <a href="https://acharyastores.com.np">Acharya Stores</a>, All Rights Reserved ||
+				<p>Copyrights &copy; 2024 - <a href="https://acharyastores.com.np">Acharya Stores</a>, All Rights
+					Reserved ||
 					Developed by <a href="https://prasiddhaacharya.com.np/" target="_main">Prasiddha Acharya</a>
 				</p>
 				<span class="mobile-line-break"></span>
@@ -2957,13 +3043,13 @@
 	<script src="assets/js/navbar.js"></script>
 
 	<script>
-    // JavaScript to trigger the fade-in effect after a delay (e.g., 2 seconds)
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
-        document.getElementById('overlay').style.opacity = '1';
-      }, 2000); // Adjust the delay as needed
-    });
-  </script>
+		// JavaScript to trigger the fade-in effect after a delay (e.g., 2 seconds)
+		document.addEventListener("DOMContentLoaded", function () {
+			setTimeout(function () {
+				document.getElementById('overlay').style.opacity = '1';
+			}, 2000); // Adjust the delay as needed
+		});
+	</script>
 </body>
 
 </html>
