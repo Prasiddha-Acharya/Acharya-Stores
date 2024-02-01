@@ -45,184 +45,184 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
 	</script>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<style>
-	#uploadSection {
-		margin-top: 10px;
-		display: none;
-	}
+	<style>
+		#uploadSection {
+			margin-top: 10px;
+			display: none;
+		}
 
-	/* Styles for the file input */
-	#paymentScreenshot {
-		color: red;
-		/* Text color for "No file chosen" */
-	}
+		/* Styles for the file input */
+		#paymentScreenshot {
+			color: red;
+			/* Text color for "No file chosen" */
+		}
 
-	#paymentScreenshot::file-selector-button {
-		background-color: #0084d0;
-		/* Button color for "Choose File" */
-		color: white;
-		padding: 5px 10px;
-		border: none;
-		border-radius: 5px;
-		cursor: pointer;
-	}
-
-
+		#paymentScreenshot::file-selector-button {
+			background-color: #0084d0;
+			/* Button color for "Choose File" */
+			color: white;
+			padding: 5px 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
 
 
-	.checkbox-wrapper-55 input[type="checkbox"] {
-		visibility: hidden;
-		display: none;
-	}
 
-	.checkbox-wrapper-55 *,
-	.checkbox-wrapper-55 ::after,
-	.checkbox-wrapper-55 ::before {
-		box-sizing: border-box;
-	}
 
-	.checkbox-wrapper-55 .rocker {
-		display: inline-block;
-		position: relative;
-		font-size: 2em;
-		font-weight: bold;
-		text-align: center;
-		text-transform: uppercase;
-		color: #888;
-		width: 7em;
-		height: 4em;
-		overflow: hidden;
-		border-bottom: 0.5em solid #eee;
-	}
+		.checkbox-wrapper-55 input[type="checkbox"] {
+			visibility: hidden;
+			display: none;
+		}
 
-	.checkbox-wrapper-55 .rocker-small {
-		font-size: 0.75em;
-	}
+		.checkbox-wrapper-55 *,
+		.checkbox-wrapper-55 ::after,
+		.checkbox-wrapper-55 ::before {
+			box-sizing: border-box;
+		}
 
-	.checkbox-wrapper-55 .rocker::before {
-		content: "";
-		position: absolute;
-		top: 0.5em;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: #999;
-		border: 0.5em solid #eee;
-		border-bottom: 0;
-	}
+		.checkbox-wrapper-55 .rocker {
+			display: inline-block;
+			position: relative;
+			font-size: 2em;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			color: #888;
+			width: 7em;
+			height: 4em;
+			overflow: hidden;
+			border-bottom: 0.5em solid #eee;
+		}
 
-	.checkbox-wrapper-55 .switch-left,
-	.checkbox-wrapper-55 .switch-right {
-		cursor: pointer;
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 2.5em;
-		width: 3em;
-		transition: 0.2s;
-		user-select: none;
-	}
+		.checkbox-wrapper-55 .rocker-small {
+			font-size: 0.75em;
+		}
 
-	.checkbox-wrapper-55 .switch-left {
-		height: 2.4em;
-		width: 2.75em;
-		left: 0.85em;
-		bottom: 0.4em;
-		background-color: #ddd;
-		transform: rotate(15deg) skewX(15deg);
-	}
+		.checkbox-wrapper-55 .rocker::before {
+			content: "";
+			position: absolute;
+			top: 0.5em;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #999;
+			border: 0.5em solid #eee;
+			border-bottom: 0;
+		}
 
-	.checkbox-wrapper-55 .switch-right {
-		right: 0.5em;
-		bottom: 0;
-		background-color: #bd5757;
-		color: #fff;
-	}
+		.checkbox-wrapper-55 .switch-left,
+		.checkbox-wrapper-55 .switch-right {
+			cursor: pointer;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 2.5em;
+			width: 3em;
+			transition: 0.2s;
+			user-select: none;
+		}
 
-	.checkbox-wrapper-55 .switch-left::before,
-	.checkbox-wrapper-55 .switch-right::before {
-		content: "";
-		position: absolute;
-		width: 0.4em;
-		height: 2.45em;
-		bottom: -0.45em;
-		background-color: #ccc;
-		transform: skewY(-65deg);
-	}
+		.checkbox-wrapper-55 .switch-left {
+			height: 2.4em;
+			width: 2.75em;
+			left: 0.85em;
+			bottom: 0.4em;
+			background-color: #ddd;
+			transform: rotate(15deg) skewX(15deg);
+		}
 
-	.checkbox-wrapper-55 .switch-left::before {
-		left: -0.4em;
-	}
+		.checkbox-wrapper-55 .switch-right {
+			right: 0.5em;
+			bottom: 0;
+			background-color: #bd5757;
+			color: #fff;
+		}
 
-	.checkbox-wrapper-55 .switch-right::before {
-		right: -0.375em;
-		background-color: transparent;
-		transform: skewY(65deg);
-	}
+		.checkbox-wrapper-55 .switch-left::before,
+		.checkbox-wrapper-55 .switch-right::before {
+			content: "";
+			position: absolute;
+			width: 0.4em;
+			height: 2.45em;
+			bottom: -0.45em;
+			background-color: #ccc;
+			transform: skewY(-65deg);
+		}
 
-	.checkbox-wrapper-55 input:checked+.switch-left {
-		background-color: #0084d0;
-		color: #fff;
-		bottom: 0px;
-		left: 0.5em;
-		height: 2.5em;
-		width: 3em;
-		transform: rotate(0deg) skewX(0deg);
-	}
+		.checkbox-wrapper-55 .switch-left::before {
+			left: -0.4em;
+		}
 
-	.checkbox-wrapper-55 input:checked+.switch-left::before {
-		background-color: transparent;
-		width: 3.0833em;
-	}
+		.checkbox-wrapper-55 .switch-right::before {
+			right: -0.375em;
+			background-color: transparent;
+			transform: skewY(65deg);
+		}
 
-	.checkbox-wrapper-55 input:checked+.switch-left+.switch-right {
-		background-color: #ddd;
-		color: #888;
-		bottom: 0.4em;
-		right: 0.8em;
-		height: 2.4em;
-		width: 2.75em;
-		transform: rotate(-15deg) skewX(-15deg);
-	}
+		.checkbox-wrapper-55 input:checked+.switch-left {
+			background-color: #0084d0;
+			color: #fff;
+			bottom: 0px;
+			left: 0.5em;
+			height: 2.5em;
+			width: 3em;
+			transform: rotate(0deg) skewX(0deg);
+		}
 
-	.checkbox-wrapper-55 input:checked+.switch-left+.switch-right::before {
-		background-color: #ccc;
-	}
+		.checkbox-wrapper-55 input:checked+.switch-left::before {
+			background-color: transparent;
+			width: 3.0833em;
+		}
 
-	.checkbox-wrapper-55 input:focus+.switch-left {
-		color: #333;
-	}
+		.checkbox-wrapper-55 input:checked+.switch-left+.switch-right {
+			background-color: #ddd;
+			color: #888;
+			bottom: 0.4em;
+			right: 0.8em;
+			height: 2.4em;
+			width: 2.75em;
+			transform: rotate(-15deg) skewX(-15deg);
+		}
 
-	.checkbox-wrapper-55 input:checked:focus+.switch-left {
-		color: #fff;
-	}
+		.checkbox-wrapper-55 input:checked+.switch-left+.switch-right::before {
+			background-color: #ccc;
+		}
 
-	.checkbox-wrapper-55 input:focus+.switch-left+.switch-right {
-		color: #fff;
-	}
+		.checkbox-wrapper-55 input:focus+.switch-left {
+			color: #333;
+		}
 
-	.checkbox-wrapper-55 input:checked:focus+.switch-left+.switch-right {
-		color: #333;
-	}
+		.checkbox-wrapper-55 input:checked:focus+.switch-left {
+			color: #fff;
+		}
 
-	/* Additional styles for the upload section */
-	#uploadSection {
-		margin-top: 10px;
-		display: none;
-	}
-</style>
-<script>
-	function handleDeliveryOption() {
-		var deliveryOption = document.getElementById("deliveryOption");
-		var uploadSection = document.getElementById("uploadSection");
+		.checkbox-wrapper-55 input:focus+.switch-left+.switch-right {
+			color: #fff;
+		}
 
-		// If "Yes" is selected, show the upload section; otherwise, hide it
-		uploadSection.style.display = deliveryOption.checked ? "block" : "none";
-	}
-</script>
+		.checkbox-wrapper-55 input:checked:focus+.switch-left+.switch-right {
+			color: #333;
+		}
+
+		/* Additional styles for the upload section */
+		#uploadSection {
+			margin-top: 10px;
+			display: none;
+		}
+	</style>
+	<script>
+		function handleDeliveryOption() {
+			var deliveryOption = document.getElementById("deliveryOption");
+			var uploadSection = document.getElementById("uploadSection");
+
+			// If "Yes" is selected, show the upload section; otherwise, hide it
+			uploadSection.style.display = deliveryOption.checked ? "block" : "none";
+		}
+	</script>
 
 
 </head>
@@ -232,66 +232,69 @@
 	<header class="header">
 		<nav class="nav container">
 			<div class="nav__data">
-				<a style="font-weight: bold; font-family: Poppins, sans-serif;" href="#"
-					class="nav__logo">
+				<a style="font-weight: bold; font-family: Poppins, sans-serif;" href="#" class="nav__logo">
 					<style>
 						/* Base styles for the nav__logo class */
 						.nav__logo {
-						  font-weight: bold;
-						  font-family: 'Poppins', sans-serif;
-						  text-decoration: none; /* Assuming this is a link */
+							font-weight: bold;
+							font-family: 'Poppins', sans-serif;
+							text-decoration: none;
+							/* Assuming this is a link */
 						}
-					
+
 						/* Media queries for different screen sizes */
 						@media (min-width: 768px) {
-						  .nav__logo {
-							font-size: 30px;
-						  }
+							.nav__logo {
+								font-size: 30px;
+							}
 						}
-					
+
 						@media (max-width: 767px) {
-						  .nav__logo {
-							font-size: 25px;
-						  }
+							.nav__logo {
+								font-size: 25px;
+							}
 						}
 
 						@media (min-width: 768px) {
-						  .nav__logo {
-							font-size: 30px;
-						  }
+							.nav__logo {
+								font-size: 30px;
+							}
 						}
-					
+
 						@media (max-width: 767px) {
-						  .nav__logo {
-							font-size: 23px;
-							margin-top: 0px;
-						  }
+							.nav__logo {
+								font-size: 23px;
+								margin-top: 0px;
+							}
 						}
-						
-					  </style>
-					    <style>
-							/* Base styles for the SVG icon */
+					</style>
+					<style>
+						/* Base styles for the SVG icon */
+						.bi-shop-window {
+							width: 32px;
+							height: 32px;
+						}
+
+						/* Media query for smaller size on mobile devices */
+						@media (max-width: 767px) {
 							.bi-shop-window {
-							  width: 32px;
-							  height: 32px;
+								width: 23px;
+								/* Adjust the size as needed */
+								height: 24px;
+								/* Adjust the size as needed */
 							}
-						
-							/* Media query for smaller size on mobile devices */
-							@media (max-width: 767px) {
-							  .bi-shop-window {
-								width: 23px; /* Adjust the size as needed */
-								height: 24px; /* Adjust the size as needed */
-							  }
-							}
-						  </style>
-					  <svg style="margin-top: -6px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
-						<path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
-					  </svg> Acharya Stores
+						}
+					</style>
+					<svg style="margin-top: -6px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+						class="bi bi-shop-window" viewBox="0 0 16 16">
+						<path
+							d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
+					</svg> Acharya Stores
 				</a>
 
 				<style>
-				.nav__logo:hover {
-      color: white; 
+					.nav__logo:hover {
+						color: white;
 					}
 				</style>
 
@@ -347,13 +350,13 @@
 		</nav>
 	</header>
 
-	
+
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg" style="padding-top: 0px; padding-bottom: 0px;">
-		<div class="container" >
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="breadcrumb-text" style="padding-top: 90px; padding-bottom: 30px;" >
+					<div class="breadcrumb-text" style="padding-top: 90px; padding-bottom: 30px;">
 						<p class="animated fadeInUp" style="opacity: 0; animation-delay: 0.3s;">Acharya Stores</p>
 						<h1 class="animated fadeInUp" style="opacity: 0; animation-delay: 0.s;">Check Out Product</h1>
 					</div>
@@ -366,266 +369,337 @@
 	<!-- check out section -->
 	<div class="checkout-section mt-150 mb-150">
 		<div class="container" style="margin-top: -50px;">
+			<div id="orderNotification" class="order-notification"
+				style="display:none; margin-top: -60px; margin-bottom: -150px; text-align: center;">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="100" height="100">
+					<!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+					<path
+						d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+				</svg>
 
- <br> <br>
+				<h1 style="font-size: 35px;">Your Order has been placed successfully!</h1>
+
+				<p style="font-size: 18px;
+		" class="delivery">Thank you for shopping with Acharya Stores. <br> You will be soon notified about your order
+					status. <br>Stay tuned!
+				</p>
+
+				<style>
+					.delivery {
+						font-family: "Poppins", sans-serif;
+						font-size: 200px;
+
+					}
+				</style>
+				<a style="margin-top: -10px;" href="https://acharyastores.com.np/" class="cart-btn">Back to Home</a>
+			</div>
+			<br> <br>
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="checkout-accordion-wrap">
 						<div class="accordion" id="accordionExample">
-							
-<div class="order-details-wrap">
-    <table style="width: 100%;" class="order-details delivery">
-        <thead>
-        <tr >
-            <th style="font-size: 15px;
+
+
+							<div id="orderFormContainer">
+								<div class="order-details-wrap">
+									<table style="width: 100%;" class="order-details delivery">
+										<thead>
+											<tr>
+												<th style="font-size: 15px;
 			font-weight: 600;">Product</th>
-            <th  style="font-size: 15px;
+												<th style="font-size: 15px;
 			font-weight: 600;" class="delivery">Price</th>
-        </tr>
-        </thead>
-        <tbody class="order-details-body">
-        <tr>
-            <td>
-                <select id="Products" >
-					<option value="" disabled selected>Select a product</option>
-                    <option value="Chini">चिनी (Sugar)</option>
-                    <option value="Mishri">Mishri</option>
-                    <option value="Chana">Chana</option>
-                    <option value="Musuri-Daal">Daal</option>
-					<option value="Kaalo-Daal">Kaalo Daal</option>
-					<option value="Jwano">Jwano</option>
-                </select>
-            </td>
-            <td id="priceContainer">
-                <p><span id="productPrice"></span></p>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<style>
-	label {
-    font-weight: bold;
-}
-
-select {
-    padding: 10px;
-    font-size: 16px;
-	font-weight: 600;
-    border: none; /* Remove border */
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    appearance: none; /* Remove default arrow in Firefox */
-    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
-    -moz-appearance: none; /* Remove default arrow in Firefox */
-    background: none; /* Remove background (optional) */
-	pointer-events: none;
-}
-
-#priceContainer {
-    display: none;
-    margin-top: 12px;
-	border: none;
-	color: red;
-}
-
-#productPrice {
-            font-size: 17px;
-            color: red;
-			font-weight: 600;
-														font-family: "Poppins", sans-serif;
-        }
-
-.order-details-wrap {
-    margin-top: 20px;
-}
-
-.order-details th,
-.order-details td {
-    padding: 10px;
-    text-align: left;
-}
-
-</style>
-<script>
-    const ProductsSelect = document.getElementById('Products');
-    const priceContainer = document.getElementById('priceContainer');
-    const productPrice = document.getElementById('productPrice');
-
-    const prices = {
-        Chini: 110,
-        Mishri: 180,
-        Chana: 140,
-        'musuri-daal': 180, 
-		'Kaalo-Daal': 200,
-		Jwano: 100,
-    };
-
-    ProductsSelect.addEventListener('change', () => {
-        const selectedOption = ProductsSelect.value;
-        const selectedPrice = prices[selectedOption];
-
-        productPrice.textContent = `Rs. ${selectedPrice}`;
-        priceContainer.style.display = 'block';
-
-        // You can add more logic here if needed
-
-        window.history.pushState(null, null, `?option=${selectedOption}`);
-    });
-
-    window.addEventListener('load', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const selectedOption = urlParams.get('option');
-
-        if (selectedOption) {
-            ProductsSelect.value = selectedOption;
-            ProductsSelect.dispatchEvent(new Event('change'));
-        }
-    });
-</script>
-<br> <br>
-							<div class="card single-accordion">
-								<div class="card-header" id="headingOne">
-									<h5 class="mb-0">
-										<button class="btn btn-link" type="button" data-toggle="collapse"
-											data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											Buyer Details
-										</button>
-									</h5>
+											</tr>
+										</thead>
+										<tbody class="order-details-body">
+											<tr>
+												<td>
+													<select id="Products">
+														<option value="" disabled selected>Select a product</option>
+														<option value="Chini">चिनी (Sugar)</option>
+														<option value="Mishri">Mishri</option>
+														<option value="Chana">Chana</option>
+														<option value="Musuri-Daal">Daal</option>
+														<option value="Kaalo-Daal">Kaalo Daal</option>
+														<option value="Jwano">Jwano</option>
+													</select>
+												</td>
+												<td id="priceContainer">
+													<p><span id="productPrice"></span></p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
+								<style>
+									label {
+										font-weight: bold;
+									}
 
-								<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-									data-parent="#accordionExample">
-									<div class="card-body">
-										<div class="billing-address-form">
-											
+									select {
+										padding: 10px;
+										font-size: 16px;
+										font-weight: 600;
+										border: none;
+										/* Remove border */
+										border-radius: 5px;
+										cursor: pointer;
+										margin-bottom: 10px;
+										appearance: none;
+										/* Remove default arrow in Firefox */
+										-webkit-appearance: none;
+										/* Remove default arrow in Chrome and Safari */
+										-moz-appearance: none;
+										/* Remove default arrow in Firefox */
+										background: none;
+										/* Remove background (optional) */
+										pointer-events: none;
+									}
 
-											<form action="https://script.google.com/macros/s/AKfycbwxbl5eArk-cWGh8-8hiQKMD9nzODvPd0CRaOk0oiv2ztjWlOAybCoS4_byOWUVpG1l/exec" method="POST" name="orderForm" onsubmit="return validateForm()">
-												<p><input type="text" name="fullName" placeholder="Name"></p>
-												<p><input type="email" name="email" placeholder="Email"></p>
-												<p><input type="text" name="address" placeholder="Address"></p>
-												<p><input type="tel" name="phone" placeholder="Phone"></p>
-												<style>
-													#productName {
-													  display: none;
-													}
-												  </style>
-												  
-												  <p><input type="text" name="productName" id="productName" placeholder="productName"></p>
-												  
-												<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-											
-												<p><input style="display: none;" type="text" name="OrderStatus" placeholder="Received" value="Received"></p>
-												<p><input style="display: none;" type="text" name="Time" placeholder="Time" value="=NOW()"></p>
-										
+									#priceContainer {
+										display: none;
+										margin-top: 12px;
+										border: none;
+										color: red;
+									}
+
+									#productPrice {
+										font-size: 17px;
+										color: red;
+										font-weight: 600;
+										font-family: "Poppins", sans-serif;
+									}
+
+									.order-details-wrap {
+										margin-top: 20px;
+									}
+
+									.order-details th,
+									.order-details td {
+										padding: 10px;
+										text-align: left;
+									}
+								</style>
+								<script>
+									const ProductsSelect = document.getElementById('Products');
+									const priceContainer = document.getElementById('priceContainer');
+									const productPrice = document.getElementById('productPrice');
+
+									const prices = {
+										Chini: 110,
+										Mishri: 180,
+										Chana: 140,
+										'musuri-daal': 180,
+										'Kaalo-Daal': 200,
+										Jwano: 100,
+									};
+
+									ProductsSelect.addEventListener('change', () => {
+										const selectedOption = ProductsSelect.value;
+										const selectedPrice = prices[selectedOption];
+
+										productPrice.textContent = `Rs. ${selectedPrice}`;
+										priceContainer.style.display = 'block';
+
+										// You can add more logic here if needed
+
+										window.history.pushState(null, null, `?option=${selectedOption}`);
+									});
+
+									window.addEventListener('load', () => {
+										const urlParams = new URLSearchParams(window.location.search);
+										const selectedOption = urlParams.get('option');
+
+										if (selectedOption) {
+											ProductsSelect.value = selectedOption;
+											ProductsSelect.dispatchEvent(new Event('change'));
+										}
+									});
+								</script>
+								<br> <br>
+								<div class="card single-accordion">
+									<div class="card-header" id="headingOne">
+										<h5 class="mb-0">
+											<button class="btn btn-link" type="button" data-toggle="collapse"
+												data-target="#collapseOne" aria-expanded="true"
+												aria-controls="collapseOne">
+												Buyer Details
+											</button>
+										</h5>
+									</div>
+
+									<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+										data-parent="#accordionExample">
+										<div class="card-body">
+											<div class="billing-address-form">
 
 
-												<style>
-													.delivery {
-														font-size: 15px;
-														font-weight: 600;
-														font-family: "Poppins", sans-serif;
-													}
-												</style>
 
-												<style>
-													/* Checkbox styles */
-													input[type="checkbox"] {
-														font-size: 15px;
-														font-weight: 600;
-														font-family: "Poppins", sans-serif;
-														margin-right: 5px;
-														/* Add some spacing between the checkbox and the label */
-													}
-												</style>
-												
+												<form
+													action="https://script.google.com/macros/s/AKfycbxIIIWKTzXqtVWDJ0J8QC9NVmVFw-rt2gDZVOLn5sff1AeJUTDBQMvtav3ClVLF9Aoe/exec"
+													method="POST" name="orderForm"
+													onsubmit="return validateAndSubmitForm()">
+													<p><input type="text" name="fullName" placeholder="Name"></p>
+													<p><input type="email" name="email" placeholder="Email"></p>
+													<p><input type="text" name="address" placeholder="Address"></p>
+													<p><input type="tel" name="phone" placeholder="Phone"></p>
+													<style>
+														#productName {
+															display: none;
+														}
+													</style>
 
-												<!-- Home Delivery Option -->
-												<label class="delivery" for="deliveryOption">Do you want home delivery?</label>
-												<div class="checkbox-wrapper-55 delivery">
-													<label class="rocker rocker-small">
-														Home Delivery:
-														<input type="checkbox" id="deliveryOption" name="HomeDelivery" value="yes" onclick="handleDeliveryOption()">
-														<span class="switch-left">Yes</span>
-														<span class="switch-right">No</span>
-													</label>
-												</div>
-											
+													<p><input type="text" name="productName" id="productName"
+															placeholder="productName"></p>
 
-												<div class="delivery" id="uploadSection">
-													<p class="delivery" style=" font-size: 13px !important;
-		color: red;">Conditions for Home Delivery : <br>
-														*Only available for order above Rs.500 <br>
-														*Shipping fee is free only inside Nayabazar area. <br>
-														*Shipping fee will be charged outside Nayabazar area. <br>
-														*Pre-payment should be done for home delivery. <br>
-														*Upload the screenshot of payment below. <br>
-													</p>
-													<p class="delivery">
-														Scan the QR Below to proceed payment </p>
+													<p><textarea name="bill" id="bill" cols="30" rows="10"
+															placeholder="Say Something"></textarea></p>
 
-													<div>
-														<img src="img/scan-to-pay.png" alt="Scan to Pay"
-															class="medium-image">
-													</div>
+													<p><input style="display: none;" type="text" name="OrderStatus"
+															placeholder="Received" value="Received"></p>
+													<p><input style="display: none;" type="text" name="Time"
+															placeholder="Time" value="=NOW()"></p>
+
 
 
 													<style>
-														::placeholder {
-															color:
-																font-size: 15px;
+														.delivery {
+															font-size: 15px;
+															font-weight: 600;
 															font-family: "Poppins", sans-serif;
 														}
+													</style>
 
-														/* Add your desired styles here */
-														.medium-image {
-															width: 50%;
-															/* Adjust the width as needed */
-															height: auto;
-															justify-content: left;
-															/* Center the image horizontally */
-														}
-
-														@media (max-width: 768px) {
-															.medium-image {
-																width: 100%;
-																/* Make the image full-width on screens up to 768px */
-															}
+													<style>
+														/* Checkbox styles */
+														input[type="checkbox"] {
+															font-size: 15px;
+															font-weight: 600;
+															font-family: "Poppins", sans-serif;
+															margin-right: 5px;
+															/* Add some spacing between the checkbox and the label */
 														}
 													</style>
-													</p>
-													<label for="paymentScreenshot">Upload Pre-payment Screenshot
-														:</label>
-													<input class="delivery" type="file" id="paymentScreenshot"
-														name="paymentScreenshot">
-												</div>
 
-												<button type="submit" name="submit" class="boxed-btn">Place Order</button>
-											</form>
-										
-											<script>
-												function validateForm() {
-													// Add your validation logic here
-													var fullName = document.forms["orderForm"]["fullName"].value;
-													var email = document.forms["orderForm"]["email"].value;
-													var address = document.forms["orderForm"]["address"].value;
-													var phone = document.forms["orderForm"]["phone"].value;
-										
-													// Add more fields as needed
-										
-													if (fullName == "" || email == "" || address == "" || phone == "") {
-														alert("All fields must be filled out");
-														return false;
+
+													<!-- Home Delivery Option -->
+													<label class="delivery" for="deliveryOption">Do you want home
+														delivery?</label>
+													<div class="checkbox-wrapper-55 delivery">
+														<label class="rocker rocker-small">
+															Home Delivery:
+															<input type="checkbox" id="deliveryOption"
+																name="HomeDelivery" value="yes"
+																onclick="handleDeliveryOption()">
+															<span class="switch-left">Yes</span>
+															<span class="switch-right">No</span>
+														</label>
+													</div>
+
+
+													<div class="delivery" id="uploadSection">
+														<p class="delivery" style=" font-size: 13px !important;
+		color: red;">Conditions for Home Delivery : <br>
+															*Only available for order above Rs.500 <br>
+															*Shipping fee is free only inside Nayabazar area. <br>
+															*Shipping fee will be charged outside Nayabazar area. <br>
+															*Pre-payment should be done for home delivery. <br>
+															*Upload the screenshot of payment below. <br>
+														</p>
+														<p class="delivery">
+															Scan the QR Below to proceed payment </p>
+
+														<div>
+															<img src="img/scan-to-pay.png" alt="Scan to Pay"
+																class="medium-image">
+														</div>
+
+
+														<style>
+															::placeholder {
+																color:
+																	font-size: 15px;
+																font-family: "Poppins", sans-serif;
+															}
+
+															/* Add your desired styles here */
+															.medium-image {
+																width: 50%;
+																/* Adjust the width as needed */
+																height: auto;
+																justify-content: left;
+																/* Center the image horizontally */
+															}
+
+															@media (max-width: 768px) {
+																.medium-image {
+																	width: 100%;
+																	/* Make the image full-width on screens up to 768px */
+																}
+															}
+														</style>
+														</p>
+														<label for="paymentScreenshot">Upload Pre-payment Screenshot
+															:</label>
+														<input class="delivery" type="file" id="paymentScreenshot"
+															name="paymentScreenshot">
+													</div>
+
+													<button type="submit" name="submit" class="boxed-btn">Place
+														Order</button>
+												</form>
+
+											</div>
+
+
+
+											<iframe id="hiddenIframe" name="hiddenIframe"
+												style="display:none;"></iframe>
+
+												<script>
+													function validateAndSubmitForm() {
+														if (!validateForm()) {
+															return false;
+														}
+												
+														// Set the target of the form to the hidden iframe
+														document.orderForm.target = "hiddenIframe";
+												
+														// Hide the form container
+														document.getElementById("orderFormContainer").style.display = "none";
+												
+														// Show the order notification text
+														document.getElementById("orderNotification").style.display = "block";
+												
+														// Return true to allow the form to be submitted
+														return true;
 													}
-										
-													// You can add more complex validation logic here
-										
-													// If validation passes, show the thank you message
-													alert("Thank you for shopping with Acharya Stores. You will be soon notified about your order status. Stay tuned.");
-													return true;
-												}
-											</script>
+												
+													function validateForm() {
+														var fullName = document.forms["orderForm"]["fullName"].value;
+														var email = document.forms["orderForm"]["email"].value;
+														var address = document.forms["orderForm"]["address"].value;
+														var phone = document.forms["orderForm"]["phone"].value;
+												
+														// Add more validation checks as needed
+														if (fullName === "" || email === "" || address === "" || phone === "") {
+															alert("Please fill out all the required fields.");
+															return false;
+														}
+												
+														// You can add more specific validation checks here
+												
+														return true;
+													}
+												
+													// Add an event listener to handle the iframe load event
+													document.getElementById("hiddenIframe").addEventListener("load", function() {
+														// Reset the form target after the iframe has loaded
+														document.orderForm.target = "_self";
+													});
+												</script>
+												
+
 										</div>
 									</div>
 								</div>
@@ -638,7 +712,7 @@ select {
 				</div>
 
 				<div class="col-lg-4">
-					
+
 				</div>
 			</div>
 		</div>
@@ -722,7 +796,8 @@ select {
 		<div class="container">
 
 			<div style="max-width: 100%; text-align: center;" class="col-lg-6 col-md-12">
-				<p>Copyrights &copy; 2024 - <a href="https://acharyastores.com.np">Acharya Stores</a>, All Rights Reserved ||
+				<p>Copyrights &copy; 2024 - <a href="https://acharyastores.com.np">Acharya Stores</a>, All Rights
+					Reserved ||
 					Developed by <a href="https://prasiddhaacharya.com.np/" target="_main">Prasiddha Acharya</a>
 				</p>
 				<span class="mobile-line-break"></span>
@@ -1031,44 +1106,44 @@ select {
 	<script src="assets/js/navbar.js"></script>
 
 	<script>
-    // JavaScript to trigger the fade-in effect after a delay (e.g., 2 seconds)
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
-        document.getElementById('overlay').style.opacity = '1';
-      }, 2000); // Adjust the delay as needed
-    });
-  </script>
-
-
-								
-<script>
-	$(document).ready(function () {
-		// Event listener for dropdown change
-		$("#Products").change(function () {
-			// Get the selected option value
-			var selectedProduct = $(this).val();
-			
-			// Set the value of the "Product Name" input field
-			$("#productName").val(selectedProduct);
-			
-			// Modify the URL (you can customize this as needed)
-			var newURL = "index.html?product=" + selectedProduct;
-			window.history.replaceState(null, null, newURL);
+		// JavaScript to trigger the fade-in effect after a delay (e.g., 2 seconds)
+		document.addEventListener("DOMContentLoaded", function () {
+			setTimeout(function () {
+				document.getElementById('overlay').style.opacity = '1';
+			}, 2000); // Adjust the delay as needed
 		});
-	});
-</script>
-<script>
-	// To show the input field
-	function showProductInput() {
-	  document.getElementById("productName").style.display = "block";
-	}
-  
-	// To hide the input field again
-	function hideProductInput() {
-	  document.getElementById("productName").style.display = "none";
-	}
-  </script>
-  
+	</script>
+
+
+
+	<script>
+		$(document).ready(function () {
+			// Event listener for dropdown change
+			$("#Products").change(function () {
+				// Get the selected option value
+				var selectedProduct = $(this).val();
+
+				// Set the value of the "Product Name" input field
+				$("#productName").val(selectedProduct);
+
+				// Modify the URL (you can customize this as needed)
+				var newURL = "index.html?product=" + selectedProduct;
+				window.history.replaceState(null, null, newURL);
+			});
+		});
+	</script>
+	<script>
+		// To show the input field
+		function showProductInput() {
+			document.getElementById("productName").style.display = "block";
+		}
+
+		// To hide the input field again
+		function hideProductInput() {
+			document.getElementById("productName").style.display = "none";
+		}
+	</script>
+
 </body>
 
 </html>
