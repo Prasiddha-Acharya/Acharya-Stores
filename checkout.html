@@ -409,13 +409,7 @@
 					status. <br>Stay tuned!
 				</p>
 
-				<style>
-					.delivery {
-						font-family: "Poppins", sans-serif;
-						font-size: 200px;
-
-					}
-				</style>
+				
 				<a style="margin-top: -10px;" href="https://acharyastores.com.np/" class="cart-btn">Back to Home</a>
 			</div>
 			<br> <br>
@@ -475,9 +469,9 @@
 										</thead>
 										<tbody class="order-details-body">
 											<tr>
-												<td class="order-td">
-													<select id="Products" onchange="updatePrice()">
-														<option value="" disabled selected>Select a product</option>
+												<td class="order-td"> 
+													<select style="padding: 1px; margin-right: -30px; margin-left: 5px;" id="Products" onchange="updatePrice()">
+														<option value=""  disabled selected>Select a product</option>
 														<option value="Chini">चिनी (Sugar)</option>
 														<option value="Mishri">Mishri</option>
 														<option value="Chana">Chana</option>
@@ -486,6 +480,7 @@
 														<option value="Jwano">Jwano</option>
 													</select>
 												</td>
+											
 												<td class="order-td" id="quantityContainer">
 													<button class="qua" onclick="decrementQuantity()">-</button>
 													<input
@@ -498,15 +493,22 @@
 													<p><span id="productPrice">0</span></p>
 												</td>
 											</tr>
-											<tr>
+											<tr style="font-size: 16px !important;">
 												<td class="order-td" colspan="2" style="text-align: right;">Total Price
 													:</td>
-												<td class="order-td" id="totalPrice">0</td>
+												<td class="order-td" style="color: red;" id="totalPrice">0</td>
 											</tr>
 										</tbody>
 									</table>
 
-
+										
+									<style>
+										@media (max-width: 767px) {
+												.order-td {
+													padding: 4px !important;
+												}
+											}
+								</style>
 
 									<script>
 										const ProductsSelect = document.getElementById('Products');
@@ -701,6 +703,14 @@
 															font-weight: 600;
 															font-family: "Poppins", sans-serif;
 														}
+
+														@media only screen and (max-width: 768px) {
+															.delivery {
+															font-size: 13.5px;
+															font-weight: 600;
+															font-family: "Poppins", sans-serif;
+														}
+														}
 													</style>
 
 													<style>
@@ -718,12 +728,11 @@
 <label class="delivery" for="deliveryOption">Do you want home delivery?</label>
 <div class="checkbox-wrapper-55 delivery">
     <label class="rocker rocker-small">
-        Home Delivery:
         <input type="checkbox" id="deliveryOption" name="HomeDelivery" value="yes" onclick="handleDeliveryOption(), check()">
         <span class="switch-left">Yes</span>
         <span class="switch-right">No</span>
     </label>
-    <p class="delivery" id="pickupMessage" style="margin-bottom: 10px; font-size: 14px !important; color: red; display: none;">
+    <p class="delivery" id="pickupMessage" style="margin-bottom: 10px;  !important; color: red; display: none;">
         *Visit store to Pickup your Product*
         <br>
     </p>
@@ -768,7 +777,7 @@
 															font-size: 14px;
 														}
 													</style>
-													<div class="delivery" id="uploadSection">
+													<div class="delivery" id="uploadSection" style="margin-left: -20px; margin-right: -32px;">
 														<label for="location" class="dropdown-label">Location :</label>
 														<select id="location" name="location" class="area"
 															onchange="showSubDropdown()">
@@ -781,8 +790,8 @@
 
 														<div id="subDropdownContainer" style="display:none;">
 															<p id="specialMessage" class="delivery"
-																style="margin-bottom: 10px; font-size: 14px !important; color: red; display:none;">
-																*Shipping fee is free inside Nayabazar area.*</p>
+																style=" margin-bottom: 10px; font-size: 13px !important; color: red; display:none;">
+																*Shipping fee is free for home delivery inside Nayabazar area.*</p>
 
 
 															<label for="subLocation" class="dropdown-label">Area :
@@ -800,8 +809,8 @@
 																<!-- Add more sub-options as needed -->
 															</select>
 														</div>
-														<p id="extraChargesMessage" class="delivery" style="margin-bottom: 10px; font-size: 14px !important;
-														color: red; display:none; color: red;">*Extra charges will be charged for home delivery outside Nayabazar
+														<p id="extraChargesMessage" class="delivery" style="margin-bottom: 10px; font-size: 13px !important;
+														color: red; display:none; color: red;">*Extra fees will be charged for home delivery outside Nayabazar
 															area*</p>
 
 
@@ -835,8 +844,8 @@
 														</p>
 														<p class="delivery" style=" font-size: 13px !important;
 		color: red;">Conditions for Home Delivery : <br>
-															*Only available for order above Rs.500 <br>
-															*Pre-payment should be done for home delivery. <br>
+															*Only available for order above Rs.500<br>
+															*Pre-payment should be done<br>
 															*Upload the screenshot of payment below<br>
 														</p>
 														<p class="delivery">
@@ -871,15 +880,17 @@
 																}
 															}
 														</style>
-														</p>
+														</p> 
+														<div style="margin-left: 20px; margin-right: 32px;">
 														<label for="paymentScreenshot">Upload Pre-payment Screenshot
 															:</label>
 														<input class="delivery" type="file" id="paymentScreenshot"
 															name="paymentScreenshot">
 													</div>
+												</div>
 
 													<button type="submit" style="font-family: 'Poppins', sans-serif;
-													display: inline-block; border-radius: 50px; cursor: pointer;
+													margin-top: 12px; display: inline-block; border-radius: 50px; cursor: pointer;
 													background-color: #F28123;  font-size: 13px; border: none; transition: 0.3s;
     padding: 8px 16px;
 													color: #fff;" name="submit" class="place-order" id="orderbtn">Place
