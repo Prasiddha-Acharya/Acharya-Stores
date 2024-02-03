@@ -379,7 +379,7 @@
 						}
 
 						.thank {
-							font-size: 35px;
+							font-size: 30px;
 						}
 					}
 
@@ -404,7 +404,7 @@
 
 				<h1 class="thank" style="">Your Order has been placed successfully!</h1>
 
-				<p style="font-size: 18px;
+				<p style="font-size: 18px; margin-top: -15px;
 		" class="delivery">Thank you for shopping with Acharya Stores. <br> You will be soon notified about your order
 					status. <br>Stay tuned!
 				</p>
@@ -655,10 +655,11 @@
 
 
 
-												<form
-													action="https://script.google.com/macros/s/AKfycbxIIIWKTzXqtVWDJ0J8QC9NVmVFw-rt2gDZVOLn5sff1AeJUTDBQMvtav3ClVLF9Aoe/exec"
-													method="POST" name="orderForm"
-													onsubmit="return validateAndSubmitForm()">
+												<form action="https://script.google.com/macros/s/AKfycbxIIIWKTzXqtVWDJ0J8QC9NVmVFw-rt2gDZVOLn5sff1AeJUTDBQMvtav3ClVLF9Aoe/exec" 
+												method="POST" 
+												name="orderForm" 
+												onsubmit="return validateAndSubmitForm()">
+										  
 													<p><input type="text" name="fullName" placeholder="Name"></p>
 													<p><input type="email" name="email" placeholder="Email"></p>
 													<p><input type="text" name="address" placeholder="Address"></p>
@@ -714,29 +715,129 @@
 													</style>
 
 
-													<!-- Home Delivery Option -->
-													<label class="delivery" for="deliveryOption">Do you want home
-														delivery?</label>
-													<div class="checkbox-wrapper-55 delivery">
-														<label class="rocker rocker-small">
-															Home Delivery:
-															<input type="checkbox" id="deliveryOption"
-																name="HomeDelivery" value="yes"
-																onclick="handleDeliveryOption()">
-															<span class="switch-left">Yes</span>
-															<span class="switch-right">No</span>
-														</label>
-													</div>
+<label class="delivery" for="deliveryOption">Do you want home delivery?</label>
+<div class="checkbox-wrapper-55 delivery">
+    <label class="rocker rocker-small">
+        Home Delivery:
+        <input type="checkbox" id="deliveryOption" name="HomeDelivery" value="yes" onclick="handleDeliveryOption(), check()">
+        <span class="switch-left">Yes</span>
+        <span class="switch-right">No</span>
+    </label>
+    <p class="delivery" id="pickupMessage" style="margin-bottom: 10px; font-size: 14px !important; color: red; display: none;">
+        *Visit store to Pickup your Product*
+        <br>
+    </p>
+</div>
+<script>
+    // Call showPickupMessage initially to display the message by default
+    showPickupMessage(true);
+
+    function check() {
+        var deliveryCheckbox = document.getElementById("deliveryOption");
+        showPickupMessage(!deliveryCheckbox.checked);
+    }
+
+    function showPickupMessage(show) {
+        var pickupMessage = document.getElementById("pickupMessage");
+        pickupMessage.style.display = show ? "block" : "none";
+    }
+</script>
+
+													
+
+													
 
 
+													<style>
+														/* Style for the label */
+
+
+														/* Style for the select dropdown */
+														.area {
+															padding: 8px;
+															font-size: 14px;
+															border: 1px solid #ccc;
+															border-radius: 4px;
+															width: 200px;
+															/* Adjust the width as needed */
+															pointer-events: all;
+														}
+
+														/* Style for the options within the dropdown */
+														.area option {
+															font-size: 14px;
+														}
+													</style>
 													<div class="delivery" id="uploadSection">
+														<label for="location" class="dropdown-label">Location :</label>
+														<select id="location" name="location" class="area"
+															onchange="showSubDropdown()">
+															<option value="default" selected disabled>Select a location
+															</option>
+															<option value="nayabazar">Inside Nayabazar Area
+															</option>
+															<option value="outside">Outside Nayabazar Area</option>
+														</select>
+
+														<div id="subDropdownContainer" style="display:none;">
+															<p id="specialMessage" class="delivery"
+																style="margin-bottom: 10px; font-size: 14px !important; color: red; display:none;">
+																*Shipping fee is free inside Nayabazar area.*</p>
+
+
+															<label for="subLocation" class="dropdown-label">Area :
+															</label>
+															<select id="subLocation" name="subLocation" class="area">
+																<option value="default" selected disabled>Select an area
+																</option>
+																<option value="Red-Panda Chowk Area">Red-Panda Chowk Area</option>
+																<option value="Mathlo Bazar Area">Mathlo Bazar Area</option>
+																<option value="Balaguru Rangashala Area">Balaguru Rangashala Area
+																</option>
+																<option value="NMC Bank Area">NMC Bank Area</option>
+																<option value="Himalayan Bank Area">Himalayan Bank Area</option>
+																<option value="High School Area">High School Area</option>
+																<!-- Add more sub-options as needed -->
+															</select>
+														</div>
+														<p id="extraChargesMessage" class="delivery" style="margin-bottom: 10px; font-size: 14px !important;
+														color: red; display:none; color: red;">*Extra charges will be charged for home delivery outside Nayabazar
+															area*</p>
+
+
+														<script>
+															function showSubDropdown() {
+																var locationDropdown = document.getElementById("location");
+																var subDropdownContainer = document.getElementById("subDropdownContainer");
+																var extraChargesMessage = document.getElementById("extraChargesMessage");
+																var specialMessage = document.getElementById("specialMessage");
+
+																if (locationDropdown.value === "nayabazar") {
+																	subDropdownContainer.style.display = "block";
+																	extraChargesMessage.style.display = "none";
+																	specialMessage.style.display = "block";
+																} else if (locationDropdown.value === "outside") {
+																	subDropdownContainer.style.display = "none";
+																	extraChargesMessage.style.display = "block";
+																	specialMessage.style.display = "none";
+																} else {
+																	subDropdownContainer.style.display = "none";
+																	extraChargesMessage.style.display = "none";
+																	specialMessage.style.display = "none";
+																}
+															}
+
+
+
+														</script>
+														<p><input type="text" name="landMark"
+																placeholder="Landmark *E.g. Tara Bhattrai house, Infront of Sahara Bank*">
+														</p>
 														<p class="delivery" style=" font-size: 13px !important;
 		color: red;">Conditions for Home Delivery : <br>
 															*Only available for order above Rs.500 <br>
-															*Shipping fee is free only inside Nayabazar area. <br>
-															*Shipping fee will be charged outside Nayabazar area. <br>
 															*Pre-payment should be done for home delivery. <br>
-															*Upload the screenshot of payment below. <br>
+															*Upload the screenshot of payment below : <br>
 														</p>
 														<p class="delivery">
 															Scan the QR Below to proceed payment </p>
@@ -784,17 +885,16 @@
 													color: #fff;" name="submit" class="place-order" id="orderbtn">Place
 														Order</button>
 
-<style>
-	.place-order:hover {
-		background-color: #051922 !important;
-	}
+													<style>
+														.place-order:hover {
+															background-color: #051922 !important;
+														}
 
-	.qua:hover {
-		background-color: #051922 !important;
-		color: white;
-	}
-	
-</style>
+														.qua:hover {
+															background-color: #051922 !important;
+															color: white;
+														}
+													</style>
 												</form>
 
 											</div>
@@ -805,59 +905,73 @@
 												style="display:none;"></iframe>
 
 											<script>
-												function validateAndSubmitForm() {
-													if (!validateForm()) {
-														return false;
-													}
+											function validateAndSubmitForm() {
+    if (!validateForm()) {
+        return false;
+    }
 
-													// Set the target of the form to the hidden iframe
-													document.orderForm.target = "hiddenIframe";
+    // Set the target of the form to the hidden iframe
+    document.orderForm.target = "hiddenIframe";
 
-													// Hide the form container
-													document.getElementById("orderFormContainer").style.display = "none";
+    // Hide the form container
+    document.getElementById("orderFormContainer").style.display = "none";
 
-													// Show the order notification text
-													document.getElementById("orderNotification").style.display = "block";
+    // Show the order notification text
+    document.getElementById("orderNotification").style.display = "block";
 
-													// Scroll to the top of the page
-													window.scrollTo(0, 0);
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
 
-													// Return true to allow the form to be submitted
-													return true;
-												}
+    // Return true to allow the form to be submitted
+    return true;
+}
 
-												function validateForm() {
-													var fullName = document.forms["orderForm"]["fullName"].value;
-													var email = document.forms["orderForm"]["email"].value;
-													var address = document.forms["orderForm"]["address"].value;
-													var phone = document.forms["orderForm"]["phone"].value;
-													var productName = document.forms["orderForm"]["productName"].value;
-													var homeDeliveryCheckbox = document.getElementById("deliveryOption");
-													var paymentScreenshot = document.forms["orderForm"]["paymentScreenshot"].value;
+function validateForm() {
+    var fullName = document.forms["orderForm"]["fullName"].value;
+    var email = document.forms["orderForm"]["email"].value;
+    var address = document.forms["orderForm"]["address"].value;
+    var phone = document.forms["orderForm"]["phone"].value;
+    var productName = document.forms["orderForm"]["productName"].value;
+    var homeDeliveryCheckbox = document.getElementById("deliveryOption");
+    var locationDropdown = document.getElementById("location");
+    var subLocationDropdown = document.getElementById("subLocation");
+    var landMark = document.forms["orderForm"]["landMark"].value;
+    var paymentScreenshot = document.forms["orderForm"]["paymentScreenshot"].value;
 
-													// Add more validation checks as needed
-													if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
-														alert("Please fill out all the required fields.");
-														return false;
-													}
+    // Add more validation checks as needed
+    if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
+        alert("Please fill out all the required fields.");
+        return false;
+    }
 
-													// Check if home delivery is selected and validate payment screenshot
-													if (homeDeliveryCheckbox.checked && paymentScreenshot === "") {
-														alert("Please upload the payment screenshot for home delivery.");
-														return false;
-													}
+    // Check if home delivery is selected and validate location, area, and payment screenshot
+    if (homeDeliveryCheckbox.checked) {
+        if (locationDropdown.value === "default") {
+            alert("Please select a location.");
+            return false;
+        }
 
-													// You can add more specific validation checks here
+        if (locationDropdown.value === "nayabazar" && subLocationDropdown.value === "default") {
+            alert("Please select an area inside Nayabazar.");
+            return false;
+        }
 
-													return true;
-												}
+        if (landMark === "") {
+            alert("Please provide a landmark for delivery.");
+            return false;
+        }
 
+        if (paymentScreenshot === "") {
+            alert("Please upload the payment screenshot for home delivery.");
+            return false;
+        }
+    }
 
-												// Add an event listener to handle the iframe load event
-												document.getElementById("hiddenIframe").addEventListener("load", function () {
-													// Reset the form target after the iframe has loaded
-													document.orderForm.target = "_self";
-												});
+    // You can add more specific validation checks here
+
+    return true;
+}
+
 											</script>
 
 										</div>
