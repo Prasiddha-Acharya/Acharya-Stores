@@ -382,7 +382,7 @@
 					}
 
 
-					
+
 					.popup {
 						top: 0;
 					}
@@ -529,22 +529,22 @@
 				}
 
 				.popupContainer {
-            /* Existing styles... */
+					/* Existing styles... */
 
-            /* Added animation properties */
-            opacity: 0;
-            animation: fadeIn 0.5s ease-in-out forwards;
-        }
+					/* Added animation properties */
+					opacity: 0;
+					animation: fadeIn 0.5s ease-in-out forwards;
+				}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
+				@keyframes fadeIn {
+					from {
+						opacity: 0;
+					}
 
-            to {
-                opacity: 1;
-            }
-        }
+					to {
+						opacity: 1;
+					}
+				}
 
 
 				.popup {
@@ -948,6 +948,12 @@
 
 
 													<style>
+														.home {
+															margin-left: 0px;
+															margin-right: 0px;
+														}
+
+
 														/* Style for the label */
 
 
@@ -967,8 +973,11 @@
 															font-size: 14px;
 														}
 													</style>
-													<div class="delivery" id="uploadSection"
-														style="margin-left: -20px; margin-right: -32px;">
+													<div class="delivery home" id="uploadSection">
+														<p class="delivery"  style="margin-bottom: 10px;  !important; color: red;">
+															*Home Delivery is only available for order above Rs.500*
+															<br>
+														</p>
 														<label for="location" class="dropdown-label">Location :</label>
 														<select id="location" name="location" class="area"
 															onchange="showSubDropdown()">
@@ -1039,20 +1048,7 @@
 														<p><input type="text" name="landMark"
 																placeholder="Landmark *E.g. Tara Bhattrai house, Infront of Sahara Bank*">
 														</p>
-														<p class="delivery" style=" font-size: 13px !important;
-		color: red;">Conditions for Home Delivery : <br>
-															*Only available for order above Rs.500<br>
-															*Pre-payment should be done<br>
-															*Upload the screenshot of payment below<br>
-														</p>
-														<p class="delivery">
-															Scan the QR Below to proceed payment </p>
-
-														<div>
-															<img src="img/scan-to-pay.png" alt="Scan to Pay"
-																class="medium-image">
-														</div>
-
+														
 
 														<style>
 															::placeholder {
@@ -1078,16 +1074,67 @@
 															}
 														</style>
 														</p>
-														<div style="margin-left: 20px; margin-right: 32px;">
-															<label for="paymentScreenshot">Upload Pre-payment Screenshot
-																:</label>
-															<input class="delivery" type="file" id="paymentScreenshot"
-																name="paymentScreenshot">
-														</div>
 													</div>
 
+
+													<p class="delivery">
+														Scan the QR Below to proceed payment & <br> Upload the screenshot of payment below :</p>
+
+													<div>
+														<img src="img/scan-to-pay.png" alt="Scan to Pay"
+															class="medium-image">
+													</div>
+
+													<div class="upload-container">
+													<label for="paymentScreenshot">Upload Pre-payment Screenshot
+														:</label>
+													<input class="delivery" type="file" id="paymentScreenshot"
+														name="paymentScreenshot">
+													<!-- This is the modified image element with an empty src and alt attribute -->
+													<img src=""  alt="">
+
+
+													<style>
+														#imagePreview {
+															width: 50%;
+															/* Adjust the width as needed */
+															height: auto;
+															justify-content: left;
+															/* Center the image horizontally */
+														}
+													</style>
+
+													<script>
+														// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
+														let url = "https://script.google.com/macros/s/AKfycbxAs1Nhfp2-_hCVA_9hG4_OuPAnVtMUs4NR9WYL8bDlJX-8uDllg78jf5iW0Z1h6l-X/exec";
+														// This line declares a variable called "file" and assigns it the value of the modified input element on the page
+														let file = document.getElementById("paymentScreenshot");
+														// This line declares a variable called "img" and assigns it the value of the modified image element on the page
+														let img = document.querySelector("img");
+														file.addEventListener('change', () => {
+															let fr = new FileReader();
+															fr.addEventListener('loadend', () => {
+																let res = fr.result;
+																img.src = res;
+																let spt = res.split("base64,")[1];
+																let obj = {
+																	base64: spt,
+																	type: file.files[0].type,
+																	name: file.files[0].name
+																}
+																fetch(url, {
+																	method: "POST",
+																	body: JSON.stringify(obj)
+																})
+																	.then(r => r.text())
+																	.then(data => console.log(data))
+															})
+															fr.readAsDataURL(file.files[0])
+														})
+													</script>
+
 													<button type="submit" style="font-family: 'Poppins', sans-serif;
-													margin-top: 12px; display: inline-block; border-radius: 50px; cursor: pointer;
+													margin-top: 15px; display: inline-block; border-radius: 50px; cursor: pointer;
 													background-color: #F28123;  font-size: 13px; border: none; transition: 0.3s;
     padding: 8px 16px;
 													color: #fff;" name="submit" class="place-order" id="orderbtn">Place
@@ -1141,31 +1188,32 @@
 
 													// Add more validation checks as needed
 													if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
-														alert("Please fill out all the required fields.");
+														alert("Please fill out all the required fields!");
+														return false;
+													}
+
+													if (paymentScreenshot === "") {
+														alert("Please upload the payment screenshot!");
 														return false;
 													}
 
 													// Check if home delivery is selected and validate location, area, and payment screenshot
 													if (homeDeliveryCheckbox.checked) {
 														if (locationDropdown.value === "default") {
-															alert("Please select a location.");
+															alert("Please select a location!");
 															return false;
 														}
 
 														if (locationDropdown.value === "nayabazar" && subLocationDropdown.value === "default") {
-															alert("Please select an area inside Nayabazar.");
+															alert("Please select an area inside Nayabazar!");
 															return false;
 														}
 
 														if (landMark === "") {
-															alert("Please provide a landmark for delivery.");
+															alert("Please provide a landmark for delivery!");
 															return false;
 														}
 
-														if (paymentScreenshot === "") {
-															alert("Please upload the payment screenshot for home delivery.");
-															return false;
-														}
 													}
 
 													// You can add more specific validation checks here
