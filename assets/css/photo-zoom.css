@@ -11,6 +11,6 @@
     transition: 0.3s;
 }
 .gallery img:hover{
-    filter: grayscale(80%);
+    filter: grayscale(40%);
     transform: scale(1.02);
 }
