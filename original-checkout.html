@@ -369,227 +369,97 @@
 	<!-- check out section -->
 	<div class="checkout-section mt-150 mb-150">
 		<div class="container" style="margin-top: -50px;">
-			<style>
-				/* Media query for desktop screens */
-				@media only screen and (min-width: 768px) {
-					.order-notification {
-						margin-top: 0px;
-						margin-bottom: -270px;
+			<div id="orderNotification" class="order-notification" style="display:none; text-align: center;">
+				<style>
+					/* Media query for desktop screens */
+					@media only screen and (min-width: 768px) {
+						.order-notification {
+							margin-top: 0px;
+							margin-bottom: -270px;
+						}
+
+						.thank {
+							font-size: 31px;
+						}
+
+
+						.noti br,
+						.notif br {
+							display: none;
+						}
+
+
+						.noti {
+							margin-top: -15px;
+							font-size: 20px !important;
+						}
+
+						.notif {
+							margin-top: -15px;
+							margin-bottom: 25px;
+							font-size: 20px !important;
+						}
 					}
 
-					.thank {
-						font-size: 28px;
+					/* Media query for mobile screens */
+					@media only screen and (max-width: 767px) {
+						.order-notification {
+							/* Adjust the margin for mobile */
+							margin-top: 110px;
+							margin-bottom: -210px;
+						}
+
+						.thank {
+							font-size: 24px;
+						}
 					}
 
 
-					
-					.popup {
-						top: 0;
-					}
 
 
-					.noti br,
-					.notif br {
-						display: none;
-					}
-
-
-					.noti {
-						margin-top: -15px;
-						font-family: 'Poppins', sans-serif;
-						font-size: 20px !important;
-						font-weight: 600;
-					}
-
-					.notif {
-						font-family: 'Poppins', sans-serif;
-						margin-top: -15px;
-						margin-bottom: 25px;
-						font-size: 20px !important;
-						font-weight: 600;
-					}
-				}
-
-				/* Media query for mobile screens */
-				@media only screen and (max-width: 767px) {
-					.order-notification {
-						/* Adjust the margin for mobile */
-						margin-top: 110px;
-						margin-bottom: -210px;
-					}
-
-					.thank {
-						font-size: 24px;
-					}
-				}
-
-
-
-
-				.cart-img {
-					width: 100px;
-					height: 100px;
-				}
-
-				@media only screen and (max-width: 767px) {
 					.cart-img {
-						width: 80px;
-						height: 80px;
-					}
-
-					.popup {
-						top: -110px;
-					}
-
-					.noti {
-						margin-top: -5px;
-						font-size: 18px !important;
-						font-family: 'Poppins', sans-serif;
-						font-weight: 600;
-					}
-
-					.notif {
-						margin-top: -10px;
-						margin-bottom: 25px;
-						font-size: 18px !important;
-						font-family: 'Poppins', sans-serif;
-						font-weight: 600;
-					}
-
-
-				}
-			</style>
-
-			<!-- Add this to your existing HTML structure, preferably inside the <body> tag -->
-			<div id="orderSuccessPopup" class="popup order-notification popupContainer">
-				<div class="popup-content">
-					<span class="close-popup" onclick="closePopup()">&times;</span>
-					<img class="popupImage" src="img/cart-check.png" alt="cookies-img" />
-					<h1 class="thank">Your Order has been placed successfully!</h1>
-					<p class="popupText noti">Thank you for shopping <br> with Acharya Stores.</p>
-					<p class="popupText notif">You will be soon notified <br> about your order status.</p>
-					<a class="acceptButton" href="https://acharyastores.com.np/">Back to Home</a> <br>
-					<p class="popupText notif" style="color: transparent; font-size: 10px !important; ">Thank you</p>
-				</div>
-			</div>
-
-			<!-- Updated styles for the popup -->
-			<style>
-				.mainContainer {
-					padding: 0;
-					margin: 0;
-					background-color: #f5f5f5;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: 100vh;
-				}
-
-				.popupContainer {
-					width: 320px;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					background-color: #fff;
-					color: #000;
-					text-align: center;
-					border-radius: 20px;
-					padding: 30px 30px 70px;
-
-					.closeButton {
-						width: 30px;
-						font-size: 20px;
-						color: #c0c5cb;
-						align-self: flex-end;
-						background-color: transparent;
-						border: none;
-						margin-bottom: 10px;
-					}
-
-					.popupImage {
 						width: 100px;
-						margin-bottom: 15px;
+						height: 100px;
 					}
 
-					.popupText {
-						font-size: 18px;
+					@media only screen and (max-width: 767px) {
+						.cart-img {
+							width: 80px;
+							height: 80px;
+						}
+
+						.noti {
+							margin-top: -5px;
+							font-size: 18px !important;
+						}
+
+						.notif {
+							margin-top: -10px;
+							margin-bottom: 25px;
+							font-size: 18px !important;
+						}
+
 					}
+				</style>
+				<svg xmlns="http://www.w3.org/2000/svg" class="cart-img" viewBox="0 0 576 512">
+					<!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+					<path
+						d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+				</svg>
 
-					.acceptButton {
-						background-color: #fd7e14;
-						border: none;
-						border-radius: 5px;
-						width: 200px;
-						padding: 14px;
-						font-size: 16px;
-						margin-bottom: 100px !important;
-						color: white;
-						box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
-					}
-				}
+				<h1 class="thank" style="">Your Order has been placed successfully!</h1>
 
-				.popupContainer {
-            /* Existing styles... */
+				<p class="delivery noti">Thank you for shopping <br> with Acharya Stores. <br>
+				</p>
 
-            /* Added animation properties */
-            opacity: 0;
-            animation: fadeIn 0.5s ease-in-out forwards;
-        }
+				<p class="delivery notif"> You will be soon notified <br> about
+					your order
+					status. <br>
+				</p>
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-
-				.popup {
-					displlay: none;
-					position: fixed;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background: rgba(0, 0, 0, 0.861);
-					justify-content: center;
-					align-items: center;
-					z-index: 999;
-					border-radius: 0px;
-				}
-
-				.popup-content {
-					text-align: center;
-					padding: 20px;
-					background: #fff;
-					border-radius: 10px;
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-					max-width: 700px;
-					width: 100%;
-				}
-
-				.close-popup {
-					position: absolute;
-					top: 10px;
-					right: 10px;
-					font-size: 20px;
-					color: #555;
-					cursor: pointer;
-				}
-			</style>
-
-			<script>
-				// Add this to your existing script or script tag
-				function showPopup() {
-					document.getElementById('orderSuccessPopup').style.display = 'flex';
-				}
-
-				function closePopup() {
-					document.getElementById('orderSuccessPopup').style.display = 'none';
-				}
-			</script>
+				<a style="margin-top: -10px;" href="https://acharyastores.com.np/" class="cart-btn">Back to Home</a>
+				<br> <br> <br> <br> <br> <br> <br>
+			</div>
 			<br> <br>
 			<div class="row">
 				<div class="col-lg-8">
@@ -638,10 +508,10 @@
 											-webkit-appearance: none;
 											margin: 0;
 										}
-
+										
 										body {
-											font-family: "Poppins", sans-serif;
-										}
+							font-family: "Poppins", sans-serif;
+						}
 									</style>
 
 									<table class="order-details delivery">
@@ -1122,8 +992,15 @@
 													document.orderForm.target = "hiddenIframe";
 
 													// Hide the form container
+													document.getElementById("orderFormContainer").style.display = "none";
 
-													showPopup();
+													// Show the order notification text
+													document.getElementById("orderNotification").style.display = "block";
+
+													// Scroll to the top of the page
+													window.scrollTo(0, 0);
+
+													// Return true to allow the form to be submitted
 													return true;
 												}
 
@@ -1202,8 +1079,7 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">About us</h2>
-						<p class="pop">We are a local shop of Naya Bazar, Ilam. You can get all of the Grocery Items &
-							Cosmetics
+						<p class="pop">We are a local shop of Naya Bazar, Ilam. You can get all of the Grocery Items & Cosmetics
 							Item here at suitable price!</p>
 					</div>
 				</div>
@@ -1270,14 +1146,13 @@
 			}
 
 			.pop {
-				font-family: "Poppins", sans-serif;
-			}
+						font-family: "Poppins", sans-serif;
+					}
 		</style>
 		<div class="container">
 
 			<div style="max-width: 100%; text-align: center;" class="col-lg-6 col-md-12">
-				<p class="pop">Copyrights &copy; 2024 - <a href="https://acharyastores.com.np">Acharya Stores</a>, All
-					Rights
+				<p class="pop">Copyrights &copy; 2024 - <a href="https://acharyastores.com.np">Acharya Stores</a>, All Rights
 					Reserved ||
 					Developed by <a href="https://prasiddhaacharya.com.np/" target="_main">Prasiddha Acharya</a>
 				</p>
