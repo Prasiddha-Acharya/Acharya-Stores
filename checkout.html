@@ -420,6 +420,7 @@
 
 					.thank {
 						font-size: 24px;
+						margin-top: 15px;
 					}
 				}
 
@@ -437,8 +438,16 @@
 						height: 80px;
 					}
 
+
+
 					.popup {
 						top: -110px;
+					}
+
+					.popup-content {
+						padding-top: 40px !important;
+						padding-bottom: 40px !important;
+					
 					}
 
 					.noti {
@@ -464,7 +473,30 @@
 			<div id="orderSuccessPopup" class="popup order-notification popupContainer">
 				<div class="popup-content">
 					<span class="close-popup" onclick="closePopup()">&times;</span>
-					<img class="popupImage" src="img/cart-check.png" alt="cookies-img" />
+					<div class="cart-png" style="text-align: center; align-items: center; justify-content: center;">
+						<style>
+							.cart-png {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								/* Add any additional styling to the container if needed */
+							}
+
+							.cart-png::before {
+								content: '';
+								background-image: url('img/cart-check.png');
+								display: block;
+								/* Set your desired smaller width and height */
+								width: 110px;
+								height: 100px;
+								background-size: cover;
+								/* or contain, depending on your preference */
+								/* Additional styling if needed */
+								
+								/* Center the image within the flex container */
+							}
+						</style>
+					</div>
 					<h1 class="thank">Your Order has been placed successfully!</h1>
 					<p class="popupText noti">Thank you for shopping <br> with Acharya Stores.</p>
 					<p class="popupText notif">You will be soon notified <br> about your order status.</p>
@@ -974,7 +1006,8 @@
 														}
 													</style>
 													<div class="delivery home" id="uploadSection">
-														<p class="delivery"  style="margin-bottom: 10px;  !important; color: red;">
+														<p class="delivery"
+															style="margin-bottom: 10px;  !important; color: red;">
 															*Home Delivery is only available for order above Rs.500*
 															<br>
 														</p>
@@ -1048,7 +1081,7 @@
 														<p><input type="text" name="landMark"
 																placeholder="Landmark *E.g. Tara Bhattrai house, Infront of Sahara Bank*">
 														</p>
-														
+
 
 														<style>
 															::placeholder {
@@ -1078,173 +1111,196 @@
 
 
 													<p class="delivery">
-														Scan the QR Below to proceed payment & <br> Upload the screenshot of payment below :</p>
+														Scan the QR Below to proceed payment & <br> Upload the
+														screenshot of payment below :</p>
 
-													<div>
-														<img src="img/scan-to-pay.png" alt="Scan to Pay"
-															class="medium-image">
-													</div>
 
-													<div class="upload-container">
-													<label for="paymentScreenshot">Upload Pre-payment Screenshot
-														:</label>
-													
-													<div>	<input class="delivery" type="file" id="paymentScreenshot"
-														name="paymentScreenshot">
-													<!-- This is the modified image element with an empty src and alt attribute -->
-													<img src=""  alt="">
-													
-														
-													</div>
+													<div class="qr-png">
+														<style>
+															.qr-png {
+																background-image: url('img/scan-to-pay.png');
+																content: '';
+																display: block;
+																/* Set your desired smaller width and height */
+																width: 400px;
+																height: 500px;
+																background-size: cover;
+																background-position: center;
 
-												</div>
+															}
 
-</div>
-													<style>
-														#imagePreview {
-															width: 50%;
-															/* Adjust the width as needed */
-															height: auto;
-															justify-content: left;
-															/* Center the image horizontally */
-														}
-													</style>
-
-													<script>
-														// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
-														let url = "https://script.google.com/macros/s/AKfycbxAs1Nhfp2-_hCVA_9hG4_OuPAnVtMUs4NR9WYL8bDlJX-8uDllg78jf5iW0Z1h6l-X/exec";
-														// This line declares a variable called "file" and assigns it the value of the modified input element on the page
-														let file = document.getElementById("paymentScreenshot");
-														// This line declares a variable called "img" and assigns it the value of the modified image element on the page
-														let img = document.querySelector("img");
-														file.addEventListener('change', () => {
-															let fr = new FileReader();
-															fr.addEventListener('loadend', () => {
-																let res = fr.result;
-																img.src = res;
-																let spt = res.split("base64,")[1];
-																let obj = {
-																	base64: spt,
-																	type: file.files[0].type,
-																	name: file.files[0].name
+															@media (max-width: 767px) {
+																.qr-png {
+																	width: 300px;
+																	/* Make the image full-width on screens up to 768px */
 																}
-																fetch(url, {
-																	method: "POST",
-																	body: JSON.stringify(obj)
-																})
-																	.then(r => r.text())
-																	.then(data => console.log(data))
-															})
-															fr.readAsDataURL(file.files[0])
-														})
-													</script>
+															}
+														</style>
+													</div>
+													<div class="upload-container">
+														<label for="paymentScreenshot"> <br> Upload Pre-payment
+															Screenshot
+															: </label> <input class="delivery" type="file"
+															id="paymentScreenshot" name="paymentScreenshot">
+														<!-- This is the modified image element with an empty src and alt attribute -->
+														<img src="" id="imagePreview" alt="">
 
-													<button type="submit" style="font-family: 'Poppins', sans-serif;
-													margin-top: 15px; display: inline-block; border-radius: 50px; cursor: pointer;
+
+
+
+													</div>
+
+											</div>
+											<style>
+												#imagePreview {
+													width: 30%;
+													/* Adjust the width as needed */
+													height: auto;
+													justify-content: left;
+													/* Center the image horizontally */
+												}
+
+												@media (max-width: 767px) {
+													#imagePreview {
+														width: 70%;
+														margin-top: 10px;
+													}
+												}
+											</style>
+
+											<script>
+												// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
+												let url = "https://script.google.com/macros/s/AKfycbxAs1Nhfp2-_hCVA_9hG4_OuPAnVtMUs4NR9WYL8bDlJX-8uDllg78jf5iW0Z1h6l-X/exec";
+												// This line declares a variable called "file" and assigns it the value of the modified input element on the page
+												let file = document.getElementById("paymentScreenshot");
+												// This line declares a variable called "img" and assigns it the value of the modified image element on the page
+												let img = document.querySelector("img");
+												file.addEventListener('change', () => {
+													let fr = new FileReader();
+													fr.addEventListener('loadend', () => {
+														let res = fr.result;
+														img.src = res;
+														let spt = res.split("base64,")[1];
+														let obj = {
+															base64: spt,
+															type: file.files[0].type,
+															name: file.files[0].name
+														}
+														fetch(url, {
+															method: "POST",
+															body: JSON.stringify(obj)
+														})
+															.then(r => r.text())
+															.then(data => console.log(data))
+													})
+													fr.readAsDataURL(file.files[0])
+												})
+											</script>
+											<button type="submit" style="font-family: 'Poppins', sans-serif;
+													 display: inline-block; border-radius: 50px; cursor: pointer; margin-left: 15px;
 													background-color: #F28123;  font-size: 13px; border: none; transition: 0.3s;
     padding: 8px 16px;
 													color: #fff;" name="submit" class="place-order" id="orderbtn">Place
-														Order</button>
+												Order</button>
 
-													<style>
-														.place-order:hover {
-															background-color: #051922 !important;
-														}
-
-														.qua:hover {
-															background-color: #051922 !important;
-															color: white;
-														}
-													</style>
-												</form>
-
-											</div>
-
-
-
-											<iframe id="hiddenIframe" name="hiddenIframe"
-												style="display:none;"></iframe>
-
-											<script>
-												function validateAndSubmitForm() {
-													if (!validateForm()) {
-														return false;
-													}
-
-													// Set the target of the form to the hidden iframe
-													document.orderForm.target = "hiddenIframe";
-
-													// Hide the form container
-
-													showPopup();
-													return true;
+											<style>
+												.place-order:hover {
+													background-color: #051922 !important;
 												}
 
-												function validateForm() {
-													var fullName = document.forms["orderForm"]["fullName"].value;
-													var email = document.forms["orderForm"]["email"].value;
-													var address = document.forms["orderForm"]["address"].value;
-													var phone = document.forms["orderForm"]["phone"].value;
-													var productName = document.forms["orderForm"]["productName"].value;
-													var homeDeliveryCheckbox = document.getElementById("deliveryOption");
-													var locationDropdown = document.getElementById("location");
-													var subLocationDropdown = document.getElementById("subLocation");
-													var landMark = document.forms["orderForm"]["landMark"].value;
-													var paymentScreenshot = document.forms["orderForm"]["paymentScreenshot"].value;
-
-													// Add more validation checks as needed
-													if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
-														alert("Please fill out all the required fields!");
-														return false;
-													}
-
-													if (paymentScreenshot === "") {
-														alert("Please upload the payment screenshot!");
-														return false;
-													}
-
-													// Check if home delivery is selected and validate location, area, and payment screenshot
-													if (homeDeliveryCheckbox.checked) {
-														if (locationDropdown.value === "default") {
-															alert("Please select a location!");
-															return false;
-														}
-
-														if (locationDropdown.value === "nayabazar" && subLocationDropdown.value === "default") {
-															alert("Please select an area inside Nayabazar!");
-															return false;
-														}
-
-														if (landMark === "") {
-															alert("Please provide a landmark for delivery!");
-															return false;
-														}
-
-													}
-
-													// You can add more specific validation checks here
-
-													return true;
+												.qua:hover {
+													background-color: #051922 !important;
+													color: white;
 												}
-
-											</script>
+											</style>
+											</form>
 
 										</div>
+
+
+
+										<iframe id="hiddenIframe" name="hiddenIframe" style="display:none;"></iframe>
+
+										<script>
+											function validateAndSubmitForm() {
+												if (!validateForm()) {
+													return false;
+												}
+
+												// Set the target of the form to the hidden iframe
+												document.orderForm.target = "hiddenIframe";
+
+												// Hide the form container
+
+												showPopup();
+												return true;
+											}
+
+											function validateForm() {
+												var fullName = document.forms["orderForm"]["fullName"].value;
+												var email = document.forms["orderForm"]["email"].value;
+												var address = document.forms["orderForm"]["address"].value;
+												var phone = document.forms["orderForm"]["phone"].value;
+												var productName = document.forms["orderForm"]["productName"].value;
+												var homeDeliveryCheckbox = document.getElementById("deliveryOption");
+												var locationDropdown = document.getElementById("location");
+												var subLocationDropdown = document.getElementById("subLocation");
+												var landMark = document.forms["orderForm"]["landMark"].value;
+												var paymentScreenshot = document.forms["orderForm"]["paymentScreenshot"].value;
+
+												// Add more validation checks as needed
+												if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
+													alert("Please fill out all the required fields!");
+													return false;
+												}
+
+												if (paymentScreenshot === "") {
+													alert("Please upload the payment screenshot!");
+													return false;
+												}
+
+												// Check if home delivery is selected and validate location, area, and payment screenshot
+												if (homeDeliveryCheckbox.checked) {
+													if (locationDropdown.value === "default") {
+														alert("Please select a location!");
+														return false;
+													}
+
+													if (locationDropdown.value === "nayabazar" && subLocationDropdown.value === "default") {
+														alert("Please select an area inside Nayabazar!");
+														return false;
+													}
+
+													if (landMark === "") {
+														alert("Please provide a landmark for delivery!");
+														return false;
+													}
+
+												}
+
+												// You can add more specific validation checks here
+
+												return true;
+											}
+
+										</script>
+
 									</div>
 								</div>
 							</div>
-
-
 						</div>
 
-					</div>
-				</div>
 
-				<div class="col-lg-4">
+					</div>
 
 				</div>
 			</div>
+
+			<div class="col-lg-4">
+
+			</div>
 		</div>
+	</div>
 	</div>
 	<!-- end check out section -->
 
