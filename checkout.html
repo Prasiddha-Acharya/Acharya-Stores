@@ -215,14 +215,27 @@
 		}
 	</style>
 	<script>
-		function handleDeliveryOption() {
-			var deliveryOption = document.getElementById("deliveryOption");
-			var uploadSection = document.getElementById("uploadSection");
+    function handleDeliveryOption() {
+        var totalAmount = parseFloat(document.getElementById("TotalPrice").value);
+        var deliveryCheckbox = document.getElementById("deliveryOption");
+        var uploadSection = document.getElementById("uploadSection");
 
-			// If "Yes" is selected, show the upload section; otherwise, hide it
-			uploadSection.style.display = deliveryOption.checked ? "block" : "none";
-		}
-	</script>
+        // Check if totalAmount is NaN or below 500
+        if (isNaN(totalAmount) || totalAmount < 500) {
+            if (deliveryCheckbox.checked) {
+                alert("Home delivery is only available for orders above Rs. 500!");
+                deliveryCheckbox.checked = false; // Uncheck the checkbox
+            }
+        }
+
+        // If "Yes" is selected, show the upload section; otherwise, hide it
+        uploadSection.style.display = deliveryCheckbox.checked ? "block" : "none";
+
+        // Return true to allow the checkbox state to change
+        return true;
+    }
+</script>
+
 
 
 </head>
@@ -447,7 +460,7 @@
 					.popup-content {
 						padding-top: 40px !important;
 						padding-bottom: 40px !important;
-					
+
 					}
 
 					.noti {
@@ -492,7 +505,7 @@
 								background-size: cover;
 								/* or contain, depending on your preference */
 								/* Additional styling if needed */
-								
+
 								/* Center the image within the flex container */
 							}
 						</style>
@@ -907,6 +920,8 @@
 													<p><textarea name="bill" id="bill" cols="30" rows="10"
 															placeholder="Say Something"></textarea></p>
 
+													<p><input style="display: none;" type="text" name="MailStatus"
+															placeholder="Pending" value="Pending"></p>
 													<p><input style="display: none;" type="text" name="OrderStatus"
 															placeholder="Received" value="Received"></p>
 													<p><input style="display: none;" type="text" name="Time"
@@ -1006,11 +1021,6 @@
 														}
 													</style>
 													<div class="delivery home" id="uploadSection">
-														<p class="delivery"
-															style="margin-bottom: 10px;  !important; color: red;">
-															*Home Delivery is only available for order above Rs.500*
-															<br>
-														</p>
 														<label for="location" class="dropdown-label">Location :</label>
 														<select id="location" name="location" class="area"
 															onchange="showSubDropdown()">
@@ -1023,7 +1033,7 @@
 
 														<div id="subDropdownContainer" style="display:none;">
 															<p id="specialMessage" class="delivery"
-																style=" margin-bottom: 10px; font-size: 13px !important; color: red; display:none;">
+																style=" margin-bottom: 10px; font-size: 14px !important; color: red; display:none;">
 																*Shipping fee is free for home delivery inside Nayabazar
 																area.*</p>
 
@@ -1048,7 +1058,7 @@
 																<!-- Add more sub-options as needed -->
 															</select>
 														</div>
-														<p id="extraChargesMessage" class="delivery" style="margin-bottom: 10px; font-size: 13px !important;
+														<p id="extraChargesMessage" class="delivery" style="margin-bottom: 10px; font-size: 14px !important;
 														color: red; display:none; color: red;">*Extra fees will be charged for home delivery outside Nayabazar
 															area*</p>
 
