@@ -215,26 +215,26 @@
 		}
 	</style>
 	<script>
-    function handleDeliveryOption() {
-        var totalAmount = parseFloat(document.getElementById("TotalPrice").value);
-        var deliveryCheckbox = document.getElementById("deliveryOption");
-        var uploadSection = document.getElementById("uploadSection");
+		function handleDeliveryOption() {
+			var totalAmount = parseFloat(document.getElementById("TotalPrice").value);
+			var deliveryCheckbox = document.getElementById("deliveryOption");
+			var uploadSection = document.getElementById("uploadSection");
 
-        // Check if totalAmount is NaN or below 500
-        if (isNaN(totalAmount) || totalAmount < 500) {
-            if (deliveryCheckbox.checked) {
-                alert("Home delivery is only available for orders above Rs. 500!");
-                deliveryCheckbox.checked = false; // Uncheck the checkbox
-            }
-        }
+			// Check if totalAmount is NaN or below 500
+			if (isNaN(totalAmount) || totalAmount < 500) {
+				if (deliveryCheckbox.checked) {
+					alert("Home delivery is only available for orders above Rs. 500!");
+					deliveryCheckbox.checked = false; // Uncheck the checkbox
+				}
+			}
 
-        // If "Yes" is selected, show the upload section; otherwise, hide it
-        uploadSection.style.display = deliveryCheckbox.checked ? "block" : "none";
+			// If "Yes" is selected, show the upload section; otherwise, hide it
+			uploadSection.style.display = deliveryCheckbox.checked ? "block" : "none";
 
-        // Return true to allow the checkbox state to change
-        return true;
-    }
-</script>
+			// Return true to allow the checkbox state to change
+			return true;
+		}
+	</script>
 
 
 
@@ -702,13 +702,211 @@
 												<td class="order-td">
 													<select style="padding: 1px; margin-right: -30px; margin-left: 5px;"
 														id="Products" onchange="updatePrice()">
-														<option value="" disabled selected>Select a product</option>
-														<option value="Chini">चिनी (Sugar)</option>
-														<option value="Mishri">Mishri</option>
-														<option value="Chana">Chana</option>
-														<option value="Musuri-Daal">Daal</option>
-														<option value="Kaalo-Daal">Kaalo Daal</option>
-														<option value="Jwano">Jwano</option>
+														<option value="" disablade selected>Select a product</option>
+														<option value="Chini">चिनी</option>
+														<option value="Mishri">मिश्री</option>
+														<option value="Chana">चना</option>
+														<option value="musuri-daal">मुसुरी दाल</option>
+														<option value="Kaalo-Daal">कालो दाल</option>
+														<option value="Jwano">ज्वानो</option>
+														<option value="bread">पाउरोटी</option>
+														<option value="suji">सुजी</option>
+														<option value="sunflower-oil">सनफ्लावर तेल</option>
+														<option value="dabur-red-paste">डाबर रेड पेस्ट</option>
+														<option value="nuetella">न्युटेला</option>
+														<option value="pasta">पास्ता</option>
+														<option value="salt">नुुन</option>
+														<option value="chiya">(CTC) चिया</option>
+														<option value="steel-jhut">स्टिल झुट</option>
+														<option value="rajor">रेजर</option>
+														<option value="coconut-biscuit">Coconut Biscuit</option>
+														<option value="good-day-biscuit">Good Day Biscuit</option>
+														<option value="parle-g-biscuit">Parle-G Biscuit</option>
+														<option value="biscuit-sano">Biscuit (सानो)</option>
+														<option value="blade">ब्लेड</option>
+														<option value="sancho">सन्चो</option>
+														<option value="shoe-polish">सु-पोलिस</option>
+														<option value="salai">सलाई</option>
+														<option value="bal-sano">बल (सानो)</option>
+														<option value="bal-thulo">बल (ठुलो)</option>
+														<option value="chiya-masala">चिया मसाला</option>
+														<option value="meat-masala">मिट मसाला</option>
+														<option value="sabji-masala">सब्जी मसाला</option>
+														<option value="momo-masala">मम: मसाला</option>
+														<option value="khukuri-churot">खुकुरी चुरोट (प्रती बट्टा)
+														</option>
+														<option value="surya-churot">सुर्य चुरोट (प्रती बट्टा)</option>
+														<option value="current-chauchau-sano">Current चाउचाउ (सानो)
+														</option>
+														<option value="current-chauchau-thulo">Current चाउचाउ (ठुलो)
+														</option>
+														<option value="rampam-chauchau">रमपम चाउचाउ</option>
+														<option value="gold-finger">गोल्ड फिंगर</option>
+														<option value="finger-chips">फिंगर चिप्स</option>
+														<option value="papad">पापड</option>
+														<option value="brush-sasto">ब्रस (सस्तो)</option>
+														<option value="brush-mahango">ब्रस (महङ्गो)</option>
+														<option value="lwang">ल्वाङ्ग (प्रती प्याकेट)</option>
+														<option value="marich">मरिच (प्रती प्याकेट)</option>
+														<option value="sukumel">सुकुमेल (प्रती प्याकेट)</option>
+														<option value="supari">सुपारी (प्रती प्याकेट)</option>
+														<option value="lifebuoy-soap">Lifebuoy साबुन</option>
+														<option value="lux-soap">LUX साबुन</option>
+														<option value="vim-soap-bhada-majhne">VIM साबुन (भाडा माझ्ने)
+														</option>
+														<option value="kalo-soap-bhada-majhne">कालो साबुन (भाडा माझ्ने)
+														</option>
+														<option value="dhoni-soap-kapda-dhune">DHONI साबुन (कपडा धुने)
+														</option>
+														<option value="surf-sano">Surf (सानो)</option>
+														<option value="frooti">Frooti</option>
+														<option value="sprite-jumbo">Sprite (Jumbo)</option>
+														<option value="sprite-medium">Sprite (Medium)</option>
+														<option value="dhago-prati-lhachhi">धागो (प्रती ल्हाच्छी)
+														</option>
+														<option value="2pm-cheese-ball">2PM Cheese Ball</option>
+														<option value="2pm-stix-kurkure">2PM Stix (Kurkure)</option>
+														<option value="2pm-akabare-twigs-kurkure">2PM Akabare Twigs
+															(Kurkure)</option>
+														<option value="2pm-kurkure">2PM Kurkure</option>
+														<option value="2pm-akabare-twigs-small">2PM Akabare Twigs
+															(Small)</option>
+														<option value="cheese-ball">Cheese Ball</option>
+														<option value="kurkure">Kurkure</option>
+														<option value="matar">मटर</option>
+
+
+
+
+
+														<option value="Lipstick-sasto">Lipstick (सस्तो)</option>
+														<option value="Lipstick-mahango">Lipstick (महङ्गो)</option>
+														<option value="Papaya-Facewash">Papaya Facewash</option>
+														<option value="Papaya-Face-Cream">Papaya Face Cream</option>
+														<option value="Clear-tel">Clear (तेल)</option>
+														<option value="Bajaj-tel">Bajaj (तेल)</option>
+														<option value="Okhati-sabun">Okhati (साबुन)</option>
+														<option value="Siglo-mehendi-Red">Siglo मेहेन्दी (Red)</option>
+														<option value="Dexe-mehendi-Black">Dexe मेहेन्दी (Black)
+														</option>
+														<option value="Goorej-mehendi-Black-Small">Goorej मेहेन्दी
+															(Small)</option>
+														<option value="Fair-and-Lovely-patta">Fair & Lovely (पत्ता)
+														</option>
+														<option value="Fair-and-Lovely-batta">Fair & Lovely (बट्टा)
+														</option>
+														<option value="sindur">सि‌ंदुर</option>
+														<option value="Liquid-sindur">Liquid सि‌ंदुर</option>
+														<option value="Ponds-Cream">Ponds Cream</option>
+														<option value="Glycerin-Big">Glycerin (Big)</option>
+														<option value="Glycerin-Small">Glycerin (Small)</option>
+														<option value="Diaper">Diaper</option>
+														<option value="Pad-thulo">Pad (ठुलो)</option>
+														<option value="Pad-medium">Pad (मिडियम)</option>
+														<option value="Pad-sano">Pad (सानो)</option>
+														<option value="Ponds-Powder-sano">Ponds Powder (सानो)</option>
+														<option value="Ponds-Powder-thulo">Ponds Powder (ठुलो)</option>
+														<option value="Johnson-Baby-Powder-thulo">Johnson's Baby
+															Powder (ठुलो)</option>
+														<option value="Johnson-Baby-Powder-sano">Johnson's Baby Powder
+															(सानो)</option>
+														<option value="Himalaya-Baby-Powder">Himalaya Baby Powder
+														</option>
+														<option value="moti-mala">मोती माला</option>
+														<option value="lhachha">ल्हाच्छा</option>
+														<option value="Vaseline">Vaseline</option>
+														<option value="Moisturizing-Cream">Moisturizing Cream</option>
+														<option value="LipGuard">LipGuard</option>
+														<option value="gajal">गाजल</option>
+														<option value="Sunsilk-Shampoo">Sunsilk Shampoo (३ पिस)
+														</option>
+														<option value="Dove-Shampoo">Dove Shampoo (१ पिस)</option>
+														<option value="Dove-Conditioner">Dove Conditioner (१ पिस)
+														</option>
+														<option value="Head-and-Shoulder-Shampoo">Head & Shoulder
+															Shampoo (३ पिस)</option>
+														<option value="Goorej-Rich-Creme-mehendi-Black">Goorej Rich
+															Creme मेहेन्दी (Black)</option>
+														<option value="Nisha-mehendi-Black">Nisha मेहेन्दी (Black)
+														</option>
+														<option value="Nisha-mehendi-Red">Nisha मेहेन्दी (Red)</option>
+														<option value="Nisha-mehendi-Yellow">Nisha मेहेन्दी (Yellow)
+														</option>
+														<option value="Neeta-mehendi-Black">Neeta मेहेन्दी (Black)
+														</option>
+														<option value="Neeta-mehendi-Red">Neeta मेहेन्दी (Red)</option>
+														<option value="Headbin">Headbin</option>
+														<option value="Johnson-Baby-Soap">Johnson's Baby Soap</option>
+														<option value="Boss-Perfume-Large">Boss Perfume (Large)</option>
+														<option value="Denver-Perfume">Denver Perfume</option>
+														<option value="Melody-Perfume">Melody Perfume</option>
+														<option value="Pocket-Perfume">Pocket Perfume</option>
+														<option value="Sunsilk-Shampoo-batta">Sunsilk Shampoo (बट्टा)
+														</option>
+														<option value="Clear-Shampoo-batta">Clear Shampoo (बट्टा)
+														</option>
+														<option value="mirror">ऐना</option>
+														<option value="Ribbon">Ribbon (प्रती मिटर)</option>
+														<option value="NailPolish-sasto">NailPolish (सस्तो)</option>
+														<option value="NailPolish-mahango">NailPolish (महङ्गो)</option>
+														<option value="Nail-Polish-Remover-Liquid">Nail Polish Remover
+															(Liquid)</option>
+														<option value="Nail-Polish-Remover-Paper">Nail Polish Remover
+															(Paper)</option>
+														<option value="kaiyo">काँईयो</option>
+
+
+
+
+
+														<option value="Dhup">धुप</option>
+														<option value="Bati">बाती</option>
+														<option value="Ashtagandh">अष्टगन्ध</option>
+														<option value="Shringar-Samagri">श्रङ्गार सामाग्री</option>
+														<option value="Hawan-Samagri">हवन सामाग्री</option>
+														<option value="Chyatchute-Kapada">
+															च्यात्चुते कपडा (प्रती मि)</option>
+														<option value="Mauli-Dhago">मौली धागो</option>
+														<option value="Kapur">कपुर</option>
+														<option value="Bati-Katne-Dhago">बाती कात्ने धागो</option>
+														<option value="Janai">जनै (२ पिस)</option>
+														<option value="Supari">सुपारी (१ पिस)</option>
+														<option value="Til">तिल (प्रती पावा)</option>
+														<option value="Jau">जौ (प्रती पावा)</option>
+														<option value="Nariwal">नरिवल (प्रती किलो)</option>
+														<option value="Damdam-Abir">डमडम अबिर</option>
+														<option value="Kanaiya-Abir">कनह्यैया अबिर</option>
+														<option value="Gaichhap-Abir">गाईछाप अबिर</option>
+														<option value="Sarvoshadhi">सर्वोषधी</option>
+														<option value="Saptamritika">सप्तमृतिका</option>
+														<option value="Panchratna">पञ्चरत्न</option>
+														<option value="Tilko-Tel">तिलको तेल</option>
+														<option value="Dopatta">दोपट्टा</option>
+														<option value="Hanuman-Chalisa">हनुमान चालीसा</option>
+														<option value="Pitambari">पिताम्बरी</option>
+
+
+
+
+
+														<option value="Petrol">Petrol (प्रती लि)</option>
+														<option value="Black-Tape">Black Tape</option>
+														<option value="Cello-Tape">Cello Tape</option>
+														<option value="Tala-Chabi">ताला चाबी</option>
+														<option value="Rumal">रुमाल</option>
+														<option value="Moja">मोजा (प्रती जोर)</option>
+														<option value="Copy-Thulo">कपी (ठुलो)</option>
+														<option value="Copy-Medium">कपी (मिडियम)</option>
+														<option value="Copy-Sano">कपी (सानो)</option>
+														<option value="Copy-Sanoo">कपी (सानो)</option>
+														<option value="File">फाईल</option>
+														<option value="Balpen">बलपेन</option>
+														<option value="Pencil">पेन्सिल</option>
+														<option value="Kham">खाम (प्रती गोटा)</option>
+														<option value="Marker">मार्कर</option>
+														<option value="Dhago-Thulo">धागो (ठुलो)</option>
+														<option value="Dhago-Sano">धागो (सानो)</option>
+														<option value="Thumbpin">थम्पिन</option>
 													</select>
 												</td>
 
@@ -752,9 +950,190 @@
 											Mishri: 180,
 											Chana: 140,
 											'musuri-daal': 180,
-											'Kaalo-Daal': 200,
+											'Kaalo-Daal': 160,
 											Jwano: 100,
+											bread: 50,
+											suji: 50,
+											'sunflower-oil': 110,
+											'dabur-red-paste': 30,
+											nuetella: 50,
+											pasta: 50,
+											salt: 30,
+											chiya: 25,
+											'steel-jhut': 30,
+											rajor: 40,
+											'coconut-biscuit': 50,
+											'good-day-biscuit': 50,
+											'parle-g-biscuit': 25,
+											'biscuit-sano': 10,
+											blade: 40,
+											sancho: 40,
+											'shoe-polish': 60,
+											salai: 25,
+											'bal-sano': 80,
+											'bal-thulo': 100,
+											'chiya-masala': 70,
+											'meat-masala': 40,
+											'sabji-masala': 40,
+											'momo-masala': 40,
+											'khukuri-churot': 130,
+											'surya-churot': 300,
+											'current-chauchau-sano': 20,
+											'current-chauchau-thulo': 50,
+											'rampam-chauchau': 20,
+											'gold-finger': 40,
+											'finger-chips': 40,
+											papad: 30,
+											'brush-sasto': 25,
+											'brush-mahango': 60,
+											lwang: 10,
+											marich: 10,
+											sukumel: 20,
+											supari: 10,
+											'lifebuoy-soap': 50,
+											'lux-soap': 55,
+											'vim-soap-bhada-majhne': 10,
+											'kalo-soap-bhada-majhne': 15,
+											'dhoni-soap-kapda-dhune': 35,
+											'surf-sano': 25,
+											frooti: 30,
+											'sprite-jumbo': 200,
+											'sprite-medium': 100,
+											'dhago-prati-lhachhi': 70,
+											'2pm-cheese-ball': 50,
+											'2pm-stix-kurkure': 50,
+											'2pm-akabare-twigs-kurkure': 50,
+											'2pm-kurkure': 50,
+											'2pm-akabare-twigs-small': 50,
+											'cheese-ball': 10,
+											kurkure: 10,
+											matar: 10,
+
+
+
+
+
+
+											'Lipstick-sasto': 60,
+											'Lipstick-mahango': 150,
+											'Papaya-Facewash': 250,
+											'Papaya-Face-Cream': 350,
+											'Clear-tel': 80,
+											'Bajaj-tel': 80,
+											'Okhati-sabun': 60,
+											'Siglo-mehendi-Red': 60,
+											'Dexe-mehendi-Black': 50,
+											'Goorej-mehendi-Black-Small': 35,
+											'Fair-and-Lovely-patta': 20,
+											'Fair-and-Lovely-batta': 100,
+											sindur: 20,
+											'Liquid-sindur': 50,
+											'Ponds-Cream': 140,
+											'Glycerin-Big': 70,
+											'Glycerin-Small': 60,
+											Diaper: 100,
+											'Pad-thulo': 120,
+											'Pad-medium': 70,
+											'Pad-sano': 60,
+											'Ponds-Powder-sano': 20,
+											'Ponds-Powder-thulo': 80,
+											'Johnson-Baby-Powder-thulo': 150,
+											'Johnson-Baby-Powder-sano': 80,
+											'Himalaya-Baby-Powder': 150,
+											'moti-mala': 60,
+											lhachha: 80,
+											Vaseline: 20,
+											'Moisturizing-Cream': 35,
+											LipGuard: 60,
+											gajal: 20,
+											'Sunsilk-Shampoo': 10,
+											'Dove-Shampoo': 5,
+											'Dove-Conditioner': 10,
+											'Head-and-Shoulder-Shampoo': 10,
+											'Goorej-Rich-Creme-mehendi-Black': 70,
+											'Nisha-mehendi-Black': 50,
+											'Nisha-mehendi-Red': 50,
+											'Nisha-mehendi-Yellow': 50,
+											'Neeta-mehendi-Black': 20,
+											'Neeta-mehendi-Red': 30,
+											Headbin: 100,
+											'Johnson-Baby-Soap': 70,
+											'Boss-Perfume-Large': 400,
+											'Denver-Perfume': 500,
+											'Melody-Perfume': 250,
+											'Pocket-Perfume': 140,
+											'Sunsilk-Shampoo-batta': 350,
+											'Clear-Shampoo-batta': 250,
+											mirror: 150,
+											Ribbon: 10,
+											'NailPolish-sasto': 60,
+											'NailPolish-mahango': 80,
+											'Nail-Polish-Remover-Liquid': 80,
+											'Nail-Polish-Remover-Paper': 40,
+											kaiyo: 110,
+
+
+
+
+
+
+
+
+											Dhup: 35,
+											Bati: 60,
+											Ashtagandh: 30,
+											'Shringar-Samagri': 150,
+											'Hawan-Samagri': 40,
+											'Chyatchute-Kapada': 50,
+											'Mauli-Dhago': 20,
+											Kapur: 60,
+											'Bati-Katne-Dhago': 70,
+											'Janai': 5,
+											'Supari': 5,
+											'Til': 80,
+											'Jau': 60,
+											'Nariwal': 600,
+											'Damdam-Abir': 30,
+											'Kanaiya-Abir': 30,
+											'Gaichhap-Abir': 15,
+											Sarvoshadhi: 20,
+											Saptamritika: 20,
+											Panchratna: 20,
+											'Tilko-Tel': 140,
+											Dopatta: 50,
+											'Hanuman-Chalisa': 10,
+											Pitambari: 50,
+
+
+
+
+
+											
+
+											Petrol: 180,
+											"Black-Tape": 30,
+											"Cello-Tape": 20,
+											"Tala-Chabi": 200,
+											Rumal: 50,
+											Moja: 120,
+											"Copy-Thulo": 50,
+											"Copy-Medium": 30,
+											"Copy-Sano": 20,
+											"Copy-Sanoo": 10,
+											File: 30,
+											Balpen: 10,
+											Pencil: 10,
+											"Kham": 1,
+											Marker: 50,
+											"Dhago-Thulo": 40,
+											"Dhago-Sano": 10,
+											Thumbpin: 15
+
 										};
+
+
+
+
 
 										ProductsSelect.addEventListener('change', () => {
 											const selectedOption = ProductsSelect.value;
@@ -1024,7 +1403,7 @@
 														<label for="location" class="dropdown-label">Location :</label>
 														<select id="location" name="location" class="area"
 															onchange="showSubDropdown()">
-															<option value="default" selected disabled>Select a location
+															<option value="default" selected disablade>Select a location
 															</option>
 															<option value="nayabazar">Inside Nayabazar Area
 															</option>
@@ -1041,7 +1420,8 @@
 															<label for="subLocation" class="dropdown-label">Area :
 															</label>
 															<select id="subLocation" name="subLocation" class="area">
-																<option value="default" selected disabled>Select an area
+																<option value="default" selected disablade>Select an
+																	area
 																</option>
 																<option value="Red-Panda Chowk Area">Red-Panda Chowk
 																	Area</option>
