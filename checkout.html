@@ -694,7 +694,6 @@
 											<tr>
 												<th style="font-weight: 600;">Product</th>
 												<th style="font-weight: 600;" class="delivery">Quantity</th>
-												<th style="font-weight: 600;" class="delivery">Price</th>
 											</tr>
 										</thead>
 										<tbody class="order-details-body">
@@ -918,12 +917,23 @@
 														onkeydown="return false">
 													<button class="qua" onclick="incrementQuantity()">+</button>
 												</td>
-												<td class="order-td" id="priceContainer">
+
+												
+
+											</tr>
+
+
+
+											<tr style="font-size: 16px !important;">
+												<td class="order-td" style="text-align: right;">Price
+													:</td>
+												<td class="order-td" style="color: red;">
 													<p><span id="productPrice">0</span></p>
 												</td>
 											</tr>
 											<tr style="font-size: 16px !important;">
-												<td class="order-td" colspan="2" style="text-align: right;">Total Price
+
+												<td class="order-td" style="text-align: right;">Total Price
 													:</td>
 												<td class="order-td" style="color: red;" id="totalPrice">0</td>
 											</tr>
@@ -1107,8 +1117,6 @@
 
 
 
-
-											
 
 											Petrol: 180,
 											"Black-Tape": 30,
