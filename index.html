@@ -277,16 +277,16 @@
 	<!-- end search area -->
 
 	<script>
-		document.addEventListener("DOMContentLoaded", function(event) { 
-  document.body.style.opacity = 1;
-});
+		document.addEventListener("DOMContentLoaded", function (event) {
+			document.body.style.opacity = 1;
+		});
 	</script>
 	<style>
+		body {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
 
-body {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
 		@media only screen and (min-width: 769px) {
 			.pcbg {
 				position: absolute;
@@ -296,19 +296,21 @@ body {
 				height: 100%;
 				object-fit: cover;
 				object-position: center;
-				 /* Set the z-index to a value that ensures it's behind other content */
+				/* Set the z-index to a value that ensures it's behind other content */
 			}
-	
+
 			.mbg {
-				display: none; /* Hide the mobile background by default on larger screens */
+				display: none;
+				/* Hide the mobile background by default on larger screens */
 			}
 		}
-	
+
 		@media only screen and (max-width: 768px) {
 			.pcbg {
-				display: none; /* Hide the desktop background on smaller screens */
+				display: none;
+				/* Hide the desktop background on smaller screens */
 			}
-	
+
 			.mbg {
 				position: absolute;
 				top: 0;
@@ -321,7 +323,7 @@ body {
 			}
 		}
 	</style>
-	
+
 	<div class="hero-area hero-bg" style=" z-index: auto !important;">
 		<img class="pcbg" src="assets/img/pc-hero-bg.png" alt="Hero Background Image">
 		<img class="mbg" src="assets/img/hero-bg.png" alt="Hero Background Image">
