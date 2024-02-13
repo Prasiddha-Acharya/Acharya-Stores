@@ -687,10 +687,17 @@
 										body {
 											font-family: "Poppins", sans-serif;
 										}
+
+										.order-details-body #Products {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 									</style>
 
 									<table class="order-details delivery">
-										<thead class="order-th">
+										<thead>
 											<tr>
 												<th style="font-weight: 600;">Product</th>
 												<th style="font-weight: 600;" class="delivery">Quantity</th>
