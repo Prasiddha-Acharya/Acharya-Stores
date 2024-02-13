@@ -296,14 +296,22 @@
 				height: 100%;
 				object-fit: cover;
 				object-position: center;
+				z-index: -1;
 				/* Set the z-index to a value that ensures it's behind other content */
 			}
 
 			.mbg {
 				display: none;
+
 				/* Hide the mobile background by default on larger screens */
 			}
+
+
+
 		}
+
+
+
 
 		@media only screen and (max-width: 768px) {
 			.pcbg {
@@ -326,15 +334,15 @@
 
 	<div class="hero-area hero-bg" style=" z-index: auto !important;">
 		<img class="pcbg" src="assets/img/pc-hero-bg.png" alt="Hero Background Image">
-		<img class="mbg" src="assets/img/hero-bg.png" alt="Hero Background Image">
+		<img class="mbg" style="z-index: -1;" src="assets/img/hero-bg.png" alt="Hero Background Image">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
 					<div class="hero-text">
 						<div class="hero-text-tablecell">
-							<p class="subtitle animated fadeInUp" style="opacity: 0;  color: #bd5601;">1ST ONLINE STORE
+							<p class="subtitle animated fadeInUp" style="opacity: 0;">1ST ONLINE STORE
 								IN NAYABAZAR</p>
-							<h1 class="animated fadeInUp" style="opacity: 0; color: #312531; animation-delay: 0.3s;">
+							<h1 class="animated fadeInUp wel" style="opacity: 0; animation-delay: 0.3s;">
 								Welcome to Acharya
 								Stores</h1>
 							<div class="hero-btns animated fadeInUp" style="opacity: 0; animation-delay: 0.5s;">
@@ -342,9 +350,8 @@
 
 
 
-								<a href="contact.html"
-									style=" background-color: #051922; border: #051922; padding: 10px 20px;"
-									class="bordered-btn">Contact Us</a>
+								<a href="contact.html"  class="con bordered-btn">Contact
+									Us</a>
 							</div>
 						</div>
 					</div>
@@ -352,6 +359,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<!-- features list section -->
 	<div class="list-section pt-80 pb-80">
@@ -654,10 +662,6 @@
 							/* For mobile */
 							.ptop {
 								margin-top: -100px;
-							}
-
-							.hero-text {
-								margin-top: -75px;
 							}
 						}
 					</style>
