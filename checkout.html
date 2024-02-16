@@ -5,13 +5,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
 	<title>Check Out || Acharya Stores</title>
 
-	
-	<meta name="description" content="Complete your purchase securely and efficiently at our checkout page. Review your items, enter shipping and payment details, and finalize your order with confidence. Enjoy hassle-free shopping experience at Acharya Stores' checkout.">
+
+	<meta name="description"
+		content="Complete your purchase securely and efficiently at our checkout page. Review your items, enter shipping and payment details, and finalize your order with confidence. Enjoy hassle-free shopping experience at Acharya Stores' checkout.">
 	<meta name="keywords"
 		content="Acharya Stores, groceries, household items, online shopping, quality products, convenience, grocery store">
 	<meta name="author" content="Acharya Stores">
@@ -1527,9 +1529,57 @@
 
 													<p class="delivery">
 														Scan the QR Below to proceed payment & <br> Upload the
-														screenshot of payment below :</p>
+														Reciept/screenshot of payment below :</p>
+
+													<div class="account-info">
+														<p><strong>Account Holder's Name :</strong> <span
+																id="account-holder">Prem Kumari Adhikari</span></p>
+														<p><strong>Account No :</strong> <span
+																id="account-number">26250411210019</span></p>
+																<a href="#" id="copy-button" onclick="copyAccountNumber()">Copy</a>
+													</div>
+<script>
+function copyAccountNumber() {
+  var accountNumber = document.getElementById("account-number");
+  var copyButton = document.getElementById("copy-button");
+
+  // Create a temporary input element
+  var tempInput = document.createElement("input");
+  tempInput.value = accountNumber.innerText;
+  document.body.appendChild(tempInput);
+
+  // Select the text in the input element
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  // Copy the selected text
+  document.execCommand("copy");
+
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
+
+  // Change button text to "Copied"
+  copyButton.textContent = "Copied Successfully!";
+}
 
 
+</script>
+													<style>
+														.account-info {
+															border: 1px solid #ccc;
+															padding: 10px;
+															border-radius: 5px;
+															margin-bottom: 20px;
+														}
+
+														.account-info p {
+															margin: 5px 0;
+														}
+
+														.account-info strong {
+															font-weight: bold;
+														}
+													</style>
 													<div class="qr-png">
 														<style>
 															.qr-png {
@@ -1727,7 +1777,8 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">About us</h2>
-						<p class="pop">"Discover all your household needs in one place! From groceries to cosmetics, Puja items to stationery, and even petrol – we've got it all covered for you!"</p>
+						<p class="pop">"Discover all your household needs in one place! From groceries to cosmetics,
+							Puja items to stationery, and even petrol – we've got it all covered for you!"</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -1749,10 +1800,12 @@
 
 						<div class="social-icons">
 							<ul>
-								<li><a href="https://www.facebook.com/acharyastores" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.facebook.com/acharyastores" target="_blank"><i
+											class="fab fa-facebook-f"></i></a></li>
 								<li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
 								<li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="https://acharyastores.com.np/" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+								<li><a href="https://acharyastores.com.np/" target="_blank"><i
+											class="fab fa-dribbble"></i></a></li>
 							</ul>
 						</div>
 					</div>
