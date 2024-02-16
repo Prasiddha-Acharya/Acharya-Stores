@@ -1377,7 +1377,6 @@
 														<p class="delivery" id="pickupMessage"
 															style="margin-bottom: 10px;  !important; color: red; display: none;">
 															*Visit store to Pickup your Product*
-															<br>
 														</p>
 													</div>
 													<script>
@@ -1527,94 +1526,7 @@
 													</div>
 
 
-													<p class="delivery">
-														Scan the QR Below to proceed payment & <br> Upload the
-														Reciept/screenshot of payment below :</p>
-
-													<div class="account-info">
-														<p><strong>Account Holder's Name :</strong> <span
-																id="account-holder">Prem Kumari Adhikari</span></p>
-														<p><strong>Account No :</strong> <span
-																id="account-number">26250411210019</span></p>
-																<a href="#" id="copy-button" onclick="copyAccountNumber()">Copy</a>
-													</div>
-<script>
-function copyAccountNumber() {
-  var accountNumber = document.getElementById("account-number");
-  var copyButton = document.getElementById("copy-button");
-
-  // Create a temporary input element
-  var tempInput = document.createElement("input");
-  tempInput.value = accountNumber.innerText;
-  document.body.appendChild(tempInput);
-
-  // Select the text in the input element
-  tempInput.select();
-  tempInput.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  // Copy the selected text
-  document.execCommand("copy");
-
-  // Remove the temporary input element
-  document.body.removeChild(tempInput);
-
-  // Change button text to "Copied"
-  copyButton.textContent = "Copied Successfully!";
-}
-
-
-</script>
-													<style>
-														.account-info {
-															border: 1px solid #ccc;
-															padding: 10px;
-															border-radius: 5px;
-															margin-bottom: 20px;
-														}
-
-														.account-info p {
-															margin: 5px 0;
-														}
-
-														.account-info strong {
-															font-weight: bold;
-														}
-													</style>
-													<div class="qr-png">
-														<style>
-															.qr-png {
-																background-image: url('img/scan-to-pay.png');
-																content: '';
-																display: block;
-																/* Set your desired smaller width and height */
-																width: 400px;
-																height: 500px;
-																background-size: cover;
-																background-position: center;
-
-															}
-
-															@media (max-width: 767px) {
-																.qr-png {
-																	width: 300px;
-																	/* Make the image full-width on screens up to 768px */
-																}
-															}
-														</style>
-													</div>
-													<div class="upload-container">
-														<label for="paymentScreenshot"> <br> Upload Pre-payment
-															Screenshot
-															: </label> <input class="delivery" type="file"
-															id="paymentScreenshot" name="paymentScreenshot">
-														<!-- This is the modified image element with an empty src and alt attribute -->
-														<img src="" id="imagePreview" alt="">
-
-
-
-
-													</div>
-
+												
 											</div>
 											<style>
 												#imagePreview {
@@ -1662,7 +1574,7 @@ function copyAccountNumber() {
 												})
 											</script>
 											<button type="submit" style="font-family: 'Poppins', sans-serif;
-													 display: inline-block; border-radius: 50px; cursor: pointer; margin-left: 15px;
+													 display: inline-block; border-radius: 50px; cursor: pointer; margin-top: -10px; margin-left: 20px;
 													background-color: #F28123;  font-size: 13px; border: none; transition: 0.3s;
     padding: 8px 16px;
 													color: #fff;" name="submit" class="place-order" id="orderbtn">Place
@@ -1711,7 +1623,6 @@ function copyAccountNumber() {
 												var locationDropdown = document.getElementById("location");
 												var subLocationDropdown = document.getElementById("subLocation");
 												var landMark = document.forms["orderForm"]["landMark"].value;
-												var paymentScreenshot = document.forms["orderForm"]["paymentScreenshot"].value;
 
 												// Add more validation checks as needed
 												if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
@@ -1719,10 +1630,7 @@ function copyAccountNumber() {
 													return false;
 												}
 
-												if (paymentScreenshot === "") {
-													alert("Please upload the payment screenshot!");
-													return false;
-												}
+											
 
 												// Check if home delivery is selected and validate location, area, and payment screenshot
 												if (homeDeliveryCheckbox.checked) {
