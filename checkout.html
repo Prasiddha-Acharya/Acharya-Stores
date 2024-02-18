@@ -1426,74 +1426,42 @@
 														}
 													</style>
 													<div class="delivery home" id="uploadSection">
-														<label for="location" class="dropdown-label">Location :</label>
-														<select id="location" name="location" class="area"
-															onchange="showSubDropdown()">
-															<option value="default" selected disablade>Select a location
-															</option>
-															<option value="nayabazar">Inside Nayabazar Area
-															</option>
-															<option value="outside">Outside Nayabazar Area</option>
-														</select>
 
-														<div id="subDropdownContainer" style="display:none;">
-															<p id="specialMessage" class="delivery"
-																style=" margin-bottom: 10px; font-size: 14px !important; color: red; display:none;">
+														<p class="delivery"
+																style=" margin-bottom: 10px; font-size: 14px !important; color: red; ">
 																*Shipping fee is free for home delivery inside Nayabazar
 																area.*</p>
 
 
-															<label for="subLocation" class="dropdown-label">Area :
-															</label>
-															<select id="subLocation" name="subLocation" class="area">
-																<option value="default" selected disablade>Select an
-																	area
-																</option>
-																<option value="Red-Panda Chowk Area">Red-Panda Chowk
-																	Area</option>
-																<option value="Mathlo Bazar Area">Mathlo Bazar Area
-																</option>
-																<option value="Balaguru Rangashala Area">Balaguru
-																	Rangashala Area
-																</option>
-																<option value="NMC Bank Area">NMC Bank Area</option>
-																<option value="Himalayan Bank Area">Himalayan Bank Area
-																</option>
-																<option value="High School Area">High School Area
-																</option>
-																<!-- Add more sub-options as needed -->
-															</select>
+																<p><input id="location" style="display: none;" type="text" name="location"
+																	placeholder="location" value="nayabazar"></p>
+
+														<label for="subLocation" class="dropdown-label">Area :</label>
+														<select id="subLocation" name="subLocation" class="area"
+															onchange="showSubDropdown()">
+															<option value="default" selected disablade>Select an
+																area
+															</option>
+															<option value="Red-Panda Chowk Area">Red-Panda Chowk
+																Area</option>
+															<option value="Mathlo Bazar Area">Mathlo Bazar Area
+															</option>
+															<option value="Balaguru Rangashala Area">Balaguru
+																Rangashala Area
+															</option>
+															<option value="NMC Bank Area">NMC Bank Area</option>
+															<option value="Himalayan Bank Area">Himalayan Bank Area
+															</option>
+															<option value="High School Area">High School Area
+															</option>
+														</select>
+
+														<div id="subDropdownContainer" style="display:none;">
+															
+
+															
 														</div>
-														<p id="extraChargesMessage" class="delivery" style="margin-bottom: 10px; font-size: 14px !important;
-														color: red; display:none; color: red;">*Extra fees will be charged for home delivery outside Nayabazar
-															area*</p>
 
-
-														<script>
-															function showSubDropdown() {
-																var locationDropdown = document.getElementById("location");
-																var subDropdownContainer = document.getElementById("subDropdownContainer");
-																var extraChargesMessage = document.getElementById("extraChargesMessage");
-																var specialMessage = document.getElementById("specialMessage");
-
-																if (locationDropdown.value === "nayabazar") {
-																	subDropdownContainer.style.display = "block";
-																	extraChargesMessage.style.display = "none";
-																	specialMessage.style.display = "block";
-																} else if (locationDropdown.value === "outside") {
-																	subDropdownContainer.style.display = "none";
-																	extraChargesMessage.style.display = "block";
-																	specialMessage.style.display = "none";
-																} else {
-																	subDropdownContainer.style.display = "none";
-																	extraChargesMessage.style.display = "none";
-																	specialMessage.style.display = "none";
-																}
-															}
-
-
-
-														</script>
 														<p><input type="text" name="landMark"
 																placeholder="Landmark *E.g. Tara Bhattrai house, Infront of Sahara Bank*">
 														</p>
