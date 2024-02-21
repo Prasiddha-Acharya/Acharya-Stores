@@ -1330,8 +1330,27 @@
 															placeholder="Pending" value="Pending"></p>
 													<p><input style="display: none;" type="text" name="OrderStatus"
 															placeholder="Received" value="Received"></p>
-													<p><input style="display: none;" type="text" name="Time"
-															placeholder="Time" value="=NOW()"></p>
+															<p>
+																<input style="display: none;" type="text" name="Time" id="dateTimeInput" placeholder="Date and Time">
+															</p>
+															
+															<script>
+																// Function to get current date, day, and time in 12-hour format
+																function getCurrentDateTime12Hour() {
+																	var currentDate = new Date();
+																	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+																	var day = days[currentDate.getDay()];
+																	var hours = currentDate.getHours() % 12 || 12; // Convert to 12-hour format
+																	var minutes = currentDate.getMinutes();
+																	var ampm = hours >= 12 ? 'PM' : 'AM';
+																	var formattedDateTime = currentDate.toLocaleDateString() + ' ' + day + ', ' + hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + ampm;
+																	return formattedDateTime;
+																}
+															
+																// Set the value of the input field with the formatted date, day, and time
+																document.getElementById('dateTimeInput').value = getCurrentDateTime12Hour();
+															</script>
+															
 
 
 
