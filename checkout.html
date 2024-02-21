@@ -1330,27 +1330,11 @@
 															placeholder="Pending" value="Pending"></p>
 													<p><input style="display: none;" type="text" name="OrderStatus"
 															placeholder="Received" value="Received"></p>
-															<p>
-																<input style="display: none;" type="text" name="Time" id="dateTimeInput" placeholder="Date and Time">
-															</p>
-															
-															<script>
-																// Function to get current date, day, and time in 12-hour format
-																function getCurrentDateTime12Hour() {
-																	var currentDate = new Date();
-																	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-																	var day = days[currentDate.getDay()];
-																	var hours = currentDate.getHours() % 12 || 12; // Convert to 12-hour format
-																	var minutes = currentDate.getMinutes();
-																	var ampm = hours >= 12 ? 'PM' : 'AM';
-																	var formattedDateTime = currentDate.toLocaleDateString() + ' ' + day + ', ' + hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + ampm;
-																	return formattedDateTime;
-																}
-															
-																// Set the value of the input field with the formatted date, day, and time
-																document.getElementById('dateTimeInput').value = getCurrentDateTime12Hour();
-															</script>
-															
+													<p>
+														<input style="display: none;" type="text" name="Time"
+															id="dateTimeInput" placeholder="Date and Time">
+													</p>
+
 
 
 
@@ -1413,6 +1397,22 @@
 														}
 													</script>
 
+													<script>
+														// Function to get current date, day, and time in 12-hour format
+														function getCurrentDateTime12Hour() {
+															var currentDate = new Date();
+															var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+															var day = days[currentDate.getDay()];
+															var hours = currentDate.getHours() % 12 || 12; // Convert to 12-hour format
+															var minutes = currentDate.getMinutes();
+															var ampm = hours >= 12 ? 'PM' : 'AM';
+															var formattedDateTime = currentDate.toLocaleDateString() + ' ' + day + ', ' + hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + ampm;
+															return formattedDateTime;
+														}
+
+														// Set the value of the input field with the formatted date, day, and time
+														document.getElementById('dateTimeInput').value = getCurrentDateTime12Hour();
+													</script>
 
 
 
@@ -1447,11 +1447,12 @@
 													<div class="delivery home" id="uploadSection">
 
 														<p class="delivery"
-																style=" margin-bottom: 10px; font-size: 14px !important; color: red; ">
-																*Shipping fee is free for home delivery inside Nayabazar
-																area.*</p>
-																<p><input id="notifmail" style="display: none;" type="text" name="notifmail"
-																	placeholder="notifmail" value="Received"></p>
+															style=" margin-bottom: 10px; font-size: 14px !important; color: red; ">
+															*Shipping fee is free for home delivery inside Nayabazar
+															area.*</p>
+														<p><input id="notifmail" style="display: none;" type="text"
+																name="notifmail" placeholder="notifmail"
+																value="Received"></p>
 
 														<label for="subLocation" class="dropdown-label">Area :</label>
 														<select id="subLocation" name="subLocation" class="area"
@@ -1474,9 +1475,9 @@
 														</select>
 
 														<div id="subDropdownContainer" style="display:none;">
-															
 
-															
+
+
 														</div>
 
 														<p><input type="text" name="landMark"
@@ -1511,7 +1512,7 @@
 													</div>
 
 
-												
+
 											</div>
 											<style>
 												#imagePreview {
@@ -1615,7 +1616,7 @@
 													return false;
 												}
 
-											
+
 
 												// Check if home delivery is selected and validate location, area, and payment screenshot
 												if (homeDeliveryCheckbox.checked) {
