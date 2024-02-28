@@ -1,3 +1,0 @@
-4. Footer Form valid
-5. Contact Form valid (Prasiddha also)
-6. mail Notification send
