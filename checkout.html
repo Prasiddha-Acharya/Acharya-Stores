@@ -1582,7 +1582,7 @@
 
 
 
-										<iframe id="hiddenIframe" name="hiddenIframe" style="display:none;"></iframe>
+
 
 										<script>
 											function validateAndSubmitForm() {
@@ -1590,13 +1590,13 @@
 													return false;
 												}
 
-												// Set the target of the form to the hidden iframe
-												document.orderForm.target = "hiddenIframe";
+												// Prevent the default form submission behavior
+												event.preventDefault();
 
-												// Hide the form container
-
+												// Show the popup
 												showPopup();
-												return true;
+
+												return false; // Prevent further propagation
 											}
 
 											function validateForm() {
