@@ -221,27 +221,7 @@
 			display: none;
 		}
 	</style>
-	<script>
-		function handleDeliveryOption() {
-			var totalAmount = parseFloat(document.getElementById("TotalPrice").value);
-			var deliveryCheckbox = document.getElementById("deliveryOption");
-			var uploadSection = document.getElementById("uploadSection");
-
-			// Check if totalAmount is NaN or below 500
-			if (isNaN(totalAmount) || totalAmount < 500) {
-				if (deliveryCheckbox.checked) {
-					alert("Home delivery is only available for orders above Rs. 500!");
-					deliveryCheckbox.checked = false; // Uncheck the checkbox
-				}
-			}
-
-			// If "Yes" is selected, show the upload section; otherwise, hide it
-			uploadSection.style.display = deliveryCheckbox.checked ? "block" : "none";
-
-			// Return true to allow the checkbox state to change
-			return true;
-		}
-	</script>
+	
 
 
 
@@ -633,16 +613,7 @@
 				}
 			</style>
 
-			<script>
-				// Add this to your existing script or script tag
-				function showPopup() {
-					document.getElementById('orderSuccessPopup').style.display = 'flex';
-				}
-
-				function closePopup() {
-					document.getElementById('orderSuccessPopup').style.display = 'none';
-				}
-			</script>
+			
 			<br> <br>
 			<div class="row">
 				<div class="col-lg-8">
@@ -968,261 +939,7 @@
 										}
 									</style>
 
-									<script>
-										const ProductsSelect = document.getElementById('Products');
-										const priceContainer = document.getElementById('priceContainer');
-										const productPrice = document.getElementById('productPrice');
-										const totalPriceContainer = document.getElementById('totalPrice');
-
-										const prices = {
-											Chini: 110,
-											Mishri: 180,
-											Chana: 140,
-											'musuri-daal': 180,
-											'Kaalo-Daal': 160,
-											Jwano: 100,
-											bread: 50,
-											suji: 50,
-											'sunflower-oil': 110,
-											'dabur-red-paste': 30,
-											nuetella: 50,
-											pasta: 50,
-											salt: 30,
-											chiya: 25,
-											'steel-jhut': 30,
-											rajor: 40,
-											'coconut-biscuit': 50,
-											'good-day-biscuit': 50,
-											'parle-g-biscuit': 25,
-											'biscuit-sano': 10,
-											blade: 40,
-											sancho: 40,
-											'shoe-polish': 60,
-											salai: 25,
-											'bal-sano': 80,
-											'bal-thulo': 100,
-											'chiya-masala': 70,
-											'meat-masala': 40,
-											'sabji-masala': 40,
-											'momo-masala': 40,
-											'khukuri-churot': 130,
-											'surya-churot': 300,
-											'current-chauchau-sano': 20,
-											'current-chauchau-thulo': 50,
-											'rampam-chauchau': 20,
-											'gold-finger': 40,
-											'finger-chips': 40,
-											papad: 30,
-											'brush-sasto': 25,
-											'brush-mahango': 60,
-											lwang: 10,
-											marich: 10,
-											sukumel: 20,
-											supari: 10,
-											'lifebuoy-soap': 50,
-											'lux-soap': 55,
-											'vim-soap-bhada-majhne': 10,
-											'kalo-soap-bhada-majhne': 15,
-											'dhoni-soap-kapda-dhune': 35,
-											'surf-sano': 25,
-											frooti: 30,
-											'sprite-jumbo': 200,
-											'sprite-medium': 100,
-											'dhago-prati-lhachhi': 70,
-											'2pm-cheese-ball': 50,
-											'2pm-stix-kurkure': 50,
-											'2pm-akabare-twigs-kurkure': 50,
-											'2pm-kurkure': 50,
-											'2pm-akabare-twigs-small': 50,
-											'cheese-ball': 10,
-											kurkure: 10,
-											matar: 10,
-
-
-
-
-
-
-											'Lipstick-sasto': 60,
-											'Lipstick-mahango': 150,
-											'Papaya-Facewash': 250,
-											'Papaya-Face-Cream': 350,
-											'Clear-tel': 80,
-											'Bajaj-tel': 80,
-											'Okhati-sabun': 60,
-											'Siglo-mehendi-Red': 60,
-											'Dexe-mehendi-Black': 50,
-											'Goorej-mehendi-Black-Small': 35,
-											'Fair-and-Lovely-patta': 20,
-											'Fair-and-Lovely-batta': 100,
-											sindur: 20,
-											'Liquid-sindur': 50,
-											'Ponds-Cream': 140,
-											'Glycerin-Big': 70,
-											'Glycerin-Small': 60,
-											Diaper: 100,
-											'Pad-thulo': 120,
-											'Pad-medium': 70,
-											'Pad-sano': 60,
-											'Ponds-Powder-sano': 20,
-											'Ponds-Powder-thulo': 80,
-											'Johnson-Baby-Powder-thulo': 150,
-											'Johnson-Baby-Powder-sano': 80,
-											'Himalaya-Baby-Powder': 150,
-											'moti-mala': 60,
-											lhachha: 80,
-											Vaseline: 20,
-											'Moisturizing-Cream': 35,
-											LipGuard: 60,
-											gajal: 20,
-											'Sunsilk-Shampoo': 10,
-											'Dove-Shampoo': 5,
-											'Dove-Conditioner': 10,
-											'Head-and-Shoulder-Shampoo': 10,
-											'Goorej-Rich-Creme-mehendi-Black': 70,
-											'Nisha-mehendi-Black': 50,
-											'Nisha-mehendi-Red': 50,
-											'Nisha-mehendi-Yellow': 50,
-											'Neeta-mehendi-Black': 20,
-											'Neeta-mehendi-Red': 30,
-											Headbin: 100,
-											'Johnson-Baby-Soap': 70,
-											'Boss-Perfume-Large': 400,
-											'Denver-Perfume': 500,
-											'Melody-Perfume': 250,
-											'Pocket-Perfume': 140,
-											'Sunsilk-Shampoo-batta': 350,
-											'Clear-Shampoo-batta': 250,
-											mirror: 150,
-											Ribbon: 10,
-											'NailPolish-sasto': 60,
-											'NailPolish-mahango': 80,
-											'Nail-Polish-Remover-Liquid': 80,
-											'Nail-Polish-Remover-Paper': 40,
-											kaiyo: 110,
-
-
-
-
-
-
-
-
-											Dhup: 35,
-											Bati: 60,
-											Ashtagandh: 30,
-											'Shringar-Samagri': 150,
-											'Hawan-Samagri': 40,
-											'Chyatchute-Kapada': 50,
-											'Mauli-Dhago': 20,
-											Kapur: 60,
-											'Bati-Katne-Dhago': 70,
-											'Janai': 5,
-											'Supari': 5,
-											'Til': 80,
-											'Jau': 60,
-											'Nariwal': 600,
-											'Damdam-Abir': 30,
-											'Kanaiya-Abir': 30,
-											'Gaichhap-Abir': 15,
-											Sarvoshadhi: 20,
-											Saptamritika: 20,
-											Panchratna: 20,
-											'Tilko-Tel': 140,
-											Dopatta: 50,
-											'Hanuman-Chalisa': 10,
-											Pitambari: 50,
-
-
-
-
-
-											Petrol: 180,
-											"Black-Tape": 30,
-											"Cello-Tape": 20,
-											"Tala-Chabi": 200,
-											Rumal: 50,
-											Moja: 120,
-											"Copy-Thulo": 50,
-											"Copy-Medium": 30,
-											"Copy-Sano": 20,
-											"Copy-Sanoo": 10,
-											File: 30,
-											Balpen: 10,
-											Pencil: 10,
-											"Kham": 1,
-											Marker: 50,
-											"Dhago-Thulo": 40,
-											"Dhago-Sano": 10,
-											Thumbpin: 15
-
-										};
-
-
-
-
-
-										ProductsSelect.addEventListener('change', () => {
-											const selectedOption = ProductsSelect.value;
-											const selectedPrice = prices[selectedOption];
-
-											productPrice.textContent = `Rs. ${selectedPrice}`;
-											totalPriceContainer.textContent = `Rs. ${selectedPrice}`; // Set default and total price to product price
-											priceContainer.style.display = 'block';
-
-											window.history.pushState(null, null, `?option=${selectedOption}`);
-										});
-
-										window.addEventListener('load', () => {
-											const urlParams = new URLSearchParams(window.location.search);
-											const selectedOption = urlParams.get('option');
-
-											if (selectedOption) {
-												ProductsSelect.value = selectedOption;
-												ProductsSelect.dispatchEvent(new Event('change'));
-											}
-										});
-
-										function updatePrice() {
-											var quantityInput = document.getElementById('quantity');
-											var productQuantityInput = document.getElementById('productQuantity');
-
-											var quantity = parseInt(quantityInput.value);
-											var selectedOption = ProductsSelect.value;
-											var selectedPrice = prices[selectedOption];
-											var totalPrice = quantity * selectedPrice;
-
-											productQuantityInput.value = quantity; // Set productQuantity input value to the selected quantity
-
-											// Set the product price to the productPrice element
-											productPrice.textContent = `Rs. ${selectedPrice}`;
-
-											// Set the perProductPrice input value to the selectedPrice
-											document.getElementById('perProductPrice').value = selectedPrice;
-
-											totalPriceContainer.textContent = `Rs. ${totalPrice}`;
-
-											// Set the value of the TotalPrice input field
-											document.getElementById('TotalPrice').value = totalPrice; // Add this line to set the value
-										}
-
-
-										function incrementQuantity() {
-											var quantityInput = document.getElementById("quantity");
-											quantityInput.value = parseInt(quantityInput.value) + 1;
-											updatePrice();
-										}
-
-										function decrementQuantity() {
-											var quantityInput = document.getElementById("quantity");
-											if (parseInt(quantityInput.value) > 1) {
-												quantityInput.value = parseInt(quantityInput.value) - 1;
-												updatePrice();
-											}
-										}
-
-
-									</script>
+									
 
 
 								</div>
@@ -1531,34 +1248,7 @@
 												}
 											</style>
 
-											<script>
-												// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
-												let url = "https://script.google.com/macros/s/AKfycbxAs1Nhfp2-_hCVA_9hG4_OuPAnVtMUs4NR9WYL8bDlJX-8uDllg78jf5iW0Z1h6l-X/exec";
-												// This line declares a variable called "file" and assigns it the value of the modified input element on the page
-												let file = document.getElementById("paymentScreenshot");
-												// This line declares a variable called "img" and assigns it the value of the modified image element on the page
-												let img = document.querySelector("img");
-												file.addEventListener('change', () => {
-													let fr = new FileReader();
-													fr.addEventListener('loadend', () => {
-														let res = fr.result;
-														img.src = res;
-														let spt = res.split("base64,")[1];
-														let obj = {
-															base64: spt,
-															type: file.files[0].type,
-															name: file.files[0].name
-														}
-														fetch(url, {
-															method: "POST",
-															body: JSON.stringify(obj)
-														})
-															.then(r => r.text())
-															.then(data => console.log(data))
-													})
-													fr.readAsDataURL(file.files[0])
-												})
-											</script>
+
 											<button type="submit" style="font-family: 'Poppins', sans-serif;
 													 display: inline-block; border-radius: 50px; cursor: pointer; margin-top: -10px; margin-left: 20px;
 													background-color: #F28123;  font-size: 13px; border: none; transition: 0.3s;
@@ -1584,65 +1274,7 @@
 
 
 
-										<script>
-											function validateAndSubmitForm() {
-												if (!validateForm()) {
-													return false;
-												}
-
-												// Prevent the default form submission behavior
-												event.preventDefault();
-
-												// Show the popup
-												showPopup();
-
-												return false; // Prevent further propagation
-											}
-
-											function validateForm() {
-												var fullName = document.forms["orderForm"]["fullName"].value;
-												var email = document.forms["orderForm"]["email"].value;
-												var address = document.forms["orderForm"]["address"].value;
-												var phone = document.forms["orderForm"]["phone"].value;
-												var productName = document.forms["orderForm"]["productName"].value;
-												var homeDeliveryCheckbox = document.getElementById("deliveryOption");
-												var locationDropdown = document.getElementById("location");
-												var subLocationDropdown = document.getElementById("subLocation");
-												var landMark = document.forms["orderForm"]["landMark"].value;
-
-												// Add more validation checks as needed
-												if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
-													alert("Please fill out all the required fields!");
-													return false;
-												}
-
-
-
-												// Check if home delivery is selected and validate location, area, and payment screenshot
-												if (homeDeliveryCheckbox.checked) {
-													if (locationDropdown.value === "default") {
-														alert("Please select a location!");
-														return false;
-													}
-
-													if (locationDropdown.value === "nayabazar" && subLocationDropdown.value === "default") {
-														alert("Please select an area inside Nayabazar!");
-														return false;
-													}
-
-													if (landMark === "") {
-														alert("Please provide a landmark for delivery!");
-														return false;
-													}
-
-												}
-
-												// You can add more specific validation checks here
-
-												return true;
-											}
-
-										</script>
+										
 
 									</div>
 								</div>
@@ -1785,6 +1417,355 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		function validateAndSubmitForm() {
+			if (!validateForm()) {
+				return false;
+			}
+
+			// Prevent the default form submission behavior
+			event.preventDefault();
+
+			// Show the popup
+			showPopup();
+
+			return false; // Prevent further propagation
+		}
+
+		function validateForm() {
+			var fullName = document.forms["orderForm"]["fullName"].value;
+			var email = document.forms["orderForm"]["email"].value;
+			var address = document.forms["orderForm"]["address"].value;
+			var phone = document.forms["orderForm"]["phone"].value;
+			var productName = document.forms["orderForm"]["productName"].value;
+			var homeDeliveryCheckbox = document.getElementById("deliveryOption");
+			var locationDropdown = document.getElementById("location");
+			var subLocationDropdown = document.getElementById("subLocation");
+			var landMark = document.forms["orderForm"]["landMark"].value;
+
+			// Add more validation checks as needed
+			if (fullName === "" || email === "" || address === "" || phone === "" || productName === "") {
+				alert("Please fill out all the required fields!");
+				return false;
+			}
+
+
+
+			// Check if home delivery is selected and validate location, area, and payment screenshot
+			if (homeDeliveryCheckbox.checked) {
+				if (locationDropdown.value === "default") {
+					alert("Please select a location!");
+					return false;
+				}
+
+				if (locationDropdown.value === "nayabazar" && subLocationDropdown.value === "default") {
+					alert("Please select an area inside Nayabazar!");
+					return false;
+				}
+
+				if (landMark === "") {
+					alert("Please provide a landmark for delivery!");
+					return false;
+				}
+
+			}
+
+			// You can add more specific validation checks here
+
+			return true;
+		}
+
+	</script>
+	
+
+	<script>
+		const ProductsSelect = document.getElementById('Products');
+		const priceContainer = document.getElementById('priceContainer');
+		const productPrice = document.getElementById('productPrice');
+		const totalPriceContainer = document.getElementById('totalPrice');
+
+		const prices = {
+			Chini: 110,
+			Mishri: 180,
+			Chana: 140,
+			'musuri-daal': 180,
+			'Kaalo-Daal': 160,
+			Jwano: 100,
+			bread: 50,
+			suji: 50,
+			'sunflower-oil': 110,
+			'dabur-red-paste': 30,
+			nuetella: 50,
+			pasta: 50,
+			salt: 30,
+			chiya: 25,
+			'steel-jhut': 30,
+			rajor: 40,
+			'coconut-biscuit': 50,
+			'good-day-biscuit': 50,
+			'parle-g-biscuit': 25,
+			'biscuit-sano': 10,
+			blade: 40,
+			sancho: 40,
+			'shoe-polish': 60,
+			salai: 25,
+			'bal-sano': 80,
+			'bal-thulo': 100,
+			'chiya-masala': 70,
+			'meat-masala': 40,
+			'sabji-masala': 40,
+			'momo-masala': 40,
+			'khukuri-churot': 130,
+			'surya-churot': 300,
+			'current-chauchau-sano': 20,
+			'current-chauchau-thulo': 50,
+			'rampam-chauchau': 20,
+			'gold-finger': 40,
+			'finger-chips': 40,
+			papad: 30,
+			'brush-sasto': 25,
+			'brush-mahango': 60,
+			lwang: 10,
+			marich: 10,
+			sukumel: 20,
+			supari: 10,
+			'lifebuoy-soap': 50,
+			'lux-soap': 55,
+			'vim-soap-bhada-majhne': 10,
+			'kalo-soap-bhada-majhne': 15,
+			'dhoni-soap-kapda-dhune': 35,
+			'surf-sano': 25,
+			frooti: 30,
+			'sprite-jumbo': 200,
+			'sprite-medium': 100,
+			'dhago-prati-lhachhi': 70,
+			'2pm-cheese-ball': 50,
+			'2pm-stix-kurkure': 50,
+			'2pm-akabare-twigs-kurkure': 50,
+			'2pm-kurkure': 50,
+			'2pm-akabare-twigs-small': 50,
+			'cheese-ball': 10,
+			kurkure: 10,
+			matar: 10,
+
+
+
+
+
+
+			'Lipstick-sasto': 60,
+			'Lipstick-mahango': 150,
+			'Papaya-Facewash': 250,
+			'Papaya-Face-Cream': 350,
+			'Clear-tel': 80,
+			'Bajaj-tel': 80,
+			'Okhati-sabun': 60,
+			'Siglo-mehendi-Red': 60,
+			'Dexe-mehendi-Black': 50,
+			'Goorej-mehendi-Black-Small': 35,
+			'Fair-and-Lovely-patta': 20,
+			'Fair-and-Lovely-batta': 100,
+			sindur: 20,
+			'Liquid-sindur': 50,
+			'Ponds-Cream': 140,
+			'Glycerin-Big': 70,
+			'Glycerin-Small': 60,
+			Diaper: 100,
+			'Pad-thulo': 120,
+			'Pad-medium': 70,
+			'Pad-sano': 60,
+			'Ponds-Powder-sano': 20,
+			'Ponds-Powder-thulo': 80,
+			'Johnson-Baby-Powder-thulo': 150,
+			'Johnson-Baby-Powder-sano': 80,
+			'Himalaya-Baby-Powder': 150,
+			'moti-mala': 60,
+			lhachha: 80,
+			Vaseline: 20,
+			'Moisturizing-Cream': 35,
+			LipGuard: 60,
+			gajal: 20,
+			'Sunsilk-Shampoo': 10,
+			'Dove-Shampoo': 5,
+			'Dove-Conditioner': 10,
+			'Head-and-Shoulder-Shampoo': 10,
+			'Goorej-Rich-Creme-mehendi-Black': 70,
+			'Nisha-mehendi-Black': 50,
+			'Nisha-mehendi-Red': 50,
+			'Nisha-mehendi-Yellow': 50,
+			'Neeta-mehendi-Black': 20,
+			'Neeta-mehendi-Red': 30,
+			Headbin: 100,
+			'Johnson-Baby-Soap': 70,
+			'Boss-Perfume-Large': 400,
+			'Denver-Perfume': 500,
+			'Melody-Perfume': 250,
+			'Pocket-Perfume': 140,
+			'Sunsilk-Shampoo-batta': 350,
+			'Clear-Shampoo-batta': 250,
+			mirror: 150,
+			Ribbon: 10,
+			'NailPolish-sasto': 60,
+			'NailPolish-mahango': 80,
+			'Nail-Polish-Remover-Liquid': 80,
+			'Nail-Polish-Remover-Paper': 40,
+			kaiyo: 110,
+
+
+
+
+
+
+
+
+			Dhup: 35,
+			Bati: 60,
+			Ashtagandh: 30,
+			'Shringar-Samagri': 150,
+			'Hawan-Samagri': 40,
+			'Chyatchute-Kapada': 50,
+			'Mauli-Dhago': 20,
+			Kapur: 60,
+			'Bati-Katne-Dhago': 70,
+			'Janai': 5,
+			'Supari': 5,
+			'Til': 80,
+			'Jau': 60,
+			'Nariwal': 600,
+			'Damdam-Abir': 30,
+			'Kanaiya-Abir': 30,
+			'Gaichhap-Abir': 15,
+			Sarvoshadhi: 20,
+			Saptamritika: 20,
+			Panchratna: 20,
+			'Tilko-Tel': 140,
+			Dopatta: 50,
+			'Hanuman-Chalisa': 10,
+			Pitambari: 50,
+
+
+
+
+
+			Petrol: 180,
+			"Black-Tape": 30,
+			"Cello-Tape": 20,
+			"Tala-Chabi": 200,
+			Rumal: 50,
+			Moja: 120,
+			"Copy-Thulo": 50,
+			"Copy-Medium": 30,
+			"Copy-Sano": 20,
+			"Copy-Sanoo": 10,
+			File: 30,
+			Balpen: 10,
+			Pencil: 10,
+			"Kham": 1,
+			Marker: 50,
+			"Dhago-Thulo": 40,
+			"Dhago-Sano": 10,
+			Thumbpin: 15
+
+		};
+
+
+
+
+
+		ProductsSelect.addEventListener('change', () => {
+			const selectedOption = ProductsSelect.value;
+			const selectedPrice = prices[selectedOption];
+
+			productPrice.textContent = `Rs. ${selectedPrice}`;
+			totalPriceContainer.textContent = `Rs. ${selectedPrice}`; // Set default and total price to product price
+			priceContainer.style.display = 'block';
+
+			window.history.pushState(null, null, `?option=${selectedOption}`);
+		});
+
+		window.addEventListener('load', () => {
+			const urlParams = new URLSearchParams(window.location.search);
+			const selectedOption = urlParams.get('option');
+
+			if (selectedOption) {
+				ProductsSelect.value = selectedOption;
+				ProductsSelect.dispatchEvent(new Event('change'));
+			}
+		});
+
+		function updatePrice() {
+			var quantityInput = document.getElementById('quantity');
+			var productQuantityInput = document.getElementById('productQuantity');
+
+			var quantity = parseInt(quantityInput.value);
+			var selectedOption = ProductsSelect.value;
+			var selectedPrice = prices[selectedOption];
+			var totalPrice = quantity * selectedPrice;
+
+			productQuantityInput.value = quantity; // Set productQuantity input value to the selected quantity
+
+			// Set the product price to the productPrice element
+			productPrice.textContent = `Rs. ${selectedPrice}`;
+
+			// Set the perProductPrice input value to the selectedPrice
+			document.getElementById('perProductPrice').value = selectedPrice;
+
+			totalPriceContainer.textContent = `Rs. ${totalPrice}`;
+
+			// Set the value of the TotalPrice input field
+			document.getElementById('TotalPrice').value = totalPrice; // Add this line to set the value
+		}
+
+
+		function incrementQuantity() {
+			var quantityInput = document.getElementById("quantity");
+			quantityInput.value = parseInt(quantityInput.value) + 1;
+			updatePrice();
+		}
+
+		function decrementQuantity() {
+			var quantityInput = document.getElementById("quantity");
+			if (parseInt(quantityInput.value) > 1) {
+				quantityInput.value = parseInt(quantityInput.value) - 1;
+				updatePrice();
+			}
+		}
+
+
+	</script>
+
+
+<script>
+	// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
+	let url = "https://script.google.com/macros/s/AKfycbxAs1Nhfp2-_hCVA_9hG4_OuPAnVtMUs4NR9WYL8bDlJX-8uDllg78jf5iW0Z1h6l-X/exec";
+	// This line declares a variable called "file" and assigns it the value of the modified input element on the page
+	let file = document.getElementById("paymentScreenshot");
+	// This line declares a variable called "img" and assigns it the value of the modified image element on the page
+	let img = document.querySelector("img");
+	file.addEventListener('change', () => {
+		let fr = new FileReader();
+		fr.addEventListener('loadend', () => {
+			let res = fr.result;
+			img.src = res;
+			let spt = res.split("base64,")[1];
+			let obj = {
+				base64: spt,
+				type: file.files[0].type,
+				name: file.files[0].name
+			}
+			fetch(url, {
+				method: "POST",
+				body: JSON.stringify(obj)
+			})
+				.then(r => r.text())
+				.then(data => console.log(data))
+		})
+		fr.readAsDataURL(file.files[0])
+	})
+</script>
+
+
 	<script>$(function () {
 
 			var targetDate = new Date(Date.UTC(2023, 03, 8));
@@ -2093,7 +2074,37 @@
 			document.getElementById("productName").style.display = "none";
 		}
 	</script>
+<script>
+	function handleDeliveryOption() {
+		var totalAmount = parseFloat(document.getElementById("TotalPrice").value);
+		var deliveryCheckbox = document.getElementById("deliveryOption");
+		var uploadSection = document.getElementById("uploadSection");
 
+		// Check if totalAmount is NaN or below 500
+		if (isNaN(totalAmount) || totalAmount < 500) {
+			if (deliveryCheckbox.checked) {
+				alert("Home delivery is only available for orders above Rs. 500!");
+				deliveryCheckbox.checked = false; // Uncheck the checkbox
+			}
+		}
+
+		// If "Yes" is selected, show the upload section; otherwise, hide it
+		uploadSection.style.display = deliveryCheckbox.checked ? "block" : "none";
+
+		// Return true to allow the checkbox state to change
+		return true;
+	}
+</script>
+<script>
+	// Add this to your existing script or script tag
+	function showPopup() {
+		document.getElementById('orderSuccessPopup').style.display = 'flex';
+	}
+
+	function closePopup() {
+		document.getElementById('orderSuccessPopup').style.display = 'none';
+	}
+</script>
 </body>
 
 </html>
