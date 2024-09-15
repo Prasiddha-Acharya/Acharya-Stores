@@ -1,73 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Firebase Web Push Notification Example</title>
 </head>
+
 <body>
-<h2>Firebase Web Push Notification Example</h2>
+    <h2>Firebase Web Push Notification Example</h2>
+    <p id="token"></p>
+    <p id="message-status"></p> <!-- Element to display message status -->
 
-<p id="token"></p>
-<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-messaging.js"></script>
-<script>
-    var firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_FIREBASE_DOMAIN_NAME",
-        databaseURL: "YOUR_FIREBASE_DATBASE_URL",
-        projectId: "YOUR_FIREBASE_PROJECT_ID",
-        storageBucket: "YOUR_FIREBASE_STORAGE_BUCKET END WITH appspot.com",
-        messagingSenderId: "YOUR SENDER ID",
-        appId: "YOUR APP ID",
-        measurementId: "YOUR MEASUREMENT ID"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const messaging=firebase.messaging();
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-messaging.js"></script>
 
-    function IntitalizeFireBaseMessaging() {
-        messaging
-            .requestPermission()
-            .then(function () {
-                console.log("Notification Permission");
-                return messaging.getToken();
-            })
-            .then(function (token) {
-                console.log("Token : "+token);
-                document.getElementById("token").innerHTML=token;
-            })
-            .catch(function (reason) {
-                console.log(reason);
-            });
-    }
-
-    messaging.onMessage(function (payload) {
-        console.log(payload);
-        const notificationOption={
-            body:payload.notification.body,
-            icon:payload.notification.icon
+    <script>
+        // Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCMfEhAeJE_BQ8eQyK6Mn52hiGf3LeXzcg",
+            authDomain: "prasiddhaacharya-com-np.firebaseapp.com",
+            projectId: "prasiddhaacharya-com-np",
+            storageBucket: "prasiddhaacharya-com-np.appspot.com",
+            messagingSenderId: "912047485186",
+            appId: "1:912047485186:web:23dab6d9bc527d8a84d21b",
+            measurementId: "G-TCFKJ034P3"
         };
 
-        if(Notification.permission==="granted"){
-            var notification=new Notification(payload.notification.title,notificationOption);
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const messaging = firebase.messaging();
 
-            notification.onclick=function (ev) {
-                ev.preventDefault();
-                window.open(payload.notification.click_action,'_blank');
-                notification.close();
-            }
+        // Request permission for notifications
+        function IntitalizeFireBaseMessaging() {
+            messaging
+                .requestPermission()
+                .then(function () {
+                    console.log("Notification permission granted.");
+                    return messaging.getToken();
+                })
+                .then(function (token) {
+                    console.log("FCM Token : " + token);
+                    document.getElementById("token").innerHTML = "FCM Token: " + token;
+                })
+                .catch(function (reason) {
+                    console.log("Notification permission denied: ", reason);
+                });
         }
 
-    });
-    messaging.onTokenRefresh(function () {
-        messaging.getToken()
-            .then(function (newtoken) {
-                console.log("New Token : "+ newtoken);
-            })
-            .catch(function (reason) {
-                console.log(reason);
-            })
-    })
-    IntitalizeFireBaseMessaging();
-</script>
+        // Listen for foreground messages
+        messaging.onMessage(function (payload) {
+            console.log("Message received: ", payload); // Log the received message
+            const notificationOption = {
+                body: payload.notification.body,
+                icon: payload.notification.icon
+            };
+
+            if (Notification.permission === "granted") {
+                const notification = new Notification(payload.notification.title, notificationOption);
+
+                notification.onclick = function (ev) {
+                    ev.preventDefault();
+                    window.open(payload.notification.click_action, '_blank');
+                    notification.close();
+                };
+            }
+
+            // Update the page with the received message details
+            document.getElementById("message-status").innerHTML = "Message received: " + payload.notification.body;
+        });
+
+        // Listen for token refresh
+        messaging.onTokenRefresh(function () {
+            messaging.getToken()
+                .then(function (newToken) {
+                    console.log("New Token : " + newToken);
+                })
+                .catch(function (reason) {
+                    console.log("Error fetching new token: ", reason);
+                });
+        });
+
+        // Initialize Firebase messaging
+        IntitalizeFireBaseMessaging();
+
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/firebase-messaging-sw.js')
+                .then(function (registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(function (error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
 </body>
+
 </html>

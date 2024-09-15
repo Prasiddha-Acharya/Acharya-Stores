@@ -1,6 +1,8 @@
+// Import Firebase scripts
 importScripts('https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/7.14.6/firebase-messaging.js');
 
+// Firebase configuration (same as in fcm_page.html)
 var firebaseConfig = {
     apiKey: "AIzaSyCMfEhAeJE_BQ8eQyK6Mn52hiGf3LeXzcg",
     authDomain: "prasiddhaacharya-com-np.firebaseapp.com",
@@ -11,15 +13,20 @@ var firebaseConfig = {
     measurementId: "G-TCFKJ034P3"
 };
 
+// Initialize Firebase in the service worker
 firebase.initializeApp(firebaseConfig);
-const messaging=firebase.messaging();
+const messaging = firebase.messaging();
 
+// Handle background messages
 messaging.setBackgroundMessageHandler(function (payload) {
-    console.log(payload);
-    const notification=JSON.parse(payload);
-    const notificationOption={
-        body:notification.body,
-        icon:notification.icon
+    console.log("Background message received: ", payload); // Log the background message
+
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+        body: payload.notification.body,
+        icon: payload.notification.icon
     };
-    return self.registration.showNotification(payload.notification.title,notificationOption);
+
+    // Display the notification
+    return self.registration.showNotification(notificationTitle, notificationOptions);
 });
