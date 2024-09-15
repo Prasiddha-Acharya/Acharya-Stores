@@ -63,6 +63,21 @@
     .then(() => console.log('Successfully registered and subscribed!'))
     .catch(console.error);
 </script> 
+<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+<script>
+
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('e810eb7c2d35c73fcce0', {
+      cluster: 'ap2'
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(JSON.stringify(data));
+    });
+  </script>
 </head>
 
 	<header class="header">
