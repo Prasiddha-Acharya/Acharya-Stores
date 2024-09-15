@@ -51,33 +51,7 @@
 
 
 
-	<!--PreLoader Ends-->
-<script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script> 
-<script>
-  const beamsClient = new PusherPushNotifications.Client({
-    instanceId: '76268747-3184-4156-a152-884ef173597c',
-  });
-
-  beamsClient.start()
-    .then(() => beamsClient.addDeviceInterest('hello'))
-    .then(() => console.log('Successfully registered and subscribed!'))
-    .catch(console.error);
-</script> 
-<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
-<script>
-
-    // Enable pusher logging - don't include this in production
-    Pusher.logToConsole = true;
-
-    var pusher = new Pusher('e810eb7c2d35c73fcce0', {
-      cluster: 'ap2'
-    });
-
-    var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function(data) {
-      alert(JSON.stringify(data));
-    });
-  </script>
+	<!-- start webpushr code --> <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BLahnoxmJ5cmDHPv3nRV_sOU92kjP9tsEP4VEkbbxt7sUeLot63fWzUXSj53WV1QRHOy4kewvbJiEt9X6377LPI' });</script><!-- end webpushr code -->
 </head>
 
 	<header class="header">
